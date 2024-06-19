@@ -9,7 +9,7 @@ export const headerLinks = [
   },
   {
     label: 'Creators',
-    route: '/discover',
+    route: '/creator',
   },
   {
     label: 'Dashboard',
