@@ -1,5 +1,6 @@
 import Footer from "@/components/shared/Footer";
 import HeaderMain from "@/components/shared/HeaderMain";
+import HeaderUser from "@/components/shared/HeaderUser";
 
 export default function RootLayout({
   children,
@@ -8,8 +9,7 @@ export default function RootLayout({
 }>) {
   return (
     <div className=" flex min-h-screen flex-col">
-      {/* <HeaderMain /> */}
-      Separate Header for products
+      <HeaderUser />
       <main className="flex-1">{children}</main>
       <Footer />
     </div>
