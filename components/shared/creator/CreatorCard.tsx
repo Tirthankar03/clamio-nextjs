@@ -3,7 +3,14 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import { FaHeart } from 'react-icons/fa';
 
-const CreatorCard = ({ type }:any) => {
+type CreatorProp = {
+  type: string,
+  followersNo: string,
+  productNo: string,
+  description: string
+}
+
+const CreatorCard = ({ type, followersNo, productNo, description }: CreatorProp) => {
   const [isFavorite, setIsFavorite] = useState(false);
 
   const toggleFavorite = () => {
@@ -19,13 +26,11 @@ const CreatorCard = ({ type }:any) => {
         </div>
         <div className="ml-4 text-center md:text-left mt-4 md:mt-0">
           <h2 className="font-bold text-xl md:text-xl xl:text-2xl lg:text-2xl text-gray-900">David Jackoff</h2>
-          <p className="text-gray-600">12k followers • 3k Products</p>
+          <p className="text-gray-600">{followersNo} followers • {productNo} Products</p>
         </div>
       </div>
       <p className="mt-4 text-center md:text-center text-gray-700">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        consectetur adipiscing elit.
-        consectetur adipiscing elit.
+        {description}
       </p>
   
       </Link>

@@ -9,6 +9,8 @@ import CreatorCard from './CreatorCard';
 import './CreatorSlider.css'; // Make sure to import your CSS file here
 import { NextArrow, PrevArrow } from './CustomArrows';
 
+import {CreatorData} from '@/constants/data'
+
 const CreatorSlider = ({ type }: any) => {
   const settings = {
     dots: true,
@@ -84,12 +86,10 @@ const CreatorSlider = ({ type }: any) => {
       <h2 className="text-2xl font-bold text-white mb-4">{type} Creators</h2>
       <div className="slider-wrapper">
         <Slider {...settings}>
-          <div className="p-2"><CreatorCard type={type} /></div>
-          <div className="p-2"><CreatorCard type={type} /></div>
-          <div className="p-2"><CreatorCard type={type} /></div>
-          <div className="p-2"><CreatorCard type={type} /></div>
-          <div className="p-2"><CreatorCard type={type} /></div>
-          <div className="p-2"><CreatorCard type={type} /></div>
+          <div className="p-2"><CreatorCard type={type} productNo='2' followersNo='4' description='lorem ispum 1'  /></div>
+          <div className="p-2"><CreatorCard type={type} productNo='2' followersNo='4' description='lorem ispum 1'  /></div>
+          <div className="p-2"><CreatorCard type={type} productNo='2' followersNo='4' description='lorem ispum 1'  /></div>
+          <div className="p-2"><CreatorCard type={type} productNo='2' followersNo='4' description='lorem ispum 1'  /></div>
         </Slider>
       </div>
     </div>
