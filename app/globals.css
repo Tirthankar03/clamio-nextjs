@@ -274,3 +274,13 @@ body {
 .react-datepicker__time-list-item--selected {
   background-color: #624cf5 !important;
 }
+
+/* styles/globals.css or any imported CSS file */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}

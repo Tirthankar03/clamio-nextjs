@@ -1,97 +1,12 @@
-//BAD PRACTICE
-'use client'
-// src/components/CreatorSlider.jsx
+// 'use client'
 import React from 'react';
-import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
-import CreatorCard from './CreatorCard';
-import './CreatorSlider.css'; // Make sure to import your CSS file here
-import { NextArrow, PrevArrow } from './CustomArrows';
-
-import {CreatorData} from '@/constants/data'
+import Cards from '@/components/shared/creator/Cards';
 
 const CreatorSlider = ({ type }: any) => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    arrows: true,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
-    responsive: [
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 4,
-        }
-      },
-      {
-        breakpoint: 1900,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 4,
-        }
-      },
-      {
-        breakpoint: 820,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        }
-      },
-      {
-        breakpoint: 950,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        }
-      },
-      {
-        breakpoint: 1000,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        }
-      },
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        }
-      },
-      {
-        breakpoint: 1330,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-        }
-      },
-      {
-        breakpoint: 640,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          arrows: false,
-        }
-      },
-    ]
-  };
-
   return (
-    <div className="my-8 mx-10 sm:mx-5 md:mx-20 lg:mx-20 2xl:mx-20 relative">
-      <h2 className="text-2xl font-bold text-white mb-4">{type} Creators</h2>
-      <div className="slider-wrapper">
-        <Slider {...settings}>
-          <div className="p-2"><CreatorCard type={type} productNo='2' followersNo='4' description='lorem ispum 1'  /></div>
-          <div className="p-2"><CreatorCard type={type} productNo='2' followersNo='4' description='lorem ispum 1'  /></div>
-          <div className="p-2"><CreatorCard type={type} productNo='2' followersNo='4' description='lorem ispum 1'  /></div>
-          <div className="p-2"><CreatorCard type={type} productNo='2' followersNo='4' description='lorem ispum 1'  /></div>
-        </Slider>
-      </div>
+    <div className="mb-8">
+      <h2 className="text-2xl px-3  max-w-[1443px] mx-auto font-bold mb-4">{type}</h2>
+      <Cards  />
     </div>
   );
 };
