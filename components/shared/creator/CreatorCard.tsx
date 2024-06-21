@@ -1,51 +1,51 @@
-'use client'
-import Link from 'next/link';
-import React, { useState } from 'react';
-import { FaHeart } from 'react-icons/fa';
+import * as React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { AiOutlineUser, AiOutlineShopping } from "react-icons/ai";
+import { FaUserPlus } from "react-icons/fa";
 
-type CreatorProp = {
-  type: string,
-  followersNo: string,
-  productNo: string,
-  description: string
+interface CreatorCardProps {
+  name: string;
+  followers: string;
+  products: string;
+  description: string;
 }
 
-const CreatorCard = ({ type, followersNo, productNo, description }: CreatorProp) => {
-  const [isFavorite, setIsFavorite] = useState(false);
-
-  const toggleFavorite = () => {
-    setIsFavorite(!isFavorite);
-  };
-
+const CreatorCard: React.FC<CreatorCardProps> = ({
+  name = "",
+  followers = "",
+  products = "",
+  description = "",
+}) => {
   return (
-    <div className="bg-white p-6 rounded-lg shadow-md relative w-full md:w-full lg:w-full xl:w-full h-96">
-          <Link href='/creator/1'>
-      <div className="flex flex-col items-center md:flex-row">
-        <div className="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center">
-          <span className="text-2xl text-black font-semibold">DJ</span>
-        </div>
-        <div className="ml-4 text-center md:text-left mt-4 md:mt-0">
-          <h2 className="font-bold text-xl md:text-xl xl:text-2xl lg:text-2xl text-gray-900">David Jackoff</h2>
-          <p className="text-gray-600">{followersNo} followers • {productNo} Products</p>
+    <Card className="w-full bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 relative overflow-hidden border border-gray-200">
+      <div className="relative px-6 py-5">
+        <img
+          className="w-full h-36 object-cover rounded-lg"
+          src="https://images.unsplash.com/photo-1583621908511-e082803e3aa2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8eWVsbG93JTIwYmFja2dyb3VuZHxlbnwwfDB8MHx8fDA%3D"
+          alt="Cover"
+        />
+        <div className="absolute inset-0 flex items-center justify-center mt-36">
+          <div className="shadow-lg w-[4.5rem] h-[4.5rem] rounded-full bg-secondary flex items-center justify-center text-white text-2xl font-bold z-10">
+            <AiOutlineUser />
+          </div>
         </div>
       </div>
-      <p className="mt-4 text-center md:text-center text-gray-700">
-        {description}
-      </p>
-  
-      </Link>
-      <button
-        className="absolute top-2 right-2 bg-transparent border-none outline-none"
-        onClick={toggleFavorite}
-      >
-        <FaHeart className={`${isFavorite ? 'text-red-500' : 'text-gray-500'} text-2xl`} />
-      </button>
-      <button
-        className=" mt-10 sm:mt-10 md:mt-28 lg:mt-20 xl:mt-20 2xl:mt-28 w-full bg-yellow-500 text-black py-3 rounded-md font-semibold hover:bg-yellow-600 hover:text-white transition duration-300 ease-in-out transform hover:scale-105"
-      >
-        Follow
-      </button>
-    </div>
+      <CardContent className="relative mt-5 p-4">
+        <h3 className="text-xl font-semibold text-gray-900 text-center mb-2">{name}</h3>
+        <div className="flex justify-center mb-2 items-center">
+          <AiOutlineUser className="text-gray-600 mr-1" />
+          <p className="text-sm text-gray-600 mr-4">{followers}</p>
+          <AiOutlineShopping className="text-gray-600 mr-1" />
+          <p className="text-sm text-gray-600">{products}</p>
+        </div>
+        <p className="text-sm text-gray-700 text-center leading-relaxed">{description}</p>
+        <div className="flex justify-center mt-4">
+          <button className="px-6 py-2 bg-yellow-500 text-white rounded-full shadow-md hover:bg-yellow-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 flex items-center">
+            <FaUserPlus className="text-xl mr-2" /> Follow
+          </button>
+        </div>
+      </CardContent>
+    </Card>
   );
 };
 
