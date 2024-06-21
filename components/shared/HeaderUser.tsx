@@ -6,6 +6,7 @@ import { CSSTransition } from 'react-transition-group';
 // import './LibraryPage.css';
 import Headroom from 'react-headroom';
 import Link from 'next/link';
+import Image from 'next/image';
 
 
 const HeaderUser = () => {
@@ -23,7 +24,12 @@ const HeaderUser = () => {
         <div className='w-full h-28 bg-white sticky mb-7 z-10 top-0 py-1 shadow-md'>
           <header className="flex md:mx-5 lg:mx-5 xl:mx-5 2xl:mx-auto mx-5 max-w-7xl md:my-4 my-4 sm:my-4 flex-col sm:flex-row justify-between items-center mb-8">
             <div className="flex justify-between items-center w-full sm:w-auto mb-4 sm:mb-0">
-              <div className="bg-yellow-300 h-16 w-16 rounded-full"></div>
+            <Link href="/" className="w-36">
+          <Image 
+            src="/assets/images/CLAMIO.svg" width={128} height={38}
+            alt="Clamio logo" 
+          />
+        </Link>
               <div className="flex sm:hidden space-x-4">
                 <button
                   className="p-2 rounded-full shadow bg-white"
