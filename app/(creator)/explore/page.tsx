@@ -40,7 +40,7 @@ const Explore = () => {
       <FAQ/>
 
       <Footer/>
-    
+
     </div>
   );
 };
