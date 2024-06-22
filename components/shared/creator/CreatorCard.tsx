@@ -1,7 +1,9 @@
-import * as React from "react";
+"use client"
+import React, { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { AiOutlineUser, AiOutlineShopping } from "react-icons/ai";
+import { AiOutlineUser, AiOutlineShopping ,AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { FaUserPlus } from "react-icons/fa";
+
 
 interface CreatorCardProps {
   name: string;
@@ -10,12 +12,19 @@ interface CreatorCardProps {
   description: string;
 }
 
-const CreatorCard: React.FC<CreatorCardProps> = ({
+
+function CreatorCard({
   name = "",
   followers = "",
   products = "",
   description = "",
-}) => {
+}: CreatorCardProps) {
+
+  const [isLiked, setIsLiked] = useState(false);
+
+  const toggleLike = () => {
+    setIsLiked(!isLiked);
+  };
   return (
     <Card className="w-full bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 relative overflow-hidden border border-gray-200">
       <div className="relative px-6 py-5">
@@ -28,7 +37,23 @@ const CreatorCard: React.FC<CreatorCardProps> = ({
           <div className="shadow-lg w-[4.5rem] h-[4.5rem] rounded-full bg-secondary flex items-center justify-center text-white text-2xl font-bold z-10">
             <AiOutlineUser />
           </div>
+
+        
         </div>
+
+        <div className="p-1 absolute top-7 right-8 rounded-full border bg-white border-gray-300">
+              {isLiked ? (
+                <AiFillHeart
+                  className="text-red-500  text-2xl cursor-pointer"
+                  onClick={toggleLike}
+                />
+              ) : (
+                <AiOutlineHeart
+                  className="text-gray-500 text-2xl cursor-pointer"
+                  onClick={toggleLike}
+                />
+              )}
+            </div>
       </div>
       <CardContent className="relative mt-5 p-4">
         <h3 className="text-xl font-semibold text-gray-900 text-center mb-2">{name}</h3>
@@ -47,6 +72,6 @@ const CreatorCard: React.FC<CreatorCardProps> = ({
       </CardContent>
     </Card>
   );
-};
+}
 
 export default CreatorCard;

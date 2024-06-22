@@ -7,13 +7,13 @@ function CommunityPage() {
     <div>
       <div className='w-full bg-secondary'>
         <header className="text-center mb-8 max-w-6xl mx-auto px-4">
-          <h1 className="text-4xl font-bold py-4 text-yellow-500">CLAMIO COMMUNITY</h1>
+          <h1 className="text-4xl font-bold py-7 text-yellow-500">CLAMIO COMMUNITY</h1>
           <p className="text-xl text-white mt-2">Collaborate and Interact with the creators community</p>
         </header>
         
-        <div className="hidden sm:grid md:grid md:grid-cols-3 text-white gap-8 mb-12 max-w-6xl mx-auto px-4">
+        <div className="hidden sm:grid md:grid md:grid-cols-3 mt-10 text-white gap-8 mb-12 max-w-6xl mx-auto px-4">
           <div className="text-center">
-            <img src="/pana.png" alt="Reach Out" className="mx-auto mb-4 sm:w-52 sm:h-52  object-cover" />
+            <img src="/pana.png" alt="Reach Out" className="mx-auto mb-4 sm:w-52 sm:h-52 md:w-60 md:h-60  object-cover" />
             <h2 className="text-xl font-semibold">Reach Out</h2>
           </div>
           <div className="text-center">

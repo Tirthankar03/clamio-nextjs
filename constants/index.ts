@@ -54,38 +54,38 @@ export const BLOCK_PNG2 = "\Frame (1).png"
 
 
 
-export const products = [
- {
-   name: "Tarot Card Reading",
-   description: "Get insights into your future with our detailed Tarot Card Readings.",
-   image: "/assets/svg/vec-five.png",
- },
- {
-   name: "Travel Guide",
-   description: "Discover the best travel destinations and tips with our comprehensive travel guides.",
-   image: "/assets/svg/vec-five.png",
- },
- {
-   name: "Food Recipes",
-   description: "Explore a variety of delicious recipes that you can try at home.",
-   image: "/assets/svg/vec-five.png",
- },
- {
-   name: "Diet Plan",
-   description: "Personalized diet plans to help you achieve your health goals.",
-   image:"/assets/svg/vec-five.png",
- },
- {
-   name: "Digital Art",
-   description: "Explore and purchase unique digital artworks created by talented artists.",
-   image: "/assets/svg/vec-five.png",
- },
- {
-   name: "E-Sports Guide",
-   description: "Become a pro gamer with our expert guides and tips on e-sports.",
-   image: "/assets/svg/vec-five.png",
- }
-];
+// export const products = [
+//  {
+//    name: "Tarot Card Reading",
+//    description: "Get insights into your future with our detailed Tarot Card Readings.",
+//    image: "/assets/svg/vec-five.png",
+//  },
+//  {
+//    name: "Travel Guide",
+//    description: "Discover the best travel destinations and tips with our comprehensive travel guides.",
+//    image: "/assets/svg/vec-five.png",
+//  },
+//  {
+//    name: "Food Recipes",
+//    description: "Explore a variety of delicious recipes that you can try at home.",
+//    image: "/assets/svg/vec-five.png",
+//  },
+//  {
+//    name: "Diet Plan",
+//    description: "Personalized diet plans to help you achieve your health goals.",
+//    image:"/assets/svg/vec-five.png",
+//  },
+//  {
+//    name: "Digital Art",
+//    description: "Explore and purchase unique digital artworks created by talented artists.",
+//    image: "/assets/svg/vec-five.png",
+//  },
+//  {
+//    name: "E-Sports Guide",
+//    description: "Become a pro gamer with our expert guides and tips on e-sports.",
+//    image: "/assets/svg/vec-five.png",
+//  }
+// ];
 
 
 export const faqs = [
