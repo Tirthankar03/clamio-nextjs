@@ -41,7 +41,7 @@ const ProductCard = ({ productName, name, stars, price, imageUrl }: ProductCardP
         </div>
         <div className="flex items-center mt-2">
           <div className="bg-yellow-500 rounded-full h-4 w-4"></div>
-          <div className="ml-2 text-semibold">{name}</div>
+          <div className="ml-2 text-semibold"><Link href="/creator/1" className="text-lg">{name}</Link></div>
         </div>
         <div className="flex items-center mt-2">
           <div className="text-sm">★ {stars}(1k)</div>
