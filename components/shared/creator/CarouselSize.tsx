@@ -18,7 +18,7 @@ export default function CarouselSize({ type }: any) {
         opts={{
           align: "start",
         }}
-        className="lg:w-full w-auto md:w-full max-w-[1433px] 2xl:mx-auto md:mx-10"
+        className="lg:w-full w-auto  max-w-[1433px] 2xl:mx-auto "
       >
         <CarouselContent>
           {CreatorData.map((item, index) => (
