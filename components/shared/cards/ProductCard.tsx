@@ -1,23 +1,28 @@
-'use client'
+// src/components/shared/cards/ProductCard.tsx
+"use client";
 import { faHeart, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
-import { useState } from "react";
 import LikeBtn from "../LikeBtn";
 import Link from "next/link";
 
-const ProductCard = ({ productName, name, stars, price }: any) => {
+interface ProductCardProps {
+  productName: string;
+  name: string;
+  stars: string;
+  price: string;
+  imageUrl: string;
+}
+
+const ProductCard = ({ productName, name, stars, price, imageUrl }: ProductCardProps) => {
   return (
     <div className="relative bg-white border border-gray-300 rounded-lg overflow-hidden text-black w-full shadow-lg ">
       <div className="absolute top-2 right-2">
         <LikeBtn />
       </div>
-      {/* <div className="">
-                <img src={imgOne} alt="" className="" />
-            </div> */}
-      <Link href={`/product/1`}>
+      <Link href={`/product/${name}`}>
         <Image
-          src="/assets/product-img/imgone.png"
+          src={imageUrl}
           alt="product card"
           width={1000}
           height={1000}
@@ -32,7 +37,7 @@ const ProductCard = ({ productName, name, stars, price }: any) => {
               icon={faShoppingCart}
               className="text-gray-600 cursor-pointer "
             />
-          </div>{" "}
+          </div>
         </div>
         <div className="flex items-center mt-2">
           <div className="bg-yellow-500 rounded-full h-4 w-4"></div>

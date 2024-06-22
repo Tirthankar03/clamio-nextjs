@@ -27,7 +27,7 @@ const ProfilePage = () => {
           <p className="text-center md:w-3/4 mx-auto mt-2 px-4">
             {isExpanded ? (
               <>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 <button className="text-blue-500 ml-2" onClick={toggleText}>Less...</button>
               </>
             ) : (
@@ -72,9 +72,9 @@ const ProfilePage = () => {
                   </button>
                 </div>
                 <div className="mt-4">
-                <Link href='/product/1'>
-                  <p className="text-center font-semibold">Beverage Animation</p>
-                </Link>
+                  <Link href='/product/1'>
+                    <p className="text-center font-semibold">Beverage Animation</p>
+                  </Link>
                   <div className="flex justify-center items-center mt-2">
                     <FaUserCircle className="text-yellow-500" />
                     <a href="#" className="ml-2 text-blue-500">David Jackoff</a>

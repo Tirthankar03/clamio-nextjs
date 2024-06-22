@@ -10,108 +10,119 @@ import ProductsCategory from "@/components/shared/ProductsCategory";
 const Explore = () => {
   return (
     <div className="min-h-screen bg-secondary text-white">
-    
-     {/* Section 1 */}
-     <section className="bg-secondary text-white p-4 sm:p-8 min-h-[60vh] md:min-h-[50vh] flex items-center justify-center">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mx-auto max-w-6xl">
-        <div className="flex justify-center">
-          <img className="w-64 h-64 mt-5 md:w-full md:h-full" src="\Blogging-bro.png" alt="Reward program" />
+      {/* Section 1 */}
+      <div className="explore-container mx-auto w-11/12 max-w-7xl py-20">
+        <div className="one-image w-5/6 px-10 py-0">
+          <img
+            src="/assets/svg/vec-one.png"
+            alt="Reward program"
+            style={{ width: "150px", height: "150px" }}
+          />
         </div>
-        <div className="text-center lg:text-left">
-          <h2 className="text-5xl font-bold mb-7">
-            Discover the <span className="text-yellow-500">CLAMIO</span> Wonderland
-          </h2>
-          <h3 className="text-2xl mb-4">
+        <div className="left-content p-6 md:p-12">
+          <h1 className="py-10 text-3xl font-bold sm:text-4xl md:text-6xl xl:text-7xl">
+            Discover the <span className="text-yellow-500">CLAMIO</span>{" "}
+            Wonderland
+          </h1>
+          <h2 className="py-4 text-2xl md:text-4xl lg:py-2 xl:py-2 2xl:py-4">
             Create and Sell Your Digital Products
-          </h3>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <button className="bg-gray-300 font-semibold text-black py-2 px-4 md:py-3 md:px-6 rounded text-lg">
+          </h2>
+          <div className="grid grid-cols-1 justify-items-start gap-4 py-10 md:grid-cols-2 md:py-12 lg:w-fit xl:py-20">
+            <button
+              // onClick={() => {}}
+              className="md:w-200 mt-6 w-full bg-white px-8 py-4 font-bold text-black"
+            >
               JOIN NOW
             </button>
-            <button className="bg-gray-300 font-semibold text-black py-2 px-4 md:py-3 md:px-6 rounded text-lg">
+            <button className="md:w-200 mt-6 w-full bg-white px-8 py-4 font-bold text-black">
               Browse Products
             </button>
           </div>
         </div>
       </div>
-    </section>
 
       {/* Section 2 */}
-      <div className="w-full bg-white text-black">
-        <div className="mx-auto flex max-w-7xl flex-col items-center px-4 md:px-10 py-10 md:py-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
-            <div className="flex flex-col items-center text-center">
+      <div className="w-full bg-white">
+        <div className="mx-auto flex max-w-7xl flex-col items-center bg-white px-10 py-20 text-black">
+          <div className="grid grid-cols-1 md:grid-cols-2">
+            <div className="flex flex-col items-center p-6 text-center">
               <img
-                src="\13858475_5370051.jpg"
+                src="/assets/svg/vec-two.png"
                 alt="Effortless Upload and Sell"
-                className="w-3/4 h-auto md:w-3/4"
+                className=""
+                style={{ width: "400px", height: "400px" }}
               />
             </div>
-            <div className="flex flex-col items-start p-4 md:p-6 text-left">
-              <h1 className="py-3 md:py-5 text-xl font-bold md:text-3xl">
+            <div className="flex flex-col items-start p-6 text-center">
+              <h1 className="py-5 text-2xl font-bold md:text-4xl">
                 Effortless Upload and Sell
               </h1>
-              <h2 className="py-4 md:py-8 text-lg md:text-xl">
+              <h2 className="py-8 text-left text-xl md:text-2xl">
                 Upload your digital products effortlessly with CLAMIO’s
                 easy-to-use Platform built exclusively for Digital Creators
               </h2>
-              <button className="w-full bg-primary px-6 py-2 md:py-2 font-bold text-black rounded-lg shadow-lg hover:bg-yellow-500 transition-all duration-300 ease-in-out lg:w-min lg:px-16">
+              <button className="w-full bg-primary px-8 py-2 py-4 font-bold text-black lg:w-min lg:px-20">
                 Explore
               </button>
             </div>
           </div>
-
-          <div className="grid grid-cols-1 px-2 md:grid-cols-2 lg:px-10 gap-6 md:gap-10 mt-10 md:mt-20">
-            <div className="flex flex-col items-start p-4 md:p-6 text-left">
-              <h1 className="py-3 md:py-5 text-xl font-bold md:text-3xl">
+          <br />
+          <br />
+          <br />
+          <div className="grid grid-cols-1 px-2 md:grid-cols-2 lg:px-20">
+            <div className="flex flex-col items-start p-6 text-center">
+              <h1 className="py-5 text-2xl font-bold md:text-4xl">
                 Secure Payments and Same Day Payout
               </h1>
-              <h2 className="py-4 md:py-8 text-lg md:text-xl">
+              <h2 className="py-8 text-left text-xl md:text-2xl">
                 Get your Payments within 24 hours on a successful transaction by
                 consumer through CLAMIO’s secured payment Gateway
               </h2>
-              <button className="w-full bg-primary px-6 py-2 md:py-2 font-bold text-black rounded-lg shadow-lg hover:bg-yellow-500 transition-all duration-300 ease-in-out lg:w-min lg:px-16">
+              <button className="w-full bg-primary px-8 py-2 py-4 font-bold text-black shadow-lg shadow-yellow-500 lg:w-min lg:px-20">
                 Explore
               </button>
             </div>
-            <div className="flex flex-col items-center text-center">
+            <div className="flex flex-col items-center p-6 text-center">
               <img
-                src="\Secure data-bro.png"
-                alt="Secure Payments and Same Day Payout"
-                className="w-60 h-auto md:w-3/4"
+                src="/assets/svg/vec-three.png"
+                alt="Effortless Upload and Sell"
+                className=""
+                style={{ width: "400px", height: "400px" }}
               />
             </div>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 mt-10 md:mt-20">
-            <div className="flex flex-col items-center text-center">
+          <br></br>
+          <br />
+          <br />
+          <div className="grid grid-cols-1 md:grid-cols-2">
+            <div className="flex flex-col items-center p-6 text-center">
               <img
-                src="\Social Dashboard-cuate.png"
-                alt="Personalized Dashboard"
-                className="w-3/4 h-auto md:w-3/4"
+                src="/assets/svg/vec-four.png"
+                alt="Effortless Upload and Sell"
+                className=""
+                style={{ width: "550px", height: "400px" }}
               />
             </div>
-            <div className="flex flex-col items-start p-4 md:p-6 text-left">
-              <h1 className="py-3 md:py-5 text-xl font-bold md:text-3xl">
+            <div className="flex flex-col items-start p-6 text-center">
+              <h1 className="py-5 text-2xl font-bold md:text-4xl">
                 Personalized Dashboard
               </h1>
-              <h2 className="py-4 md:py-8 text-lg md:text-xl">
+              <h2 className="py-8 text-left text-xl md:text-2xl">
                 Get your CLAMIO Personalized Dashboard to get curated insights
                 about your products, customers, and peers.
               </h2>
-              <button className="w-full bg-primary px-6 py-2 md:py-2 font-bold text-black rounded-lg shadow-lg hover:bg-yellow-500 transition-all duration-300 ease-in-out lg:w-min lg:px-16">
+              <button className="w-full bg-primary px-8 py-2 py-4 font-bold text-black lg:w-min lg:px-20">
                 Explore
               </button>
             </div>
           </div>
-          
           <img
             src="/assets/svg/vec-five.png"
-            className="icon-container mx-auto w-full max-w-xs mt-10 md:mt-20"
+            className="icon-container mx-auto w-full max-w-sm"
           />
           <ProductsCategory />
           <div className="flex justify-center py-10">
-            <button className="bg-primary px-12 md:px-16 py-4 md:py-6 font-bold text-black rounded-lg shadow-lg hover:bg-yellow-500 transition-all duration-300 ease-in-out sm:w-full">
+            <button className="bg-primary px-16 py-6 font-bold text-black sm:w-full">
               Browse products
             </button>
           </div>
@@ -119,13 +130,14 @@ const Explore = () => {
       </div>
 
       {/* Section 3 */}
-      <div className="creator-container mx-auto w-11/12 max-w-7xl px-4 md:px-10 py-20">
-        <div className="py-10 text-3xl font-bold md:text-5xl lg:text-6xl">
+
+      <div className="creator-container mx-auto w-11/12 max-w-7xl px-10 py-20">
+        <div className="py-10 text-3xl font-bold md:text-6xl lg:text-8xl">
           Meet the <span className="text-yellow-500">CLAMIO</span> Creator{" "}
         </div>
         <br />
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-          <div className="row-span-2 flex flex-col items-start text-lg md:text-xl">
+          <div className="row-span-2 flex flex-col items-start text-xl md:text-2xl">
             <p className="text-justify">
               Welcome to the creators’ stage, where the magic happens! Say hello
               to an eclectic mix of artists, experts, and storytellers, all
@@ -140,7 +152,7 @@ const Explore = () => {
               bound to discover a creator who speaks to your interests.
             </p>
             <br />
-            <p className="hidden xl:block">
+            <p className="md:hidden lg:hidden xl:block">
               Join a community that’s teeming with talent and be the first to
               know about fresh releases, upcoming events, and exclusive goodies
               from these maestros of the digital realm!
@@ -149,12 +161,12 @@ const Explore = () => {
           </div>
           <div className="flex flex-col items-start md:mt-12 lg:mt-0">
             <img
-              src="\Creative thinking-cuate.png"
-              style={{ width: "100%", height: "100%" }}
+              src="/assets/svg/vec-six.png"
+              style={{ width: "550px", height: "350px" }}
             />
           </div>
         </div>
-        <div className="row-span-2 flex hidden flex-col items-start text-lg md:block md:text-xl xl:hidden">
+        <div className="row-span-2 flex hidden flex-col items-start text-xl md:block md:text-2xl xl:hidden">
           <p>
             Join a community that’s teeming with talent and be the first to know
             about fresh releases, upcoming events, and exclusive goodies from
@@ -164,35 +176,36 @@ const Explore = () => {
         </div>
         <br />
         <div className="justify-left flex">
-          <button className="mt-4 w-full bg-white p-4 px-8 text-lg font-bold text-black lg:w-1/5">
+          <button className="mt-4 w-full bg-white p-4 px-8 text-xl font-bold text-black lg:w-1/5">
             Browse products
           </button>
         </div>
       </div>
 
+
       {/* Section 4 */}
       <div className="w-full bg-white">
-        <div className="inspired-container mx-auto max-w-7xl bg-white px-4 md:px-20 py-20 text-black">
+        <div className="inspired-container mx-auto max-w-7xl bg-white px-20 py-20 text-black 2xl:px-32">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-            <div className="row-span-2 flex flex-col items-start text-lg md:text-xl">
-              <div className="py-10 text-3xl font-bold md:text-5xl">
-                Take home<span className="text-yellow-500">100%</span> of your
+            <div className="row-span-2 flex flex-col items-start text-xl md:text-2xl">
+              <div className="py-10 text-3xl font-bold md:text-6xl">
+                Take home<span className="text-yellow-500">100% </span> of your
                 Revenue
               </div>
-              <ul className="list-disc pl-4 text-lg">
-                <li className="mb-2 font-medium">
+              <ul className="list-disc pl-4 text-xl">
+                <li className="mb-2 text-lg font-medium">
                   Share Personalised Link on Instagram
                 </li>
-                <li className="mb-2 font-medium">
+                <li className="mb-2 text-lg font-medium">
                   Sell digital products and services
                 </li>
-                <li className="mb-2 font-medium">
+                <li className="mb-2 text-lg font-medium">
                   Get Payments securely by UPI, Card & Net Banking
                 </li>
-                <li className="mb-2 font-medium">
+                <li className="mb-2 text-lg font-medium">
                   Pay Rs.0 per month and Keep up to 100% of revenue*
                 </li>
-                <li className="mb-2 font-medium">
+                <li className="mb-2 text-lg font-medium">
                   Get 24/7 support to sell.
                 </li>
               </ul>
@@ -201,24 +214,24 @@ const Explore = () => {
                 *We charge 12.5% on each successful transaction
               </h6>
             </div>
-            <div className="row-span-2 flex flex-col items-start text-lg md:text-xl">
+            <div className="row-span-2 flex flex-col items-start text-xl md:text-2xl">
               <h6 className="py-16 text-sm">Claimo premium</h6>
               <p className="text-2xl md:text-4xl">Rs 0/-</p>
               <br />
-              <ul className="list-disc py-8 pl-4 text-lg">
-                <li className="mb-2 font-medium">
+              <ul className="list-disc py-8 pl-4 text-xl">
+                <li className="mb-2 text-lg font-medium">
                   Share Personalised Link on Instagram
                 </li>
-                <li className="mb-2 font-medium">
+                <li className="mb-2 text-lg font-medium">
                   Sell digital products and services
                 </li>
-                <li className="mb-2 font-medium">
+                <li className="mb-2 text-lg font-medium">
                   Get Payments securely by UPI, Card & Net Banking
                 </li>
-                <li className="mb-2 font-medium">
+                <li className="mb-2 text-lg font-medium">
                   Pay Rs.0 per month and Keep up to 100% of revenue*
                 </li>
-                <li className="mb-2 font-medium">
+                <li className="mb-2 text-lg font-medium">
                   Get 24/7 support to sell.
                 </li>
               </ul>
@@ -228,20 +241,48 @@ const Explore = () => {
               <br />
             </div>
           </div>
+          <br />
+          {/* <div className="py-6 text-2xl font-bold md:text-4xl">FAQs</div> */}
+          {/* <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+            <div className="row-span-2 flex flex-col items-start text-xl md:text-2xl">
+              <h2 className="py-6 text-xl text-blue-800 md:text-2xl lg:text-3xl">
+                Can I add a wide range of products?
+              </h2>
+              <br />
+              <p>
+                Absolutely! Our platform allows you to easily add a wide range
+                of products from your catalog.
+              </p>
+            </div>
+            <div className="row-span-2 flex flex-col items-start text-xl text-blue-800 md:text-2xl">
+              <h2 className="py-6 text-xl md:text-2xl lg:text-3xl">
+                What kind of digital products can I sell?
+              </h2>
+              <br />
+              <p className="text-black">
+                You can sell a wide range of digital products like ebooks,
+                software, videos, music, and more.
+              </p>
+            </div>
+          </div> */}
+
+          {/* import FAQ yourself */}
+          {/* <FAQ/> */}
+          <br />
         </div>
       </div>
 
       <div className="w-full bg-white">
-        <div className="mx-auto flex max-w-7xl flex-col items-center bg-white text-black px-4 py-20">
+        <div className="mx-auto flex max-w-7xl flex-col items-center bg-white text-black">
           <img
             src="/assets/svg/vec-five.png"
             className="icon-container"
-            style={{ width: "300px", height: "250px" }}
+            style={{ width: "450px", height: "350px" }}
           />
-          <h1 className="w-5/6 py-2 text-center text-xl font-bold md:text-3xl">
+          <h1 className="w-5/6 py-2 text-center text-2xl font-bold md:text-4xl">
             Get Inspired
           </h1>
-          <p className="w-5/6 text-center text-lg">
+          <p className="w-5/6 text-center text-xl">
             Don’t miss out on fresh content and follow your favorite creators
             today!
             <br /> Stay in the loop and never miss their newest creations.
@@ -254,6 +295,7 @@ const Explore = () => {
               Discover Creators
             </button>
           </div>
+          <br />
         </div>
       </div>
     </div>
