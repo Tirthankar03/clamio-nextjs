@@ -16,7 +16,12 @@ export const headerLinks = [
     route: '/dashboard',
   },
 ]
-
+export const headerLinkstwo = [
+  {
+    label: 'Refer and Earn',
+    route: '/refer',
+  }
+]
 export const eventDefaultValues = {
   title: '',
   description: '',

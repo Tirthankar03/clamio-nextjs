@@ -43,13 +43,15 @@ export const barData = {
     ],
 };
 
+// /constants/topFansData.js
+
 export const topFans = [
-    'Lorem ipsum dolor',
-    'Consectetur adipis',
-    'Sed do eiusmod',
-    'Incididunt ut',
-    'Labore et dolore',
-    'Ut enim ad minim',
-    'Quis nostrud',
-    'Ullamco labori ut',
+    { id: 1, name: 'John Doe', country: 'USA', watchHours: 120 },
+    { id: 2, name: 'Jane Smith', country: 'UK', watchHours: 110 },
+    { id: 3, name: 'Alice Johnson', country: 'Canada', watchHours: 100 },
+    { id: 4, name: 'Bob Brown', country: 'Australia', watchHours: 95 },
+    { id: 5, name: 'Charlie Davis', country: 'Germany', watchHours: 90 },
+    { id: 6, name: 'Eva Green', country: 'France', watchHours: 85 },
+    { id: 7, name: 'Frank Harris', country: 'Japan', watchHours: 80 },
+    { id: 8, name: 'Grace Lee', country: 'South Korea', watchHours: 75 },
 ];

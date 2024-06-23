@@ -15,7 +15,7 @@ ChartJS.register(
 
 const Charts = () => {
     return (
-        <section className="my-12">
+        <section className="my-12 w-full md:w-5/6 mx-auto">
             <h2 className="text-2xl font-bold mb-4">Followers Analytics</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-gray-100 p-6 rounded">
