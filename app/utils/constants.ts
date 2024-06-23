@@ -71,3 +71,72 @@ export const HotNewproductData = [
 // ------------&&-------------
 
 
+  export const products = [
+    {
+      name: "Tarot Card Reading",
+      description: "Get insights into your future with our detailed Tarot Card Readings.",
+      image: '/tarot.png',
+    },
+    {
+      name: "Travel Guide",
+      description: "Discover the best travel destinations and tips with our comprehensive travel guides.",
+      image: 'travel-guide.png',
+    },
+    {
+      name: "Food Recipes",
+      description: "Explore a variety of delicious recipes that you can try at home.",
+      image: 'book.png',
+    },
+    {
+      name: "Diet Plan",
+      description: "Personalized diet plans to help you achieve your health goals.",
+      image:'\diet.png',
+    },
+    {
+      name: "Digital Art",
+      description: "Explore and purchase unique digital artworks created by talented artists.",
+      image: '\digital-art.png',
+    },
+    {
+      name: "E-Sports Guide",
+      description: "Become a pro gamer with our expert guides and tips on e-sports.",
+      image: '\e-sports.png',
+    }
+  ];
+  
+  // faqData.js
+ 
+export const faqData = [
+  { 
+    id:1,
+    question: 'Can I add a wide range of products?',
+    answer: 'Absolutely! Our platform allows you to easily add a wide range of products from your catalog.',
+  },
+  {
+    id:2,
+    question: 'What kind of digital products can I sell?',
+    answer: 'You can sell a wide range of digital products like ebooks, software, videos, music, and more.',
+  },
+  {
+    id:3,
+    question: 'How do I get paid?',
+    answer: 'You will receive payments directly to your linked bank account through our secure payment gateway.',
+  },
+  {
+    id:4,
+    question: 'Is there a limit to the number of products I can list?',
+    answer: 'No, there is no limit. You can list as many products as you like.',
+  },
+  {
+    id:5,
+    question: 'Can I customize my store?',
+    answer: 'Yes, our platform offers various customization options to help you create a unique store.',
+  },
+  {
+    id:6,
+    question: 'What support is available if I encounter issues?',
+    answer: 'We offer 24/7 customer support to assist you with any issues you may encounter.',
+  },
+];
+
+export default faqData;
