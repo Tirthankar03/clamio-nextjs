@@ -7,6 +7,7 @@ import LikeBtn from "../LikeBtn";
 import Link from "next/link";
 
 interface ProductCardProps {
+  id: string
   productName: string;
   name: string;
   stars: string;
@@ -14,13 +15,13 @@ interface ProductCardProps {
   imageUrl: string;
 }
 
-const ProductCard = ({ productName, name, stars, price, imageUrl }: ProductCardProps) => {
+const ProductCard = ({ id, productName, name, stars, price, imageUrl }: ProductCardProps) => {
   return (
     <div className="relative bg-white border border-gray-300 rounded-lg overflow-hidden text-black w-full shadow-lg ">
       <div className="absolute top-2 right-2">
         <LikeBtn />
       </div>
-      <Link href={`/product/${name}`}>
+      <Link href={`/product/${id}`}>
         <Image
           src={imageUrl}
           alt="product card"

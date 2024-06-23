@@ -54,9 +54,9 @@ export const categoryData = [
 
 export const TopSellingproductData = [
   { id: 1, productName: "Beverage Animation", name: "David Jackoff", stars: "4.7", price: "$25", imageUrl: "/assets/product-img/imgone.png", },
-  { id: 1, productName: "Beverage Animation", name: "David Jackoff", stars: "4.7", price: "$25", imageUrl: "/assets/product-img/imgone.png", },
-  { id: 1, productName: "Beverage Animation", name: "David Jackoff", stars: "4.7", price: "$25", imageUrl: "/assets/product-img/imgone.png", },
-  { id: 1, productName: "Beverage Animation", name: "David Jackoff", stars: "4.7", price: "$25", imageUrl: "/assets/product-img/imgone.png", },
+  { id: 2, productName: "Beverage Animation", name: "David Jackoff", stars: "4.7", price: "$25", imageUrl: "/assets/product-img/imgone.png", },
+  { id: 3, productName: "Beverage Animation", name: "David Jackoff", stars: "4.7", price: "$25", imageUrl: "/assets/product-img/imgone.png", },
+  { id: 4, productName: "Beverage Animation", name: "David Jackoff", stars: "4.7", price: "$25", imageUrl: "/assets/product-img/imgone.png", },
 ];
 
 //Hot and New Product Data

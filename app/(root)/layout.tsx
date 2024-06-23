@@ -1,5 +1,4 @@
 import Footer from "@/components/shared/Footer";
-import HeaderMain from "@/components/shared/HeaderMain";
 import HeaderUser from "@/components/shared/Navbar/HeaderUser";
 
 export default function RootLayout({
