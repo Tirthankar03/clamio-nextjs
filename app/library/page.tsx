@@ -1,5 +1,6 @@
 import LibraryPage from '@/components/LibraryPage/LibraryPage'
-import HeaderUser from '@/components/shared/HeaderUser'
+import HeaderUser from '@/components/shared/Navbar/HeaderUser'
+
 import React from 'react'
 
 function page() {

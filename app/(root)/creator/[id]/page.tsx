@@ -4,6 +4,7 @@ import { FaHeart, FaShoppingCart, FaStar, FaUserCircle } from "react-icons/fa";
 import { PRODUCTS } from "@/constants/index"; 
 import ToggleText from "@/Reusable Components/ToggleText"; 
 import { FaYoutube, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import FavoriteButton from "@/Reusable Components/FavoriteButton";
 
 const ProfilePage = () => {
   return (
@@ -44,10 +45,10 @@ const ProfilePage = () => {
             Top Selling Products
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
-            {PRODUCTS.slice(0, 3).map((product) => (
+            {PRODUCTS.slice(0, 3).map((product,idx) => (
               <div key={product.id} className="bg-white p-4 shadow-lg rounded-lg relative">
                 <div className="bg-yellow-300 h-40 w-full rounded-t-lg relative">
-                  {/* FavoriteButton component */}
+                 <FavoriteButton idx={idx}/>
                 </div>
                 <div className="mt-4">
                   <Link href={`/product/${product.id}`}>
@@ -80,10 +81,10 @@ const ProfilePage = () => {
             All Products
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
-            {PRODUCTS.map((product) => (
+            {PRODUCTS.map((product,idx) => (
               <div key={product.id} className="bg-white p-4 shadow-lg rounded-lg relative">
                 <div className="bg-yellow-300 h-40 w-full rounded-t-lg relative">
-                  {/* FavoriteButton component */}
+                <FavoriteButton idx={idx}/>
                 </div>
                 <div className="mt-4">
                   <p className="text-center font-semibold">{product.title}</p>

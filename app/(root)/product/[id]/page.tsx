@@ -87,7 +87,7 @@ const ProductDetail = () => {
           {ProductDetailsData[0].similarProducts.map((product, idx) => (
             <div key={idx} className="bg-white p-4 shadow-lg rounded-lg relative">
               <div className="bg-yellow-300 h-40 w-full rounded-t-lg relative">
-                <FavoriteButton product={product} />
+                <FavoriteButton product={idx} />
               </div>
               <div className="mt-4">
                 <p className="text-center font-semibold">{product.title}</p>
