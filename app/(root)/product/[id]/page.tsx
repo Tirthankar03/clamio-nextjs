@@ -94,7 +94,7 @@ const ProductDetail = () => {
                 <div className="flex justify-center items-center mt-2">
                   <FaUserCircle className="text-yellow-500" />
                   <Link href={product.creator.link}>
-                    <a className="ml-2 text-blue-500">{product.creator.name}</a>
+                    <p className="ml-2 text-blue-500">{product.creator.name}</p>
                   </Link>
                 </div>
                 <div className="flex justify-center items-center mt-2 text-gray-600">
