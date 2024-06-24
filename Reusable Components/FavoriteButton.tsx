@@ -1,11 +1,11 @@
 "use client"
 import React, { useState } from 'react';
 import { FaHeart } from 'react-icons/fa';
-import { ProdudctDetailData } from '@/constants/data';
+import { ProductDetailsData } from '@/constants/data';
 
 function FavoriteButton({ idx }:any) { // Receive idx as a prop
   const [favorites, setFavorites] = useState(
-    Array(ProdudctDetailData[0].similarProducts.length).fill(false)
+    Array(ProductDetailsData[0].similarProducts.length).fill(false)
   );
 
   const toggleFavorite = () => {
