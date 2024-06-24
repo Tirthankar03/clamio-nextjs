@@ -1,4 +1,4 @@
-import { products } from '@/app/utils/constants'
+import { products } from '@/constants/constants'
 import React from 'react'
 
 function ProductsPage() {

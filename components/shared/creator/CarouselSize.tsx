@@ -8,7 +8,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import CreatorCard from '@/components/shared/creator/CreatorCard';
-import { CreatorData } from "@/app/utils/constants";
+import { CreatorData } from "@/constants/constants";
 
 
 export default function CarouselSize({ type }: any) {

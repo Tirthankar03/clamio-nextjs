@@ -1,5 +1,6 @@
 // components/ImageCarousel.tsx
-
+"use client"
+import Autoplay from "embla-carousel-autoplay"
 import React from "react";
 import {
   Carousel,
@@ -12,7 +13,13 @@ import {
 function ImageCarousel() {
   return (
     <div className="relative mb-12">
-      <Carousel orientation="horizontal">
+      <Carousel orientation="horizontal"
+      
+      plugins={[
+        Autoplay({
+          delay: 2000,
+        }),
+      ]}>
         <CarouselPrevious className="hidden" />
         <CarouselContent>
           <CarouselItem>
