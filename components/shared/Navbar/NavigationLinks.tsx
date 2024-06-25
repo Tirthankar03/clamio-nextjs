@@ -5,11 +5,10 @@ import { FaHeart, FaShoppingCart } from 'react-icons/fa';
 const NavigationLinks = () => {
     return (
         <>
-            <Link href="/sell" className="text-lg hover:text-primary text-syne hidden md:block">
-                Sell Your Product
+            <Link href="/sell" className="text-lg hover:text-primary text-syne hidden md:block"><button type='button' className='bg-black text-white rounded-lg px-4 py-2'>Sell Your Product</button>
             </Link>
-            <FaHeart className="w-6 h-6 hover:text-primary" />
-            <FaShoppingCart className="w-6 h-6 hover:text-primary" />
+            <button type='button'><FaHeart className="w-6 h-6" /></button>
+            <button type='button'><FaShoppingCart className="w-6 h-6 hover:cursor" /></button>
         </>
     );
 };
