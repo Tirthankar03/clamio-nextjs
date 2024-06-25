@@ -4,11 +4,11 @@ import vectwo from "/assets/svg/vec-two.png";
 import vecthree from "/assets/svg/vec-three.png";
 import ProductsCategory from "@/components/shared/ProductsCategory";
 import Hero from "@/components/explore/Hero";
-import FeaturesSection from "@/components/explore/FeaturesSection";
+import FeaturesSection from "@/Reusable Components/FeaturesSection";
 import ProductsPage from "@/components/explore/ProductsPage";
 import MeetTheCreator from "@/components/explore/MeetTheCreator";
 import RevenueSection from "@/components/explore/RevenueSection";
-import FAQ from "@/components/explore/FAQ";
+import FAQ from "@/Reusable Components/FAQ";
 import Footer from "@/components/explore/Footer";
 // import vecfour from "/assets/svg/vec-four.png";
 // import vecfive from "/assets/svg/vec-five.png";
@@ -17,30 +17,19 @@ import Footer from "@/components/explore/Footer";
 const Explore = () => {
   return (
     <div className="">
-    
-     {/* Section 1 */}
-    <Hero/>
+      <Hero />
 
-      {/* Section 2 */}
-     
-   
-        <FeaturesSection/>
-    
+      <FeaturesSection />
 
-      {/* Section 3 */}
+      <ProductsPage />
 
-           
-    
-      <ProductsPage/>
+      <MeetTheCreator />
 
-      <MeetTheCreator/>
+      <RevenueSection />
 
-      <RevenueSection/>
+      <FAQ />
 
-      <FAQ/>
-
-      <Footer/>
-
+      <Footer />
     </div>
   );
 };

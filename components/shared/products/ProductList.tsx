@@ -32,8 +32,7 @@ const ProductList: React.FC<ProductListProps> = ({ products, title }) => {
                         name={product.name}
                         stars={product.stars}
                         price={product.price}
-                        imageUrl={product.imageUrl}
-                    />
+                        imageUrl={product.imageUrl} id={''} />
                 ))}
             </div>
         </div>

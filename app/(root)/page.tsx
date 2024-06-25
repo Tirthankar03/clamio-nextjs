@@ -1,7 +1,7 @@
 // src/pages/index.tsx
 import HorizontalScrollfirst from "@/components/shared/HorizontalScroll";
 import ProductList from "@/components/shared/products/ProductList";
-import { TopSellingproductData, HotNewproductData } from "../utils/constants";
+import { TopSellingproductData, HotNewproductData } from "@/constants/constants";
 
 export default function Home() {
     return (

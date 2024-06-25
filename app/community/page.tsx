@@ -1,6 +1,6 @@
 import React from 'react';
 import ImageCarousel from '@/components/ImageCarousel';
-import { communityCardsData } from '@/app/utils/constants';
+import { communityCardsData } from '@/constants/constants';
 
 function CommunityPage() {
   return (
