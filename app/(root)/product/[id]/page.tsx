@@ -40,7 +40,7 @@ const ProductDetail = () => {
               <div className="flex items-center mb-4">
                 <FaStar className="text-yellow-500 text-xl" />
                 <span className="ml-2 text-xl">{ProductDetailsData[0].productDetails.rating} ({ProductDetailsData[0].productDetails.reviewsCount})</span>
-                <span className="ml-2 text-xl">{ProductDetailsData[0].productDetails.rating} ({ProductDetailsData[0].productDetails.reviewsCount})</span>
+              
               </div>
               <p className="mb-8">{ProductDetailsData[0].productDetails.description}</p>
               <span className="text-2xl font-bold mb-4">${ProductDetailsData[0].productDetails.price}</span>
@@ -87,7 +87,7 @@ const ProductDetail = () => {
           {ProductDetailsData[0].similarProducts.map((product, idx) => (
             <div key={idx} className="bg-white p-4 shadow-lg rounded-lg relative">
               <div className="bg-yellow-300 h-40 w-full rounded-t-lg relative">
-                <FavoriteButton product={idx} />
+                <FavoriteButton idx={idx} />
               </div>
               <div className="mt-4">
                 <p className="text-center font-semibold">{product.title}</p>

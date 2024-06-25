@@ -7,6 +7,7 @@ export const CreatorData = [
 export const ProductDetailsData = [
     {
       productDetails: {
+       
         title: "Beverage Animation",
         creator: {
           name: "David Jackoff",
@@ -53,6 +54,7 @@ export const ProductDetailsData = [
       ],
       similarProducts: [
         {
+          id:1,
           title: "Beverage Animation",
           creator: {
             name: "David Jackoff",
@@ -63,6 +65,7 @@ export const ProductDetailsData = [
           price: 25
         },
         {
+          id:2,
           title: "Beverage Animation",
           creator: {
             name: "David Jackoff",
@@ -73,6 +76,7 @@ export const ProductDetailsData = [
           price: 25
         },
         {
+          id:3,
           title: "Beverage Animation",
           creator: {
             name: "David Jackoff",
@@ -83,6 +87,7 @@ export const ProductDetailsData = [
           price: 25
         },
         {
+          id:4,
           title: "Beverage Animation",
           creator: {
             name: "David Jackoff",
