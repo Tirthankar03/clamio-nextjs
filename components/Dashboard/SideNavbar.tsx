@@ -21,7 +21,9 @@ export default function SideNavbar({}: Props) {
   const onlyWidth = useWindowWidth();
   const mobileWidth = onlyWidth < 768;
   return (
-    <div className="relative min-w-[80px] border-r px-8 pb-10 pt-24">
+    <div className="relative sm:min-w-[80px]  border-r sm:px-8 pb-10 pt-24">
+
+      <div className="hidden sm:block">
       {!mobileWidth && (
         <div className="absolute right-[-20px] top-7">
           <Button
@@ -65,6 +67,7 @@ export default function SideNavbar({}: Props) {
           },
         ]}
       />
+      </div>
     </div>
   );
 }
