@@ -17,7 +17,7 @@ const MeetTheCreator = () => {
             <p className="mb-6">
               Join a community that's teeming with talent and be the first to know about fresh releases, upcoming events, and exclusive goodies from these maestros of the digital realm!
             </p>
-            <button className="px-6 py-3 bg-yellow-500 font-bold text-white rounded-lg">
+            <button className="hidden sm:block px-6 py-3 bg-yellow-500 font-bold text-white rounded-lg">
               Browse Creators
             </button>
           </div>
@@ -30,7 +30,11 @@ const MeetTheCreator = () => {
               />
             </div>
           </div>
+          <button className="px-6 py-3 bg-yellow-500 font-bold text-white rounded-lg">
+              Browse Creators
+            </button>
         </div>
+        
       </section>
     );
   };

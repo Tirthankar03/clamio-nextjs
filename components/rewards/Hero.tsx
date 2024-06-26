@@ -21,7 +21,9 @@ const Hero = () => {
         </div>
         
         {/* Button visible on smaller screens */}
-        <button className="bg-gray-300 sm:hidden self-center md:hidden font-semibold text-black py-3 px-0 w-72 mx-8 rounded text-lg">VIEW DASHBOARD</button>
+        {/* <button className="bg-gray-300 sm:hidden self-center md:hidden font-semibold text-black py-3 px-0 w-72 mx-8 rounded text-lg">VIEW DASHBOARD</button> */}
+        <button className="bg-gray-300 block sm:hidden font-semibold text-black py-2 sm:py-3 sm:px-20 md:py-3 md:px-20 rounded text-lg my-8">VIEW DASHBOARD</button>
+
       </div>
     </section>
   );
