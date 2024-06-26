@@ -16,6 +16,25 @@ export const headerLinks = [
     route: '/dashboard',
   },
 ]
+
+export const headerLinksDashboard = [
+  {
+    label: '1',
+    route: '/community',
+  },
+  {
+    label: '2',
+    route: '/',
+  },
+  {
+    label: '3',
+    route: '/creator',
+  },
+  {
+    label: '4',
+    route: '/dashboard',
+  },
+]
 export const headerLinkstwo = [
   {
     label: 'Refer and Earn',
