@@ -65,6 +65,18 @@ export default function SideNavbar({}: Props) {
             icon: Settings,
             variant: "ghost",
           },
+          {
+            title: "Followers",
+            href: "/dashboard/followers",
+            icon: Settings,
+            variant: "ghost",
+          },
+          {
+            title: "Rewards",
+            href: "/dashboard/reward",
+            icon: Settings,
+            variant: "ghost",
+          },
         ]}
       />
       </div>
