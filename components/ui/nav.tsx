@@ -83,7 +83,7 @@ export function Nav({ links, isCollapsed }: NavProps) {
                     className={cn(
                       "ml-auto",
                       link.variant === "default" &&
-                        "text-background dark:text-white"
+                        "text-background bg-white dark:text-white"
                     )}
                   >
                     {link.label}
