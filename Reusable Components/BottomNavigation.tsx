@@ -53,7 +53,7 @@ function BottomNavigation() {
           <DropdownMenuTrigger >
             <div className='flex flex-col'>
                  <SquareMenu className=' text-gray-600'/>
-                <span className="text-xs text-gray-600 text-center">More</span>
+                <span className="text-sm text-gray-600 text-center">More</span>
             </div>
            
              
