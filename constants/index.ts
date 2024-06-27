@@ -44,7 +44,7 @@ export const headerLinkstwo = [
 export const headerLinksThree = [
   {
     label: 'Sell Your Product',
-    route: '/sell',
+    route: '/explore',
   },
   {
     label: 'Favourites',
