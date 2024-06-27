@@ -5,7 +5,7 @@ import { Nav } from "@/components/ui/nav";
 
 type Props = {};
 
-import { LayoutDashboard, Users, ShoppingCart, Settings, UsersRound, Gift, Heart,ChevronRight } from 'lucide-react';
+import { LayoutDashboard, Users, ShoppingCart, Settings, UsersRound, Gift, Heart,ChevronRight,CreditCard } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 import { useWindowWidth } from "@react-hook/window-size";
@@ -39,6 +39,12 @@ export default function SideNavbar({}: Props) {
       title: "Dashboard",
       href: "/dashboard",
       icon: LayoutDashboard,
+      variant: "default",
+    },
+    {
+      title: "Product",
+      href: "/dashboard/product",
+      icon: CreditCard,
       variant: "default",
     },
     {

@@ -11,6 +11,7 @@ import {
   DollarSign,
   Settings,
   LayoutDashboard,
+  SquareMenu
 } from 'lucide-react';
 import {
   DropdownMenu,
@@ -40,7 +41,7 @@ function BottomNavigation() {
     <div className="fixed bottom-0 left-0 right-0 md:hidden bg-white border-t shadow-md lg:hidden z-50">
       <div className="flex justify-center py-2 gap-8">
         {bottomNavLinks.slice(0, 3).map((link) => (
-          <Link href={link.route} key={link.route} passHref>
+          <Link href={link.route} key={link.route} >
             <div className="flex flex-col items-center text-sm text-gray-600 hover:text-primary-600 cursor-pointer">
               {link.icon}
               <span className="mt-1">{link.label}</span>
@@ -49,14 +50,15 @@ function BottomNavigation() {
         ))}
 
         <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button
-              className="flex  items-center sm:gap-2 text-sm text-gray-600 hover:text-primary-600"
+          <DropdownMenuTrigger >
+            <Button variant="destructive"
+              className="flex flex-col  items-center sm:gap-2 text-sm text-gray-600 hover:text-primary-600"
               onClick={() => setDropdownOpen(!isDropdownOpen)}
             >
+             <SquareMenu className='w-6 h-6'/>
+                {/* <span className="">More</span>  */}
              
-              <span className="mt-1">More</span>
-              <ChevronUp className="h-6 w-6 " />
+           
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent className="w-40 bg-white shadow-lg">
