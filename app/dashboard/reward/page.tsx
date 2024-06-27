@@ -9,7 +9,6 @@ import React from 'react'
 function page() {
   return (
     <div className='overflow-x-hidden'>
-      <HeaderMain />
       <Hero />
       <Steps />
       <CallToAction />
