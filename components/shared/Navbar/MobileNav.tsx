@@ -1,4 +1,3 @@
-
 import {
     Sheet,
     SheetContent,
@@ -9,7 +8,7 @@ import {
 } from "@/components/ui/sheet";
 import Image from "next/image";
 import { Separator } from "@/components/ui/separator";
-import NavItems from "@/components/shared/NavItems";
+import NavItems from "./Nav-items";
 
 const MobileNav = () => {
     return (

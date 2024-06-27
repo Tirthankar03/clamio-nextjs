@@ -11,13 +11,93 @@ export const CreatorData = [
   { id: 10, name: 'Kevin Blue', followers: '17k followers', products: '1.8k Products', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.' },
 ];
 
-// communityData.js
+// Payout Page 
+//Payout Chart Data
+export const chartData = {
+  labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+  datasets: [
+    {
+      label: 'Current Week',
+      data: [500, 1000, 3256, 4000, 3000, 5000, 8000],
+      borderColor: 'black',
+      backgroundColor: 'black',
+      fill: false,
+      tension: 0.4,
+      pointBackgroundColor: 'white',
+    },
+    {
+      label: 'Previous Week',
+      data: [1000, 3000, 5000, 2000, 1500, 6000, 7000],
+      borderColor: 'rgba(75, 192, 192, 0.4)',
+      backgroundColor: 'rgba(75, 192, 192, 0.4)',
+      fill: true,
+      tension: 0.4,
+      pointBackgroundColor: 'white',
+    },
+  ],
+};
+
+//payout chartoptions
+
+export const chartOptions = {
+  responsive: true,
+  plugins: {
+    legend: {
+      position: 'top',
+    },
+    tooltip: {
+      mode: 'index',
+      intersect: false,
+    },
+  },
+  interaction: {
+    mode: 'nearest',
+    intersect: false,
+  },
+  scales: {
+    x: {
+      display: true,
+      title: {
+        display: true,
+        text: 'Month',
+      },
+    },
+    y: {
+      display: true,
+      title: {
+        display: true,
+        text: 'Value',
+      },
+      suggestedMin: 0,
+      suggestedMax: 10000,
+    },
+  },
+};
+
+
+// Payouts data
+export const payoutData = [
+  {
+    title: "Last 7 Days",
+    payout: "Rs.25"
+  },
+  {
+    title: "Last 30 Days",
+    payout: "Rs.700"
+  },
+  {
+    title: "Total Earnings",
+    payout: "Rs.5337"
+  }
+]
+
+
 // communityData.js
 export const communityCardsData = [
 
   {
     title: "Gaming Legends",
-    "members": "1k Members"
+    members: "1k Members"
   },
   {
     title: "Gaming Legends",

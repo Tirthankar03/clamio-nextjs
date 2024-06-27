@@ -41,6 +41,20 @@ export const headerLinkstwo = [
     route: '/refer',
   }
 ]
+export const headerLinksThree = [
+  {
+    label: 'Sell Your Product',
+    route: '/sell',
+  },
+  {
+    label: 'Favourites',
+    route: '/favourites',
+  },
+  {
+    label: 'Cart',
+    route: '/cart',
+  },
+]
 export const eventDefaultValues = {
   title: '',
   description: '',
