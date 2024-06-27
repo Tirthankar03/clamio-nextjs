@@ -51,20 +51,19 @@ function BottomNavigation() {
 
         <DropdownMenu>
           <DropdownMenuTrigger >
-            <Button variant="destructive"
-              className="flex flex-col  items-center sm:gap-2 text-sm text-gray-600 hover:text-primary-600"
-              onClick={() => setDropdownOpen(!isDropdownOpen)}
-            >
-             <SquareMenu className='w-6 h-6'/>
-                {/* <span className="">More</span>  */}
+            <div className='flex flex-col'>
+                 <SquareMenu className=' text-gray-600'/>
+                <span className="text-xs text-gray-600 text-center">More</span>
+            </div>
+           
              
            
-            </Button>
+          
           </DropdownMenuTrigger>
-          <DropdownMenuContent className="w-40 bg-white shadow-lg">
+          <DropdownMenuContent className="w-40 bg-white shadow-lg md:hidden">
             {bottomNavLinks.slice(3).concat(moreLinks).map((link) => (
               <Link href={link.route} key={link.route} passHref>
-                <DropdownMenuItem className="flex items-center text-gray-600 hover:text-primary-600">
+                <DropdownMenuItem className="flex items-center md:hidden text-gray-600 hover:text-primary-600">
                   {link.icon}
                   <span className="ml-2">{link.label}</span>
                 </DropdownMenuItem>

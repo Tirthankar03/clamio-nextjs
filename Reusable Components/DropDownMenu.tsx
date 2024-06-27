@@ -69,7 +69,7 @@ function DropDown() {
           <ChevronDown className="h-4 w-4 lg:hidden" />
         </div>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56 mx-5 bg-white">
+      <DropdownMenuContent className="w-56 mx-5 bg-white lg:hidden">
         {headerLinksDashboard.map((item) => (
           <Link href={item.route} key={item.route}>
             <p>
