@@ -209,4 +209,6 @@ export const PRODUCTS = [
 ];
 
 
+// creator-login 
 
+export const Add = [{ image_url: "/assets/creator-login-img/Add.png" }]
