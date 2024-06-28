@@ -233,14 +233,17 @@ export const chartOptions = {
 export const payoutData = [
   {
     title: "Last 7 Days",
+    date: "Apr 2-9 2021",
     payout: "Rs.25"
   },
   {
     title: "Last 30 Days",
+    date: "Apr-March 2021",
     payout: "Rs.700"
   },
   {
     title: "Total Earnings",
+    date: "Est. by Apr 15 2021",
     payout: "Rs.5337"
   }
 ]
