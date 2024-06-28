@@ -20,13 +20,19 @@ const TopFansSection: React.FC<TopFansSectionProps> = ({ scrollToTopFans }) => {
                     <h3 className="text-xl md:text-2xl mb-4">
                         Lorem ipsum dolor sit amet.
                     </h3>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mt-8">
+                    <div className="flex flex-row sm:flex-row gap-4 justify-center md:justify-start mt-8">
                         <button
                             className="bg-gray-300 font-semibold text-black w-5/6 mx-auto md:mx-0 md:w-44 py-2 md:py-3 md:px-6 rounded text-lg mb-14 mb:my-0"
                             onClick={scrollToTopFans}
                         >
-                            VIEW
+                            View                        </button>
+                        <button
+                            className="bg-gray-300 font-semibold text-black w-5/6 mx-auto md:mx-0 md:w-44 py-2 md:py-3 md:px-6 rounded text-lg mb-14 mb:my-0"
+                            onClick={scrollToTopFans}
+                        >
+                            Refer & Earn
                         </button>
+
                     </div>
                 </div>
                 <div className="order-1 md:order-2 flex justify-center">
