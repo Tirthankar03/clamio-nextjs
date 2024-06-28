@@ -1,5 +1,6 @@
 import Add from "@/public/assets/creator-login-img/Add.png";
 import Image from "next/image";
+import LineChart from "@/components/shared/creator-login/lineChart";
 
 export default function Page() {
     return (
@@ -10,7 +11,9 @@ export default function Page() {
                     <section className="bg-primary mt-10">
                         <div className="flex flex-col w-5/6 mx-auto justify-center items-center pt-40 pb-20">
                             <div >
-                                <Image src={Add} alt="add.img" width={160} />
+                                <button className="" type="button">
+                                    <Image src={Add} alt="add.img" width={160} />
+                                </button>
                             </div>
                             <div>
                                 <button className="text-2xl bg-gray-200 mt-10 rounded-lg p-4">Create your product</button>
@@ -18,6 +21,7 @@ export default function Page() {
                         </div>
                     </section>
                 </div>
+                <LineChart />
             </div>
         </main>
     );

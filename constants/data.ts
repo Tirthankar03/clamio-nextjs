@@ -228,6 +228,70 @@ export const chartOptions = {
   },
 };
 
+//creator login page
+
+//creator login chart
+export const chartDataCreator = {
+  labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+  datasets: [
+    {
+      label: 'Current Week',
+      data: [500, 1000, 3256, 4000, 3000, 5000, 8000],
+      borderColor: 'black',
+      backgroundColor: 'black',
+      fill: false,
+      tension: 0.4,
+      pointBackgroundColor: 'white',
+    },
+    {
+      label: 'Previous Week',
+      data: [1000, 3000, 5000, 2000, 1500, 6000, 7000],
+      borderColor: 'rgba(75, 192, 192, 0.4)',
+      backgroundColor: 'rgba(75, 192, 192, 0.4)',
+      fill: true,
+      tension: 0.4,
+      pointBackgroundColor: 'white',
+    },
+  ],
+};
+
+
+//creator login chartoptions
+
+export const chartOptionsCreator = {
+  responsive: true,
+  plugins: {
+    legend: {
+      position: 'top' as const,
+    },
+    tooltip: {
+      mode: 'index' as const,
+      intersect: false,
+    },
+  },
+  interaction: {
+    mode: 'nearest' as const,
+    intersect: false,
+  },
+  scales: {
+    x: {
+      display: true,
+      title: {
+        display: true,
+        text: 'Month',
+      },
+    },
+    y: {
+      display: true,
+      title: {
+        display: true,
+        text: 'Value',
+      },
+      suggestedMin: 0,
+      suggestedMax: 10000,
+    },
+  },
+};
 
 // Payouts data
 export const payoutData = [
