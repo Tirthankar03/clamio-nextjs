@@ -23,20 +23,12 @@ export default function RootLayout({
           )}
         >
 
-<!--           {/* sidebar */}
-          {/* <p className="border">Sidebar</p> */}
-          <SideNavbar />
 
-          {/* main page */}
-          <div className="p-8 w-full">
-            {children}
-            <div className="block sm:hidden"><h1>BottomBar</h1></div>
-          </div> -->
 
 
         <SideNavbar />
 
-        <div className="w-full">
+        <div className="p-8 w-full">
           {children}
         </div>
 

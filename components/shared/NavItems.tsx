@@ -1,9 +1,9 @@
 'use client';
 
 
-import { headerLinks, headerLinksDashboard } from '@/constants/index'
+// import { headerLinks, headerLinksDashboard } from '@/constants/index'
 
-<!-- import { headerLinks } from '@/constants' -->
+import { headerLinks } from '@/constants' 
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
