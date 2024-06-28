@@ -51,6 +51,20 @@ export const headerLinkstwo = [
     route: '/refer',
   }
 ]
+export const headerLinksThree = [
+  {
+    label: 'Sell Your Product',
+    route: '/explore',
+  },
+  {
+    label: 'Favourites',
+    route: '/favourites',
+  },
+  {
+    label: 'Cart',
+    route: '/cart',
+  },
+]
 export const eventDefaultValues = {
   title: '',
   description: '',
@@ -205,4 +219,6 @@ export const PRODUCTS = [
 ];
 
 
+// creator-login 
 
+export const Add = [{ image_url: "/assets/creator-login-img/Add.png" }]

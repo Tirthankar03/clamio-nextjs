@@ -14,7 +14,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <HeaderMain/>
+        <HeaderMain />
         <div
           className={cn(
             "min-h-screen w-full bg-white text-black flex ",
@@ -22,11 +22,24 @@ export default function RootLayout({
             { "debug-screens": process.env.NODE_ENV === "development" }
           )}
         >
+
+<!--           {/* sidebar */}
+          {/* <p className="border">Sidebar</p> */}
+          <SideNavbar />
+
+          {/* main page */}
+          <div className="p-8 w-full">
+            {children}
+            <div className="block sm:hidden"><h1>BottomBar</h1></div>
+          </div> -->
+
+
         <SideNavbar />
 
         <div className="w-full">
           {children}
         </div>
+
 
         </div>
         <BottomNavigation /> {/* Add BottomNavigation component */}

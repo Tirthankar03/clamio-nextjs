@@ -1,6 +1,10 @@
 'use client';
 
-import { headerLinks } from '@/constants'
+
+import { headerLinks, headerLinksDashboard } from '@/constants/index'
+
+<!-- import { headerLinks } from '@/constants' -->
+
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Separator } from "@/components/ui/separator"
@@ -34,10 +38,11 @@ const NavItems = () => {
        <li className='hidden md:block lg:hidden'><DropDown/></li>
       {/* {headerLinksDashboard.map((link) => {
         const isActive = pathname === link.route;
-        
+
         return (
           <li
             key={link.route}
+
             className={`${
               isActive && 'text-primary-500'
             } flex-center p-medium-16 whitespace-nowrap hidden`}
