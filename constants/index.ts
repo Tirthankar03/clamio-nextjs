@@ -15,26 +15,36 @@ export const headerLinks = [
     label: 'Dashboard',
     route: '/dashboard',
   },
+
 ]
 
-export const headerLinksDashboard = [
+const headerLinksDashboard = [
   {
-    label: '1',
-    route: '/community',
-  },
-  {
-    label: '2',
-    route: '/',
-  },
-  {
-    label: '3',
-    route: '/creator',
-  },
-  {
-    label: '4',
+    label: 'Dashboard',
     route: '/dashboard',
+   
   },
-]
+  {
+    label: 'Product',
+    route: '/',
+    
+  },
+  {
+    label: 'User',
+    route: '/creator',
+
+  },
+  {
+    label: 'Orders',
+    route: '/orders',
+
+  },
+  {
+    label: 'Settings',
+    route: '/settings',
+   
+  },
+];
 export const headerLinkstwo = [
   {
     label: 'Refer and Earn',
@@ -76,15 +86,15 @@ export const GOOGLE_PNG = "\pngegg (12).png"
 export const INSTAGRAM_PNG = "\instagram.png"
 export const CUATE_PNG = "\cuate.png"
 export const STAR_PNG = "\Frame 203.png"
-export const GOLD_SACK = "\gold_sack.png"
-export const signInImage = "\Frame 120.png"
-export const REWARD_PNG = "\Frame 121.png"
-export const EARN_POINT_PNG = "\Frame 122.png"
-export const BRO_PNG = "\Frame 132.png"
-export const BOY_PNG = "\Frame 205.png"
-export const STAR1_PNG = "\star (2).png"
-export const STAR2_PNG = "\police-badge (1).png"
-export const STAR3_PNG = "\star-medal (2).png"
+export const GOLD_SACK = "/gold_sack.png"
+export const signInImage = "/Frame 120.png"
+export const REWARD_PNG = "/Frame 121.png"
+export const EARN_POINT_PNG = "/Frame 122.png"
+export const BRO_PNG = "/Frame 132.png"
+export const BOY_PNG = "/Frame 205.png"
+export const STAR1_PNG = "/star (2).png"
+export const STAR2_PNG = "/police-badge (1).png"
+export const STAR3_PNG = "/star-medal (2).png"
 export const AMICO_PNG = "\amico.png"
 export const BLOCK_PNG = "\Chart.png"
 export const BLOCK_PNG2 = "\Frame (1).png"
