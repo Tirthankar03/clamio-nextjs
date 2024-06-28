@@ -35,7 +35,6 @@ const TopFansSection: React.FC<TopFansSectionProps> = ({ scrollToTopFans }) => {
             </div>
         </section>
     );
-    );
 };
 
 export default TopFansSection;
