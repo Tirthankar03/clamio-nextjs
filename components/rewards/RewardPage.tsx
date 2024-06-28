@@ -11,7 +11,7 @@ import LevelUp from './LevelUp';
 
 const RewardsPage = () => {
   return (
-    <div >
+    <div className='-z-30'>
       <Header/>
       <Hero/>
       <Steps/>

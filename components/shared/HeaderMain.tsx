@@ -15,7 +15,7 @@ const HeaderMain = () => {
             alt="Clamio logo"
           />
         </Link>
-        <nav className="md:flex-between hidden w-full max-w-sm">
+        <nav className="md:flex-between md:mr-24 lg:mr-0 hidden w-full max-w-sm">
           <NavItems />
         </nav>
         <div className="flex md:hidden w-32 justify-end gap-3 ">
