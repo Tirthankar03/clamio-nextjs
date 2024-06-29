@@ -29,7 +29,10 @@ export default function RootLayout({
         </div>
 
         </div>
-        <BottomNavigation /> {/* Add BottomNavigation component */}
+        <div className="mt-10">
+          <BottomNavigation /> 
+        </div>
+        
       </body>
     </html>
   );

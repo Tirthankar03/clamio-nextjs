@@ -1,3 +1,4 @@
+import { User, CreditCard, Users, LifeBuoy, Settings, Keyboard, Plus, Coins } from 'lucide-react';
 export const headerLinks = [
   {
     label: 'Community',
