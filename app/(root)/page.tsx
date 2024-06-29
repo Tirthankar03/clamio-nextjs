@@ -15,7 +15,7 @@ export default function Home() {
                     <div className="grid gap-4 px-4 w-11/12 md:w-5/6 mx-auto pb-10">
                         <ProductList products={TopSellingproductData} title="Top Selling Products" />
                         <ProductList products={HotNewproductData} title="Hot and New Products" />
-                        <ProductList products={TopSellingproductData} title="Top Selling Products" />
+                        <ProductList products={TopSellingproductData} title="People's choice" />
                     </div>
                 </div>
             </div>

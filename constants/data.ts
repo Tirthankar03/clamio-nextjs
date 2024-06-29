@@ -57,46 +57,50 @@ export const ProductDetailsData = [
     similarProducts: [
       {
         id: 1,
-        title: "Beverage Animation",
+        title: "Mystic Tarot Reading",
         creator: {
-          name: "David Jackoff",
-          link: "/creator/1"
+          name: "Luna Lovegood",
+          link: "/creator/2"
         },
-        rating: 4.7,
-        reviewsCount: "1k",
-        price: 25
+        productLink: '/product/2',
+        rating: 4.8,
+        reviewsCount: "2k",
+        price: 15
       },
       {
         id: 2,
-        title: "Beverage Animation",
+        title: "Paris Travel Guide",
         creator: {
-          name: "David Jackoff",
-          link: "/creator/1"
+          name: "John Doe",
+          link: "/creator/3"
         },
-        rating: 4.7,
-        reviewsCount: "1k",
-        price: 25
+        productLink: '/product/3',
+        rating: 4.5,
+        reviewsCount: "1.5k",
+        price: 20
       },
       {
         id: 3,
-        title: "Beverage Animation",
+        title: "Italian Pasta Recipes",
         creator: {
-          name: "David Jackoff",
-          link: "/creator/1"
+          name: "Gordon Ramsay",
+          link: "/creator/4"
         },
-        rating: 4.7,
-        reviewsCount: "1k",
-        price: 25
+        productLink: '/product/4',
+        rating: 4.9,
+        reviewsCount: "2.5k",
+        price: 30
       },
       {
         id: 4,
-        title: "Beverage Animation",
+        title: "Keto Diet Plan",
         creator: {
-          name: "David Jackoff",
-          link: "/creator/1"
+          name: "Jane Smith",
+          link: "/creator/5"
         },
-        rating: 4.7,
-        reviewsCount: "1k",
+        productLink: '/product/5',
+        rating: 4.6,
+        reviewsCount: "1.8k",
         price: 25
       }
     ]

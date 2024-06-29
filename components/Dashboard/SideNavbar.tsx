@@ -43,7 +43,7 @@ export default function SideNavbar({}: Props) {
     },
     {
       title: "Product",
-      href: "/dashboard/product",
+      href: "/dashboard/create-product",
       icon: CreditCard,
       variant: "default",
     },

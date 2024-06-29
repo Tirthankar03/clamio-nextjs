@@ -34,7 +34,10 @@ export default function RootLayout({
 
 
         </div>
-        <BottomNavigation /> {/* Add BottomNavigation component */}
+        <div className="mt-10">
+          <BottomNavigation /> 
+        </div>
+        
       </body>
     </html>
   );

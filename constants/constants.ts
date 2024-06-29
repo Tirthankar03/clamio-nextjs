@@ -94,24 +94,22 @@ export const payoutData = [
 
 // communityData.js
 export const communityCardsData = [
-
   {
     title: "Gaming Legends",
     members: "1k Members"
   },
   {
-    title: "Gaming Legends",
-    members: "1k Members"
+    title: "Travel Enthusiasts",
+    members: "2k Members"
   },
   {
-    title: "Gaming Legends",
-    members: "1k Members"
+    title: "Healthy Recipes",
+    members: "1.5k Members"
   },
   {
-    title: "Gaming Legends",
-    members: "1k Members"
-  }
-
+    title: "Digital Art Hub",
+    members: "3k Members"
+  },
 ];
 
 
@@ -131,21 +129,19 @@ export const categoryData = [
 
 //Product Data
 //Top Selling Product Data
-
 export const TopSellingproductData = [
-  { id: 1, productName: "Beverage Animation", name: "David Jackoff", stars: "4.7", price: "$25", imageUrl: "/assets/product-img/imgone.png", },
-  { id: 1, productName: "Beverage Animation", name: "David Jackoff", stars: "4.7", price: "$25", imageUrl: "/assets/product-img/imgone.png", },
-  { id: 1, productName: "Beverage Animation", name: "David Jackoff", stars: "4.7", price: "$25", imageUrl: "/assets/product-img/imgone.png", },
-  { id: 1, productName: "Beverage Animation", name: "David Jackoff", stars: "4.7", price: "$25", imageUrl: "/assets/product-img/imgone.png", },
+  { id: 1, productName: "Mystic Tarot Reading", name: "Luna Lovegood", stars: "4.8", price: "$15", imageUrl: "/assets/product-img/imgone.png" },
+  { id: 2, productName: "Paris Travel Guide", name: "John Doe", stars: "4.5", price: "$20", imageUrl: "/assets/product-img/imgone.png" },
+  { id: 3, productName: "Italian Pasta Recipes", name: "Gordon Ramsay", stars: "4.9", price: "$30", imageUrl: "/assets/product-img/imgone.png" },
+  { id: 4, productName: "Keto Diet Plan", name: "Jane Smith", stars: "4.6", price: "$25", imageUrl: "/assets/product-img/imgone.png" },
+
 ];
 
-//Hot and New Product Data
-
 export const HotNewproductData = [
-  { id: 1, productName: "Beverage Animation", name: "David Jackoff", stars: "4.7", price: "$25", imageUrl: "/assets/product-img/imgone.png", },
-  { id: 1, productName: "Beverage Animation", name: "David Jackoff", stars: "4.7", price: "$25", imageUrl: "/assets/product-img/imgone.png", },
-  { id: 1, productName: "Beverage Animation", name: "David Jackoff", stars: "4.7", price: "$25", imageUrl: "/assets/product-img/imgone.png", },
-  { id: 1, productName: "Beverage Animation", name: "David Jackoff", stars: "4.7", price: "$25", imageUrl: "/assets/product-img/imgone.png", },
+  { id: 1, productName: "Advanced Tarot Techniques", name: "Mystic Meg", stars: "4.9", price: "$18", imageUrl: "/assets/product-img/imgone.png" },
+  { id: 2, productName: "Tokyo Travel Guide", name: "Jane Doe", stars: "4.4", price: "$22", imageUrl: "/assets/product-img/imgone.png" },
+  { id: 3, productName: "Vegan Dessert Recipes", name: "Jamie Oliver", stars: "4.8", price: "$28", imageUrl: "/assets/product-img/imgone.png" },
+  { id: 4, productName: "Mediterranean Diet Plan", name: "Dr. Health", stars: "4.5", price: "$20", imageUrl: "/assets/product-img/imgone.png" },
 ];
 
 // ------------&&-------------
@@ -160,27 +156,27 @@ export const products = [
   {
     name: "Travel Guide",
     description: "Discover the best travel destinations and tips with our comprehensive travel guides.",
-    image: 'travel-guide.png',
+    image: '/travel-guide.png',
   },
   {
     name: "Food Recipes",
     description: "Explore a variety of delicious recipes that you can try at home.",
-    image: 'book.png',
+    image: '/book.png',
   },
   {
     name: "Diet Plan",
     description: "Personalized diet plans to help you achieve your health goals.",
-    image: '\diet.png',
+    image: '/diet.png',
   },
   {
     name: "Digital Art",
     description: "Explore and purchase unique digital artworks created by talented artists.",
-    image: '\digital-art.png',
+    image: '/digital-art.png',
   },
   {
     name: "E-Sports Guide",
     description: "Become a pro gamer with our expert guides and tips on e-sports.",
-    image: '\e-sports.png',
+    image: '/e-sports.png',
   }
 ];
 

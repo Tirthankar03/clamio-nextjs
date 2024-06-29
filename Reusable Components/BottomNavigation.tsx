@@ -1,4 +1,4 @@
-"use client";
+
 import { useState } from 'react';
 import Link from 'next/link';
 import {
@@ -20,6 +20,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { Button } from "@/components/ui/button";
+import { usePathname } from 'next/navigation';
 
 const bottomNavLinks = [
   { label: 'Dashboard', route: '/dashboard', icon: <LayoutDashboard className="h-6 w-6" /> },
@@ -35,7 +36,8 @@ const moreLinks = [
 ];
 
 function BottomNavigation() {
-  const [isDropdownOpen, setDropdownOpen] = useState(false);
+  
+  
 
   return (
     <div className="fixed bottom-0 left-0 right-0 md:hidden bg-white border-t shadow-md lg:hidden z-50">
@@ -62,8 +64,8 @@ function BottomNavigation() {
           </DropdownMenuTrigger>
           <DropdownMenuContent className="w-40 bg-white shadow-lg md:hidden">
             {bottomNavLinks.slice(3).concat(moreLinks).map((link) => (
-              <Link href={link.route} key={link.route} passHref>
-                <DropdownMenuItem className="flex items-center md:hidden text-gray-600 hover:text-primary-600">
+              <Link  href={link.route} key={link.route} passHref>
+                <DropdownMenuItem  className="flex items-center md:hidden text-gray-600 hover:text-primary-600">
                   {link.icon}
                   <span className="ml-2">{link.label}</span>
                 </DropdownMenuItem>
