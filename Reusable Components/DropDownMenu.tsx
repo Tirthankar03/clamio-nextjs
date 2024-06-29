@@ -25,12 +25,12 @@ const headerLinksDashboard = [
   },
   {
     label: 'Product',
-    route: '/',
+    route: '/dashboard/create-product',
     icon: <CreditCard className="h-4 w-4" />,
   },
   {
     label: 'User',
-    route: '/creator',
+    route: '/dashboard/users',
     icon: <Users className="h-4 w-4" />,
   },
   {
@@ -45,17 +45,17 @@ const headerLinksDashboard = [
   },
   {
     label: 'Payouts',
-    route: '/payouts',
+    route: '/dashboard/payouts',
     icon: <Keyboard className="h-4 w-4" />,
   },
   {
     label: 'Followers',
-    route: '/followers',
+    route: '/dashboard/followers',
     icon: <Plus className="h-4 w-4" />,
   },
   {
     label: 'Reward',
-    route: '/reward',
+    route: '/dashboard/reward',
     icon: <Coins className="h-4 w-4" />,
   },
 ];

@@ -156,27 +156,27 @@ export const products = [
   {
     name: "Travel Guide",
     description: "Discover the best travel destinations and tips with our comprehensive travel guides.",
-    image: 'travel-guide.png',
+    image: '/travel-guide.png',
   },
   {
     name: "Food Recipes",
     description: "Explore a variety of delicious recipes that you can try at home.",
-    image: 'book.png',
+    image: '/book.png',
   },
   {
     name: "Diet Plan",
     description: "Personalized diet plans to help you achieve your health goals.",
-    image: '\diet.png',
+    image: '/diet.png',
   },
   {
     name: "Digital Art",
     description: "Explore and purchase unique digital artworks created by talented artists.",
-    image: '\digital-art.png',
+    image: '/digital-art.png',
   },
   {
     name: "E-Sports Guide",
     description: "Become a pro gamer with our expert guides and tips on e-sports.",
-    image: '\e-sports.png',
+    image: '/e-sports.png',
   }
 ];
 

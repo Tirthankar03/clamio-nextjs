@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="p-4 text-center my-10">
       <div className="grid gap-4 justify-center place-items-center">
         <Image
-          src="/29Y_6di5usrkc5p2qc1k.jpg" // Replace with your image path
+          src="/Frame 203.png" // Replace with your image path
           alt="Star"
           width={300} // Set the desired width of the image
           height={200} // Set the desired height of the image

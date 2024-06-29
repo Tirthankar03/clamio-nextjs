@@ -10,8 +10,8 @@ const FeaturesSection = () => {
         
         {/* Effortless Upload and Sell */}
         <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center justify-between">
-          <div className="relative w-full h-80 md:h-96">
-            <Image src="/13858475_5370051.jpg" alt="Effortless Upload and Sell" layout="fill" objectFit="cover" />
+          <div className="relative w-full h-80 md:h-auto">
+            <img src="/13858475_5370051.jpg" alt="Effortless Upload and Sell" layout="fill" objectFit="cover" />
           </div>
           <div className="text-center md:text-left max-w-lg">
             <h3 className="text-3xl py-4 font-bold">Effortless Upload and Sell</h3>
@@ -24,8 +24,8 @@ const FeaturesSection = () => {
 
         {/* Secure Payments and Same Day Payout */}
         <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center justify-between">
-          <div className="relative w-full h-80 md:h-96 md:order-2">
-            <Image src="/Secure data-bro.png" alt="Secure Payments and Same Day Payout" layout="fill" objectFit="cover" />
+          <div className="relative w-full h-80 md:h-auto md:order-2">
+            <img src="/Secure data-bro.png" alt="Secure Payments and Same Day Payout" layout="fill" objectFit="cover" />
           </div>
           <div className="text-center md:text-left max-w-lg">
             <h3 className="text-3xl py-4 font-bold">Secure Payments and Same Day Payout</h3>
@@ -39,7 +39,7 @@ const FeaturesSection = () => {
         {/* Personalized Dashboard */}
         <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center justify-between">
           <div className="relative w-full h-80 md:h-96">
-            <Image src="/11436084_4720780.jpg" alt="Personalized Dashboard" layout="fill" objectFit="cover" />
+            <img src="/11436084_4720780.jpg" alt="Personalized Dashboard" layout="fill" objectFit="cover" />
           </div>
           <div className="text-center md:text-left max-w-lg">
             <h3 className="text-3xl py-4 font-bold">Personalized Dashboard</h3>
