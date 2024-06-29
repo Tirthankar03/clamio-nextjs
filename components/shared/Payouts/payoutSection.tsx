@@ -11,11 +11,11 @@ const PayoutSection = () => {
                             key={index}
                             className="flex flex-col items-start px-6 py-4 rounded-md bg-white shadow-md gap-8 w-full md:w-auto transform transition duration-300 hover:scale-105 hover:shadow-lg"
                         >
-                            <div className="divone grid grid-cols-2 justify-right items-center">
+                            <div className="divone grid grid-cols-2 justify-right items-center w-full">
                                 <h1 className="text-semibold text-2xl">
                                     {data.title}
                                 </h1>
-                                <h1 className="text-gray-600 text-sm pl-4">
+                                <h1 className="text-gray-600 text-sm pl-4 text-right">
                                     {data.date}
                                 </h1>
                             </div>

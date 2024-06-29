@@ -26,11 +26,11 @@ export default function RootLayout({
 
 
 
-        <SideNavbar />
+          <SideNavbar />
 
-        <div className="p-8 w-full">
-          {children}
-        </div>
+          <div className="p-8 w-full mb-16">
+            {children}
+          </div>
 
 
         </div>
