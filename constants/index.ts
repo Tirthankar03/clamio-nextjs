@@ -57,8 +57,8 @@ export const headerLinksThree = [
     route: '/explore',
   },
   {
-    label: 'Favourites',
-    route: '/favourites',
+    label: 'Wishlist',
+    route: '/wishlist',
   },
   {
     label: 'Cart',

@@ -25,7 +25,7 @@ const HeaderUser = () => {
           <MobileNav />
         </div>
       </div>
-      <div className=" block md:hidden flex w-full">
+      <div className=" md:hidden flex w-full">
         <SearchBar />
       </div>
     </header>

@@ -7,7 +7,7 @@ import LikeBtn from "../LikeBtn";
 import Link from "next/link";
 
 interface ProductCardProps {
-  id: string;
+  id: number;
   productName: string;
   name: string;
   stars: string;

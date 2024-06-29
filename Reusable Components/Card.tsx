@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import { FaHeart, FaShoppingCart, FaStar, FaUserCircle } from 'react-icons/fa';
 import FavoriteButton from './FavoriteButton';
 import { Link } from 'lucide-react';
+import Image from 'next/image';
 
 
 const Card = () => {
@@ -13,8 +14,15 @@ const Card = () => {
     {cardData.map((card,idx) => (
         
       <div key={card.id} className="bg-white p-4 shadow-lg rounded-lg relative">
-        <div className="bg-yellow-300 h-[300px] w-full rounded-t-lg relative">
+        <div className="bg-yellow-300 h-40 w-full rounded-t-lg relative">
         <FavoriteButton key={idx} idx={idx} />
+        {/* <Image
+          src="/assets/product-img/imgone.png"
+          alt="product card"
+          width={1000}
+          height={1000}
+          className="cursor-pointer object-cover h-64 w-full p-4 pb-0"
+        /> */}
         </div>
        
         <div className="mt-4">
