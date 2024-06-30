@@ -1,7 +1,8 @@
 import React from 'react';
 import { BOY_PNG, BRO_PNG } from '@/constants/index';
-import CategoryCarousel from '../shared/creator/CategoryCarousel';
-import Category from '../shared/creator/Category';
+import CategoryCarousel from '@/components/shared/creator/CategoryCarousel';
+import Category from '../creator/Category';
+
 
 const RewardDetails = () => {
   return (

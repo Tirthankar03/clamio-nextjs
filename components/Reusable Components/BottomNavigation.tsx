@@ -41,15 +41,33 @@ function BottomNavigation() {
 
   return (
     <div className="fixed bottom-0 left-0 right-0 md:hidden bg-white border-t shadow-md lg:hidden z-50">
-      <div className="flex justify-center py-2 gap-8">
-        {bottomNavLinks.slice(0, 3).map((link) => (
-          <Link href={link.route} key={link.route} >
-            <div className="flex flex-col items-center text-sm text-gray-600 hover:text-primary-600 cursor-pointer">
-              {link.icon}
-              <span className="mt-1">{link.label}</span>
-            </div>
-          </Link>
-        ))}
+      <div className="flex justify-center py-2 gap-3 sm:gap-8">
+      <Link href="/dashboard">
+          <div className="flex flex-col items-center text-sm text-gray-600 hover:text-primary-600 cursor-pointer">
+            <LayoutDashboard className="h-6 w-6" />
+            <span className="mt-1">Dashboard</span>
+          </div>
+        </Link>
+        
+        <Link href="/dashboard/orders">
+          <div className="flex flex-col items-center px-2 text-sm text-gray-600 hover:text-primary-600 cursor-pointer">
+            <Package className="h-6 w-6" />
+            <span className="mt-1">Orders</span>
+          </div>
+        </Link>
+        
+        <Link href="/dashboard/users">
+          <div className="flex flex-col items-center pl-2 text-sm text-gray-600 hover:text-primary-600 cursor-pointer">
+            <User className="h-6 w-6" />
+            <span className="mt-1">User</span>
+          </div>
+        </Link>
+        <Link href="/dashboard/followers">
+          <div className="flex flex-col items-center text-sm text-gray-600 hover:text-primary-600 cursor-pointer">
+            <Users className="h-6 w-6 hidden sm:block" />
+            <span className="mt-1 hidden sm:block">Followers</span>
+          </div>
+        </Link>
 
         <DropdownMenu>
           <DropdownMenuTrigger >

@@ -1,9 +1,10 @@
-import CallToAction from '@/components/rewards/CallToAction'
-import Hero from '@/components/rewards/Hero'
-import LevelUp from '@/components/rewards/LevelUp'
-import RewardDetails from '@/components/rewards/RewardsDetails'
-import Steps from '@/components/rewards/Steps'
+
 import HeaderMain from '@/components/shared/HeaderMain'
+import CallToAction from '@/components/shared/rewards/CallToAction'
+import Hero from '@/components/shared/rewards/Hero'
+import LevelUp from '@/components/shared/rewards/LevelUp'
+import RewardDetails from '@/components/shared/rewards/RewardsDetails'
+import Steps from '@/components/shared/rewards/Steps'
 import React from 'react'
 
 function page() {

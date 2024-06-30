@@ -1,11 +1,13 @@
 'use client'
 import React from 'react';
-import FileUploader from '@/components/CreateProductPage/FileUploader';
-import Input from '@/components/CreateProductPage/Input';
-import TextArea from '@/components/CreateProductPage/TextArea';
+
 import { useForm } from 'react-hook-form';
 import { Upload } from 'lucide-react'; // Assuming lucide-react is installed for icons
-import ProductsPage from '@/components/explore/ProductsPage';
+import FileUploader from '@/components/shared/CreateProductPage/FileUploader';
+import Input from '@/components/shared/CreateProductPage/Input';
+import TextArea from '@/components/shared/CreateProductPage/TextArea';
+import ProductsPage from '@/components/shared/explore/ProductsPage';
+
 
 const CreateProduct = () => {
   const { register, handleSubmit } = useForm();

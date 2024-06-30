@@ -1,9 +1,9 @@
 // pages/ProductDetail.js
 
-import ProductHighlights from "@/components/ProductDetails/ProductHighlights";
-import ProductInfo from "@/components/ProductDetails/ProductInfo";
-import Reviews from "@/components/ProductDetails/Reviews";
-import SimilarProducts from "@/components/ProductDetails/SimilarProducts";
+import ProductHighlights from "@/components/shared/Product-Details/ProductHighlights";
+import ProductInfo from "@/components/shared/Product-Details/ProductInfo";
+import Reviews from "@/components/shared/Product-Details/Reviews";
+import SimilarProducts from "@/components/shared/Product-Details/SimilarProducts";
 
 
 const ProductDetail = () => {

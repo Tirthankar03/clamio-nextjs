@@ -3,7 +3,7 @@ import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { AiOutlineUser, AiOutlineShopping } from "react-icons/ai";
 import { FaUserPlus } from "react-icons/fa";
-import FavoriteButton from "@/Reusable Components/FavoriteButton";
+import FavoriteButton from "@/components/Reusable Components/FavoriteButton";
 
 interface CreatorCardProps {
   idx: number;

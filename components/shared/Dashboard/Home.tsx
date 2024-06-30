@@ -1,7 +1,7 @@
 
-import Card, { CardProps } from "@/components/Dashboard/Card";
-import PageTitle from "@/components/Dashboard/PageTitle";
-import SalesCard, { SalesProps } from "@/components/Dashboard/SalesCard";
+import Card, { CardProps } from "@/components/shared/Dashboard/Card";
+import PageTitle from "@/components/shared/Dashboard/PageTitle";
+import SalesCard, { SalesProps } from "@/components/shared/Dashboard/SalesCard";
 import { CardContent } from "@/components/ui/card";
 import { Activity, CreditCard, DollarSign, Users } from "lucide-react";
 import Image from "next/image";
@@ -65,7 +65,7 @@ const uesrSalesData: SalesProps[] = [
 
 export default function Home() {
   return (
-    <div className="flex flex-col p-6 gap-5 w-full ">
+    <div className="flex flex-col md:p-6 gap-5 w-full ">
       <PageTitle title="Dashboard" />
       <section className="grid w-full grid-cols-1 gap-4 gap-x-8 transition-all sm:grid-cols-2 xl:grid-cols-4">
         {cardData.map((d, i) => (
@@ -84,10 +84,10 @@ export default function Home() {
 
           <BarChart />
         </CardContent>
-        <CardContent className="flexflex-col shadow justify-between gap-4">
+        <CardContent className="flexflex-col shadow  justify-between gap-4">
           <section>
             <p>Recent Sales</p>
-            <p className="text-sm text-gray-400">
+            <p className="text-sm pb-5 text-gray-400">
               You made 265 sales this month.
             </p>
           </section>

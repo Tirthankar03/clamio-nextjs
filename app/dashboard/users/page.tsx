@@ -7,10 +7,10 @@
 /** @format */
 "use client";
 
-import { DataTable } from "@/components/Dashboard/DataTable";
+import { DataTable } from "@/components/shared/Dashboard/DataTable";
 
 import React from "react";
-import PageTitle from "@/components/Dashboard/PageTitle";
+import PageTitle from "@/components/shared/Dashboard/PageTitle";
 
 type Props = {};
 type Payment = {

@@ -13,10 +13,10 @@
 /** @format */
 "use client";
 
-import { DataTable } from "@/components/Dashboard/DataTable";
+import { DataTable } from "@/components/shared/Dashboard/DataTable";
 import { ColumnDef } from "@tanstack/react-table";
 import React from "react";
-import PageTitle from "@/components/Dashboard/PageTitle";
+import PageTitle from "@/components/shared/Dashboard/PageTitle";
 import { cn } from "@/lib/utils";
 
 type Props = {};

@@ -1,8 +1,10 @@
 import { Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
-import SideNavbar from "@/components/Dashboard/SideNavbar";
-import HeaderMain from "@/components/shared/HeaderMain";
-import BottomNavigation from "@/Reusable Components/BottomNavigation"; // Import the BottomNavigation component
+
+import BottomNavigation from "@/components/Reusable Components/BottomNavigation"; // Import the BottomNavigation component
+import HeaderDashboard from "@/components/shared/Dashboard/HeaderDashboard";
+import SideNavbar from "@/components/shared/Dashboard/SideNavbar";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <HeaderMain />
+        <HeaderDashboard />
         <div
           className={cn(
             "min-h-screen w-full bg-white text-black flex ",
@@ -28,7 +30,7 @@ export default function RootLayout({
 
         <SideNavbar />
 
-        <div className="p-8 w-full">
+        <div className="md:p-8 w-full">
           {children}
         </div>
 

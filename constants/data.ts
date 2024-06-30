@@ -107,15 +107,39 @@ export const ProductDetailsData = [
   }
 ];
 
-export const cardData = Array.from({ length: 12 }).map((_, idx) => ({
-  id: idx,
-  title: 'Beverage Animation',
-  author: 'David Jackoff',
-  rating: 4.7,
-  numReviews: 1000,
-  price: 25,
-  link: "/creator/1"
-}));
+export const cardData = [
+  { id: 1, title: 'Coffee Brew', author: 'David Jackoff', rating: 4.8, numReviews: 1200, price: 15, link: "/creator/1" },
+  { id: 2, title: 'Tea Blend', author: 'Sarah Smith', rating: 4.6, numReviews: 850, price: 12, link: "/creator/2" },
+  { id: 3, title: 'Smoothie Delight', author: 'John Doe', rating: 4.7, numReviews: 900, price: 10, link: "/creator/3" },
+  { id: 4, title: 'Latte Art', author: 'Emily White', rating: 4.9, numReviews: 1500, price: 20, link: "/creator/4" },
+  { id: 5, title: 'Espresso Shot', author: 'Chris Black', rating: 4.5, numReviews: 700, price: 8, link: "/creator/5" },
+  { id: 6, title: 'Herbal Infusion', author: 'Anna Green', rating: 4.4, numReviews: 650, price: 14, link: "/creator/6" },
+  { id: 7, title: 'Cappuccino', author: 'Michael Brown', rating: 4.6, numReviews: 1100, price: 18, link: "/creator/7" },
+  { id: 8, title: 'Fruit Punch', author: 'Laura Blue', rating: 4.8, numReviews: 1300, price: 16, link: "/creator/8" },
+  { id: 9, title: 'Mocha Mix', author: 'James Red', rating: 4.7, numReviews: 1000, price: 19, link: "/creator/9" },
+  { id: 10, title: 'Iced Tea', author: 'Nancy Yellow', rating: 4.3, numReviews: 500, price: 7, link: "/creator/10" },
+  { id: 11, title: 'Green Tea', author: 'Paul Purple', rating: 4.6, numReviews: 900, price: 13, link: "/creator/11" },
+  { id: 12, title: 'Chai Latte', author: 'Susan Orange', rating: 4.9, numReviews: 1400, price: 17, link: "/creator/12" },
+];
+
+// src/constants/profileData.js
+// src/constants/profileData.js
+export const profileData = [
+  { name: "David Jackoff", totalProducts: 230, followers: "1M" },
+  { name: "Sarah Smith", totalProducts: 120, followers: "500K" },
+  { name: "John Doe", totalProducts: 150, followers: "800K" },
+  { name: "Emily White", totalProducts: 180, followers: "1.2M" },
+  { name: "Chris Black", totalProducts: 90, followers: "400K" },
+  { name: "Anna Green", totalProducts: 200, followers: "1.1M" },
+  { name: "Michael Brown", totalProducts: 220, followers: "950K" },
+  { name: "Laura Blue", totalProducts: 160, followers: "700K" },
+  { name: "James Red", totalProducts: 110, followers: "600K" },
+  { name: "Nancy Yellow", totalProducts: 80, followers: "300K" },
+  { name: "Paul Purple", totalProducts: 100, followers: "450K" },
+  { name: "Susan Orange", totalProducts: 140, followers: "550K" },
+];
+
+
 
 // chartData.ts Followers Page
 
