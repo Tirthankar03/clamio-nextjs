@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // pages/index.tsx
 import Head from 'next/head';
 import Hero from '@/components/shared/creator-login/Hero';
@@ -16,3 +17,5 @@ export default function Home() {
         </div>
     );
 }
+=======
+>>>>>>> f1378455759613a353850f92bf0f2d5287aef44e
