@@ -19,7 +19,7 @@ const Card = ({ card, idx }:any) => {
           className="cursor-pointer"
         />
       </div>
-
+        
       <div className="mt-4">
         <p className="text-center font-semibold">{card.title}</p>
         <div className="flex justify-center items-center mt-2">
