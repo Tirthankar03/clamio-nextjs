@@ -26,8 +26,8 @@ ChartJS.register(
 
 const LineChart: React.FC = () => {
     return (
-        <div className='w-full xl:w-9/12'>
-            <h2 className='text-bold text-4xl p-4 mt-4'>Total Payout</h2>
+        <div className='w-5/6'>
+            <h2 className='text-bold text-4xl p-4 pl-0 mt-4'>Total Payout</h2>
             <Line data={chartDataCreator} options={chartOptionsCreator} />
         </div>
     );
