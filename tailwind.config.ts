@@ -50,7 +50,7 @@ module.exports = {
       colors: {
         primary: "#FFDB58",
         secondary: "#212121",
-                grey: {
+        grey: {
           600: '#545454', // Subdued - color name in figma
           500: '#757575',
           400: '#AFAFAF', // Disabled - color name in figma

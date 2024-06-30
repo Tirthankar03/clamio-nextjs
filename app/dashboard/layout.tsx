@@ -24,22 +24,15 @@ export default function RootLayout({
             { "debug-screens": process.env.NODE_ENV === "development" }
           )}
         >
-
-
-
-
-        <SideNavbar />
-
-        <div className="md:p-8 w-full">
-          {children}
-        </div>
-
+          <SideNavbar />
+          <div className="p-8 w-full mb-16">
+            {children}
+          </div>
 
         </div>
         <div className="mt-10">
-          <BottomNavigation /> 
+          <BottomNavigation />
         </div>
-        
       </body>
     </html>
   );

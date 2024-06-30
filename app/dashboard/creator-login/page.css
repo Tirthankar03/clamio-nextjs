@@ -1,0 +1,24 @@
+.transition-container {
+    overflow: hidden;
+}
+
+.transition-item {
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slide-in 3s forwards;
+}
+
+.transition-item.delay-1 {
+    animation-delay: 0.5s;
+}
+
+.transition-item.delay-2 {
+    animation-delay: 1s;
+}
+
+@keyframes slide-in {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
