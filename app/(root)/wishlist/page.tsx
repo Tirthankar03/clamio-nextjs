@@ -1,5 +1,6 @@
-import LibraryPage from '@/components/library/LibraryPage'
+
 import HeaderUser from '@/components/shared/Navbar/HeaderUser'
+import LibraryPage from '@/components/shared/library/LibraryPage'
 
 import React from 'react'
 
