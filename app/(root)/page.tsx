@@ -1,6 +1,4 @@
 // src/pages/index.tsx
-'use client';
-
 import HorizontalScrollfirst from "@/components/shared/HorizontalScroll";
 import FilteredProductList from '@/components/shared/products/ProductFilter';
 
