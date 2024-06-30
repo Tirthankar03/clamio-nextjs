@@ -1,4 +1,4 @@
-// src/components/shared/cards/ProductCard.tsx
+// src/components/shared/cardsCard.tsx
 "use client";
 import { faHeart, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

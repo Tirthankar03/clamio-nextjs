@@ -24,7 +24,9 @@ export default function CarouselSize({ type }: any) {
           {CreatorData.map((item, index) => (
             <CarouselItem key={index} className="basis-full flex sm:basis-1/2 md:basis-1/2 lg:basis-1/3 2xl:basis-1/4 p-2">
               <CreatorCard
+              
                 idx={index}
+                id={item.id}
                 name={item.name}
                 followers={item.followers}
                 products={item.products}

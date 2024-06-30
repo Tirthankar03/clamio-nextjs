@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  BarChartBig,
   ChevronDown,
   Coins,
   CreditCard,
@@ -7,6 +8,7 @@ import {
   Keyboard,
   LifeBuoy,
   LogOut,
+  NotebookTabs,
   Plus,
   Settings,
   User,
@@ -37,6 +39,18 @@ const headerLinksDashboard = [
     label: 'Orders',
     route: '/dashboard/orders',
     icon: <LifeBuoy className="h-4 w-4" />,
+  },
+  {
+    label: "Analytics",
+    route: "/dashboard/analytics",
+    icon: <BarChartBig className="h-4 w-4" />,
+    variant: "ghost",
+  },
+  {
+    label: "Product Listing",
+    route: "/dashboard/product-listing",
+    icon: <NotebookTabs className="h-4 w-4" />,
+    variant: "ghost",
   },
   {
     label: 'Settings',
