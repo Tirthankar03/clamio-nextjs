@@ -11,7 +11,9 @@ import {
   Settings,
   LayoutDashboard,
   SquareMenu,
+  NotebookTabs,
   CreditCard,
+  BarChartBig,
 } from "lucide-react";
 import {
   DropdownMenu,
@@ -21,6 +23,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 import { usePathname } from "next/navigation";
+import { Label } from "recharts";
 
 const bottomNavLinks = [
   {
@@ -65,6 +68,19 @@ const moreLinks = [
     label: "Product",
     route: "/dashboard/create-product",
     icon: <CreditCard className="h-6 w-6" />,
+    variant: "default",
+  },
+  {
+    label: "Analytics",
+    route: "/dashboard/analytics",
+    icon: <BarChartBig className="h-6 w-6" />,
+    variant: "ghost",
+  },
+  {
+    label: "Product Listing",
+    route: "/dashboard/product-listing",
+    icon: <NotebookTabs className="h-6 w-6" />,
+    variant: "ghost",
   },
 ];
 
@@ -107,17 +123,14 @@ function BottomNavigation() {
             </div>
           </DropdownMenuTrigger>
           <DropdownMenuContent className="w-40 bg-white shadow-lg md:hidden">
-            {bottomNavLinks
-              .slice(3)
-              .concat(moreLinks)
-              .map((link) => (
-                <Link href={link.route} key={link.route} passHref>
-                  <DropdownMenuItem className="flex items-center md:hidden text-gray-600 hover:text-primary-600">
-                    {link.icon}
-                    <span className="ml-2">{link.label}</span>
-                  </DropdownMenuItem>
-                </Link>
-              ))}
+            {moreLinks.map((link) => (
+              <Link href={link.route} key={link.route} passHref>
+                <DropdownMenuItem className="flex items-center md:hidden text-gray-600 hover:text-primary-600">
+                  {link.icon}
+                  <span className="ml-2">{link.label}</span>
+                </DropdownMenuItem>
+              </Link>
+            ))}
           </DropdownMenuContent>
         </DropdownMenu>
       </div>

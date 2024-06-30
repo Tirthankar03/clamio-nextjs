@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import FavoriteButton from '@/Reusable Components/FavoriteButton';
+import FavoriteButton from '@/components/Reusable Components/FavoriteButton';
 import { FaUserCircle, FaStar, FaShoppingCart } from 'react-icons/fa';
 
 const ProductCardUser = ({ product, idx }: {product: string, idx: number}) => {

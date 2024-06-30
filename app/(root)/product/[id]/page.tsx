@@ -9,7 +9,7 @@ import SimilarProducts from "@/components/shared/Product-Details/SimilarProducts
 const ProductDetail = () => {
   return (
     <div className="container mx-auto p-6">
-      <ProductInfo />
+      <ProductInfo   />
       <ProductHighlights />
       <Reviews />
       <SimilarProducts />
