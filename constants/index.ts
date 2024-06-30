@@ -167,57 +167,57 @@ export const faqs = [
 
 // constants.js
 
-export const PRODUCTS = [
-  {
-    id: 1,
-    title: "Beverage Animation",
-    seller: "David Jackoff",
-    rating: 4.7,
-    numRatings: 1000,
-    price: 25,
-  },
-  {
-    id: 2,
-    title: "Another Product",
-    seller: "John Doe",
-    rating: 4.5,
-    numRatings: 800,
-    price: 30,
-  },
-  {
-    id: 3,
-    title: "Third Product",
-    seller: "Jane Smith",
-    rating: 4.9,
-    numRatings: 1200,
-    price: 20,
-  },
-  {
-    id: 4,
-    title: "Third Product",
-    seller: "Jane Smith",
-    rating: 4.9,
-    numRatings: 1200,
-    price: 20,
-  },
-  {
-    id: 5,
-    title: "Third Product",
-    seller: "Jane Smith",
-    rating: 4.9,
-    numRatings: 1200,
-    price: 20,
-  },
-  {
-    id: 6,
-    title: "Third Product",
-    seller: "Jane Smith",
-    rating: 4.9,
-    numRatings: 1200,
-    price: 20,
-  },
-  // Add more products as needed
-];
+// export const PRODUCTS = [
+//   {
+//     id: 1,
+//     title: "Beverage Animation",
+//     author: "David Jackoff",
+//     rating: 4.7,
+//     numRatings: 1000,
+//     price: 25,
+//   },
+//   {
+//     id: 2,
+//     title: "Another Product",
+//     author: "John Doe",
+//     rating: 4.5,
+//     numRatings: 800,
+//     price: 30,
+//   },
+//   {
+//     id: 3,
+//     title: "Third Product",
+//     author: "Jane Smith",
+//     rating: 4.9,
+//     numRatings: 1200,
+//     price: 20,
+//   },
+//   {
+//     id: 4,
+//     title: "Third Product",
+//     author: "Jane Smith",
+//     rating: 4.9,
+//     numRatings: 1200,
+//     price: 20,
+//   },
+//   {
+//     id: 5,
+//     title: "Third Product",
+//     author: "Jane Smith",
+//     rating: 4.9,
+//     numRatings: 1200,
+//     price: 20,
+//   },
+//   {
+//     id: 6,
+//     title: "Third Product",
+//     author: "Jane Smith",
+//     rating: 4.9,
+//     numRatings: 1200,
+//     price: 20,
+//   },
+//   // Add more products as needed
+// ];
 
 
 // creator-login 

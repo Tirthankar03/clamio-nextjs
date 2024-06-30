@@ -1,4 +1,4 @@
-import Home from '@/components/Dashboard/Home'
+import Home from '@/components/shared/Dashboard/Home'
 import React from 'react'
 
 function page() {
