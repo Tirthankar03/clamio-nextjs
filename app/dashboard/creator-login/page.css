@@ -22,3 +22,17 @@
         transform: translateX(0);
     }
 }
+
+/* global styles or in a specific CSS file */
+
+.blurred {
+    filter: blur(5px);
+    pointer-events: none;
+}
+
+.main-grid-4 {
+    filter: none !important;
+    pointer-events: auto !important;
+}
+
+/* Ensure main-grid-4 class is applied to the specific part of the MainContent you want unblurred */
