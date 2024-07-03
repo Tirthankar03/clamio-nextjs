@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Hero from '@/components/shared/creator-login/Hero';
 import MainContent from '@/components/shared/creator-login/Main';
+import { useMediaQuery } from 'react-responsive';
 
 export default function Home() {
     const [isBlurred, setIsBlurred] = useState(false);
@@ -15,21 +16,20 @@ export default function Home() {
     };
 
     const handleClickOutside = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-        if (isBlurred && !event.target.closest('.main-grid-4')) {
+        if (isBlurred && !(event.target as HTMLElement).closest('.main-grid-4')) {
             setIsBlurred(false);
         }
     };
 
+    const isSmallScreen = useMediaQuery({ query: '(max-width: 767px)' });
+
     return (
         <>
-            <div className="min-h-screen bg-gray-100 hidden md:block" onClick={handleClickOutside}>
+            <div className="min-h-screen md:bg-gray-100" onClick={handleClickOutside}>
                 <div className={`main-content ${isBlurred ? 'blurred' : ''}`}>
-                    <Hero onButtonClick={handleButtonClick} />
-                    <MainContent isCardFocused={isCardFocused} />
+                    <Hero onButtonClick={handleButtonClick} showCreateButtons={isSmallScreen} />
+                    <MainContent isCardFocused={isCardFocused} hideCreateSection={isSmallScreen} />
                 </div>
-            </div>
-            <div className='min-h-screen justify-center items-center text-center align-center block md:hidden'>
-                Mobile View Unavailable
             </div>
         </>
     );
