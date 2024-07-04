@@ -41,7 +41,9 @@ const NavItems = () => {
 
       {!isLoggedIn && ( // Show styled login and signup buttons if not logged in
         <>
-          <li>
+        <div className='md:mr-5 flex gap-2'>
+
+             <li>
             <Button className=" font-semibold hover:bg-yellow-400 px-4 py-2 rounded-md shadow-md">
               <Link href="/login">Login</Link>
             </Button>
@@ -51,6 +53,8 @@ const NavItems = () => {
               <Link href="/signup">Signup</Link>
             </Button>
           </li>
+        </div>
+       
         </>
       )}
     </ul>
