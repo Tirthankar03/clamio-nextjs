@@ -1,35 +1,43 @@
+'use client'
 import React from "react";
-import vecone from "../../../public/assets/svg/vec-one.png";
-import vectwo from "/assets/svg/vec-two.png";
-import vecthree from "/assets/svg/vec-three.png";
-import ProductsCategory from "@/components/shared/ProductsCategory";
+import { useSelector } from "react-redux";
+import Hero from "@/components/shared/explore/Hero";
+import HeroPage from "@/components/shared/afterlogin/HeroPage";
 import FeaturesSection from "@/components/Reusable Components/FeaturesSection";
 import ProductsPage from "@/components/shared/explore/ProductsPage";
 import MeetTheCreator from "@/components/shared/explore/MeetTheCreator";
 import RevenueSection from "@/components/shared/explore/RevenueSection";
 import FAQ from "@/components/Reusable Components/FAQ";
 import Footer from "@/components/shared/explore/Footer";
-import Hero from "@/components/shared/explore/Hero";
-// import vecfour from "/assets/svg/vec-four.png";
-// import vecfive from "/assets/svg/vec-five.png";
-// import vecsix from "/assets/svg/vec-six.png";
+import Pricing from "@/components/shared/afterlogin/Pricing";
+import { RootState } from "@/Store/store";
 
 const Explore = () => {
+  const isLoggedIn = useSelector((store: RootState) => store.user.isLoggedIn);
+
   return (
     <div className="">
-      <Hero />
+      {isLoggedIn ? (
+        <>
+          <HeroPage />
+          <Pricing />
+          <ProductsPage />
+          <FAQ />
+          <Footer />
+        </>
+      ) : (
+        <>
+          <Hero />
+          <FeaturesSection />
+          <ProductsPage />
+          <MeetTheCreator />
+          <RevenueSection />
+          <FAQ />
+          <Footer />
+        </>
+      )}
 
-      <FeaturesSection />
 
-      <ProductsPage />
-
-      <MeetTheCreator />
-
-      <RevenueSection />
-
-      <FAQ />
-
-      <Footer />
     </div>
   );
 };

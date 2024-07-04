@@ -26,10 +26,14 @@ ChartJS.register(
 
 const LineChart: React.FC = () => {
     return (
-        <div className='w-full xl:w-9/12'>
-            <h2 className='text-bold text-4xl p-4 mt-4'>Total Payout</h2>
-            <Line data={chartData} options={chartOptions} />
+        <div className="max-w-7xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+        <div className="p-6">
+            <h2 className="text-3xl font-semibold mb-4">Total Payout</h2>
+            <div className="h-96">
+                <Line id="line-chart" data={chartData} options={chartOptions} />
+            </div>
         </div>
+    </div>
     );
 };
 

@@ -81,10 +81,9 @@ export const eventDefaultValues = {
 
 
 
-export const APPLE_PNG = "\pngegg (13).png"
+export const INSTAGRAM_PNG = "/instagram.png"
 export const FACEBOOK_PNG = "\pngegg (11).png"
 export const GOOGLE_PNG = "\pngegg (12).png"
-export const INSTAGRAM_PNG = "\instagram.png"
 export const CUATE_PNG = "\cuate.png"
 export const STAR_PNG = "\Frame 203.png"
 export const GOLD_SACK = "/gold_sack.png"
@@ -161,6 +160,28 @@ export const faqs = [
   {
     question: 'What support is available if I encounter issues?',
     answer: 'We offer 24/7 customer support to assist you with any issues you may encounter.',
+  },
+];
+
+// pricingConstants.js
+export const pricingData = [
+  {
+    title: 'You',
+    description: 'You will be charged 12.5%',
+    example: {
+      productPrice: 'Rs.100',
+      customerPay: 'Rs.100',
+      earning: 'Rs.87.5',
+    },
+  },
+  {
+    title: 'Your Customers',
+    description: 'Customers will be charged 12.5%',
+    example: {
+      productPrice: 'Rs.100',
+      customerPay: 'Rs.112.5',
+      earning: 'Rs.100',
+    },
   },
 ];
 

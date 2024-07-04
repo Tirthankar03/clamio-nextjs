@@ -7,6 +7,7 @@ import ForgotPassword from "@/components/shared/Login/ForgotPassword";
 import LoginButton from "@/components/shared/buttons/Login";
 
 const Login: React.FC = () => {
+
     return (
         <div className="flex items-center justify-center h-screen w-screen bg-secondary overflow-hidden">
             <div className="w-11/12 sm:w-3/4 md:w-1/2 lg:w-1/3 xl:w-1/4 rounded-lg bg-white p-5">
