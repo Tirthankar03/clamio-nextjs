@@ -7,7 +7,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import faqData from '@/constants/constants';
+import faqData from '@/constants/data';
 
 function FAQ() {
   return (

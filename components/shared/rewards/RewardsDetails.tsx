@@ -1,5 +1,5 @@
 import React from 'react';
-import { BOY_PNG, BRO_PNG } from '@/constants/index';
+import { BOY_PNG, BRO_PNG } from '@/constants/data';
 import CategoryCarousel from '@/components/shared/creator/CategoryCarousel';
 import Category from '../creator/Category';
 

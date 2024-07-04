@@ -1,5 +1,5 @@
 import React from 'react';
-import { STAR1_PNG, STAR2_PNG, STAR3_PNG } from '@/constants/index';
+import { STAR1_PNG, STAR2_PNG, STAR3_PNG } from '@/constants/data';
 
 const LevelUp = () => {
   return (

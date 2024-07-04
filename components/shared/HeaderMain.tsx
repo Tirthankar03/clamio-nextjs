@@ -1,9 +1,12 @@
 // import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
+'use client'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '../ui/button'
 import NavItems from './NavItems'
 import MobileNav from './MobileNav'
+import { Provider } from 'react-redux'
+import { store } from '@/Store/store'
 
 const HeaderMain = () => {
   return (
@@ -19,7 +22,11 @@ const HeaderMain = () => {
 
         {/* <SignedIn> */}
           <nav className="md:flex-between hidden w-full max-w-sm">
-            <NavItems />
+            <Provider store={store}>
+
+               <NavItems />
+            </Provider>
+           
           </nav>
         {/* </SignedIn> */}
 

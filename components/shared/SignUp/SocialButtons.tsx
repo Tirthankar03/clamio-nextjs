@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Facebook from "@/public/assets/Login-img/Facebook.png";
 import Google from "@/public/assets/Login-img/Google.png";
 import Apple from "@/public/assets/Login-img/Apple.png";
-import { INSTAGRAM_PNG } from "@/constants";
+import { INSTAGRAM_PNG } from "@/constants/data";
 
 const SocialButtons = () => (
     <div className="flex gap-10 items-center justify-center cursor-pointer">

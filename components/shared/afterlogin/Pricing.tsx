@@ -1,5 +1,5 @@
 import React from 'react';
-import { pricingData } from '@/constants/index';
+import { pricingData } from '@/constants/data';
 
 const Pricing = () => {
   return (

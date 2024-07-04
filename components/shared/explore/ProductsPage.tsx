@@ -1,4 +1,5 @@
-import { products } from '@/constants/constants'
+
+import { products } from '@/constants/data'
 import React from 'react'
 
 function ProductsPage() {
