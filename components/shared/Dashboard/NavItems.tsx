@@ -4,7 +4,7 @@
 import DropDown from '@/components/Reusable Components/DropDownMenu';
 // import { headerLinks, headerLinksDashboard } from '@/constants/index'
 
-import { headerLinks } from '@/constants' 
+import { headerLinks } from '@/constants/data' 
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'

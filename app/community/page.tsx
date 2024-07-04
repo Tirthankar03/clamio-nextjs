@@ -1,6 +1,6 @@
 import React from 'react';
 import ImageCarousel from '@/components/ImageCarousel';
-import { communityCardsData } from '@/constants/constants';
+import { communityCardsData } from '@/constants/data';
 
 function CommunityPage() {
   return (
@@ -17,7 +17,7 @@ function CommunityPage() {
             <h2 className="text-xl font-semibold">Reach Out</h2>
           </div>
           <div className="text-center">
-            <img src="/cuate.png" alt="Find Common Ground" className="mx-auto mb-4 object-cover" />
+            <img src="/cuate2.png" alt="Find Common Ground" className="mx-auto mb-4 object-cover" />
             <h2 className="text-xl font-semibold">Find Common Ground</h2>
           </div>
           <div className="text-center">

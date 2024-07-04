@@ -1,4 +1,4 @@
-import { categoryData } from "@/constants/constants";
+import { categoryData } from "@/constants/data";
 import React from "react";
 
 function Category() {

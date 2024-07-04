@@ -9,7 +9,7 @@ import {
   CarouselNext,
 } from "@/components/ui/carousel"; // Adjust the path as necessary
 
-import { categoryData } from "@/constants/constants";
+import { categoryData } from "@/constants/data";
 
 function CategoryCarousel() {
   return (

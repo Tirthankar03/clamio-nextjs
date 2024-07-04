@@ -1,4 +1,4 @@
-import { CUATE_PNG } from '@/constants';
+import { CUATE_PNG } from '@/constants/data';
 import React from 'react';
 
 
