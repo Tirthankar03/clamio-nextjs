@@ -1,5 +1,5 @@
 import React from 'react';
-import { EARN_POINT_PNG, REWARD_PNG, signInImage } from '@/constants/index';
+import { EARN_POINT_PNG, REWARD_PNG, signInImage } from '@/constants/data';
 
 const Steps = () => {
   return (

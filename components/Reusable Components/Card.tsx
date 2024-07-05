@@ -7,6 +7,8 @@ import Image from 'next/image';
 const Card = ({ card, idx }:any) => {
   return (
     <div key={card.id} className="bg-white p-4 shadow-lg rounded-lg relative">
+      <Link href={`/product/${card.id}`}>
+      
       <div className="relative  w-full rounded-t-lg overflow-hidden">
         <FavoriteButton key={idx} idx={idx} />
         <Image
@@ -19,6 +21,8 @@ const Card = ({ card, idx }:any) => {
           className="cursor-pointer"
         />
       </div>
+      </Link>
+      
         
       <div className="mt-4">
         <p className="text-center font-semibold">{card.title}</p>

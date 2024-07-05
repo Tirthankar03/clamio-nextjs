@@ -1,5 +1,5 @@
 import React from 'react';
-import { CUATE_PNG, GOLD_SACK } from '@/constants/index';
+import { CUATE_PNG, GOLD_SACK } from '@/constants/data';
 
 const Hero = () => {
   return (

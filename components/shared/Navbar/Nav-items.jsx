@@ -1,6 +1,6 @@
 'use client';
 
-import { headerLinksThree, headerLinksDashboard } from '@/constants/index'
+import { headerLinksThree, headerLinksDashboard } from '@/constants/data'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Separator } from "@/components/ui/separator"
