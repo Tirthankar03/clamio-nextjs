@@ -1,9 +1,10 @@
-// import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
+'use client'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Button } from '../ui/button'
-import NavItems from './NavItems'
+import NavItems from '@/components/shared/Dashboard/NavItems'
 import MobileNav from './MobileNav'
+import { Provider } from 'react-redux'
+import { store } from '@/Store/store'
 
 const HeaderDashboard = () => {
   return (
@@ -15,11 +16,19 @@ const HeaderDashboard = () => {
             alt="Clamio logo"
           />
         </Link>
-        <nav className="md:flex-between md:mr-24 lg:mr-0 hidden w-full max-w-sm">
-          <NavItems />
+        <nav className="md:flex-between md:mr-24 lg:mr-8  xl:mr-0 hidden w-full max-w-sm">
+          <Provider store={store}>
+
+             <NavItems />
+          </Provider>
+         
         </nav>
         <div className="flex md:hidden w-32 justify-end gap-3 ">
-          <MobileNav />
+          <Provider store={store}>
+
+             <MobileNav />
+          </Provider>
+         
         </div>
       </div>
     </header>

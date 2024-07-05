@@ -30,7 +30,7 @@ function ImageCarousel() {
           </CarouselItem>
           <CarouselItem>
             <div className="text-center text-white">
-              <img src="/cuate2.png" alt="Find Common Ground" className="mx-auto mb-4" />
+              <img src="/cuate3.png" alt="Find Common Ground" className="mx-auto mb-4" />
               <h2 className="text-xl font-semibold">Find Common Ground</h2>
             </div>
           </CarouselItem>
