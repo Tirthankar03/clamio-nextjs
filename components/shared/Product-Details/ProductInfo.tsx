@@ -3,7 +3,7 @@ import React from 'react';
 import { FaStar, FaUserCircle } from 'react-icons/fa';
 import Link from 'next/link';
 import Image from 'next/image';
-import { productsInfo } from '@/constants';
+import { productsInfo } from '@/constants/data';
 
 // Select the product you want to display
 const product = productsInfo[0]; // Replace 0 with the index of the desired product

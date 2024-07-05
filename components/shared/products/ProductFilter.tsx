@@ -3,16 +3,16 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '@/Store/store';
-import { selectSearchQuery } from '@/app/features/productSlice';
+import { selectSearchQuery } from '@/utils/productSlice';
 import ProductList from '@/components/shared/products/ProductList';
-import { TopSellingproductData, HotNewproductData, TopDiscountProduct } from '@/constants/constants';
+import { TopSellingproductData, HotNewproductData, TopDiscountProduct } from '@/constants/data';
 
 const FilteredProductList = () => {
     const searchQuery = useSelector((state: RootState) => state.product.searchQuery);
 
-    const filterProducts = (products) => {
+    const filterProducts = (products: any) => {
         if (!searchQuery) return products;
-        return products.filter((product) =>
+        return products.filter((product: any) =>
             product.productName.toLowerCase().includes(searchQuery.toLowerCase())
         );
     };

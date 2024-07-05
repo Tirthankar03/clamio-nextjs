@@ -1,5 +1,8 @@
+'use client'
 import Footer from "@/components/shared/Footer";
 import HeaderMain from "@/components/shared/HeaderMain";
+import { store } from "@/Store/store";
+import { Provider } from "react-redux";
 
 export default function CreatorRootLayout({
     children,
@@ -7,10 +10,14 @@ export default function CreatorRootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <div className=" flex min-h-screen flex-col">
+        <Provider store={store}>
+
+           <div className=" flex min-h-screen flex-col">
             <HeaderMain />
             <main className="flex-1">{children}</main>
             <Footer />
-        </div>
+        </div> 
+        </Provider>
+        
     );
 }

@@ -25,7 +25,7 @@ export default function RootLayout({
           )}
         >
           <SideNavbar />
-          <div className="p-8 w-full mb-16">
+          <div className="md:p-8 w-full mb-16">
             {children}
           </div>
 

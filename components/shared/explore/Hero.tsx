@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 function Hero() {
@@ -15,9 +16,13 @@ function Hero() {
             Create and Sell Your Digital Products
           </h3>
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <Link href={"/signup"}>
+
             <button className="bg-gray-300 font-semibold text-black w-full sm:w-44 py-2 md:py-3 md:px-6 rounded text-lg">
               JOIN NOW
             </button>
+            </Link>
+            
             <button className="bg-gray-300 font-semibold text-black w-full sm:w-60 py-2 md:py-3 md:px-6 rounded text-lg mt-4 sm:mt-0">
               Browse Products
             </button>

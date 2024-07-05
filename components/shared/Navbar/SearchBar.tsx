@@ -2,7 +2,7 @@
 'use client';
 import React, { ChangeEvent } from 'react';
 import { useDispatch } from 'react-redux';
-import { setSearchQuery } from '@/app/features/productSlice';
+import { setSearchQuery } from '@/utils/productSlice';
 
 const SearchBar: React.FC = () => {
     const dispatch = useDispatch();
