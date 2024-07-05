@@ -21,7 +21,7 @@ const HeaderMain = () => {
 
 
         {/* <SignedIn> */}
-          <nav className="md:flex-between hidden w-full max-w-sm">
+          <nav className="md:flex-between hidden md:mr-6 w-full max-w-sm">
             <Provider store={store}>
 
                <NavItems />
@@ -35,7 +35,11 @@ const HeaderMain = () => {
 
         {/* <SignedIn> */}
             {/* <UserButton afterSignOutUrl="/" /> */}
-            <MobileNav />
+            <Provider store={store}>
+
+              <MobileNav />
+            </Provider>
+            
           {/* </SignedIn> */}
 
 

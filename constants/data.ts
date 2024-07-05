@@ -694,7 +694,7 @@ export const headerLinks = [
   },
   {
     label: 'Explore',
-    route: '/',
+    route: '/explore',
   },
   {
     label: 'Creators',
@@ -770,8 +770,8 @@ export const eventDefaultValues = {
 
 
 export const INSTAGRAM_PNG = "/instagram.png"
-export const FACEBOOK_PNG = "\pngegg (11).png"
-export const GOOGLE_PNG = "\pngegg (12).png"
+export const FACEBOOK_PNG = "/pngegg (14).png"
+export const GOOGLE_PNG = "/pngegg (15).png"
 export const CUATE_PNG = "\cuate.png"
 export const STAR_PNG = "\Frame 203.png"
 export const GOLD_SACK = "/gold_sack.png"
