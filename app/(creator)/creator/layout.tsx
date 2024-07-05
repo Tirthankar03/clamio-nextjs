@@ -1,5 +1,6 @@
 import Footer from "@/components/shared/Footer";
 import HeaderMain from "@/components/shared/HeaderMain";
+import { Toaster } from 'sonner';
 
 export default function CreatorRootLayout({
     children,
@@ -11,6 +12,7 @@ export default function CreatorRootLayout({
             <HeaderMain />
             <main className="flex-1">{children}</main>
             <Footer />
+            <Toaster />
         </div>
     );
 }
