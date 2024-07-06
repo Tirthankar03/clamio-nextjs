@@ -14,14 +14,6 @@ const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
-  const handleSignUp = () => {
-    // Handle login logic here (form validation, API calls, etc.)
-    // Assuming successful login:
-    dispatch(setIsLoggedIn(true)); // Dispatch action to set isLoggedIn to true
-    // Redirect user to explore page or handle navigation as needed
-    // Example using Next.js Router:
-    router.push('/explore');
-  };
 
   const { register, handleSubmit, formState: { errors, isSubmitting }, reset, watch } = useForm();
   const password = watch("password");
@@ -29,6 +21,10 @@ const SignUp = () => {
   const onSubmit = async (data: FieldValues) => {
     console.log(data);
     await new Promise((resolve) => setTimeout(resolve, 1000));
+    dispatch(setIsLoggedIn(true)); // Dispatch action to set isLoggedIn to true
+    // Redirect user to explore page or handle navigation as needed
+    // Example using Next.js Router:
+    router.push('/explore');
     reset();
   };
 
@@ -117,7 +113,7 @@ const SignUp = () => {
             and <span className="underline cursor-pointer">Privacy Policy</span>
           </p>
 
-          <button onClick={handleSignUp} disabled={isSubmitting} type="submit" className="mt-5 h-12 w-full rounded-md bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500 hover:bg-gradient-to-r hover:from-yellow-400 hover:via-yellow-500 hover:to-yellow-600 transition duration-300 ease-in-out text-center font-bold shadow-sm disabled:bg-gray-500">
+          <button  disabled={isSubmitting} type="submit" className="mt-5 h-12 w-full rounded-md bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500 hover:bg-gradient-to-r hover:from-yellow-400 hover:via-yellow-500 hover:to-yellow-600 transition duration-300 ease-in-out text-center font-bold shadow-sm disabled:bg-gray-500">
             SIGN UP
           </button>
           <p className="py-2 font-semibold text-sm text-center">
