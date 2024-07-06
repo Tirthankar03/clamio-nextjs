@@ -1,15 +1,20 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import ReduxProvider from "@/utils/ReduxProvider";
 
-const poppins = Poppins({ subsets: ["latin"], weight: ['400', '500', '600', '700'], variable: '--font-poppins'  });
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-poppins",
+});
 
 export const metadata: Metadata = {
   title: "Clamio",
   description: "Sell All your digital products now. Become a clamio creator!",
   icons: {
-    icon:'/assests/images/logo.svg'
-  }
+    icon: "/assests/images/logo.svg",
+  },
 };
 
 export default function RootLayout({
@@ -19,8 +24,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      
-      <body className={poppins.variable}>{children}</body>
+      <ReduxProvider>
+        <body className={poppins.variable}>{children}</body>
+      </ReduxProvider>
     </html>
   );
 }
