@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import { FaHeart } from 'react-icons/fa';
+import { Toaster, toast } from 'sonner'
 import { ProductDetailsData } from '@/constants/data';
 
 function FavoriteButton({ idx }:any) { // Receive idx as a prop
@@ -12,6 +13,7 @@ function FavoriteButton({ idx }:any) { // Receive idx as a prop
     const newFavorites = [...favorites];
     newFavorites[idx] = !newFavorites[idx];
     setFavorites(newFavorites);
+    toast.success("added to wishlist")
   };
 
   return (
