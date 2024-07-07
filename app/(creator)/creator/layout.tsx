@@ -2,7 +2,7 @@ import Footer from "@/components/shared/Footer";
 import HeaderMain from "@/components/shared/HeaderMain";
 import { Toaster } from 'sonner';
 
-export default function CreatorRootLayout({
+export default function RootLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;

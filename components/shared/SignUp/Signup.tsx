@@ -15,21 +15,17 @@ const SignUp = () => {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
 
-
   const { register, handleSubmit, formState: { errors, isSubmitting }, reset, watch } = useForm();
   const password = watch("password");
 
   const onSubmit = async (data: FieldValues) => {
     console.log(data);
-    // await new Promise((resolve) => setTimeout(resolve, 1000));
-    // reset();
-        // Handle login logic here (form validation, API calls, etc.)
-    // Assuming successful login:
+    await new Promise((resolve) => setTimeout(resolve, 1000));
     dispatch(setIsLoggedIn(true)); // Dispatch action to set isLoggedIn to true
     // Redirect user to explore page or handle navigation as needed
     // Example using Next.js Router:
     router.push('/explore');
-
+    reset();
   };
 
   return (

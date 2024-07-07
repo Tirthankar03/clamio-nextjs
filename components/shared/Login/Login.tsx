@@ -17,16 +17,14 @@ const Login = () => {
   const { register, handleSubmit, formState: { errors, isSubmitting }, reset } = useForm();
 
 
-
   const onSubmit = async (data: FieldValues) => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
-    reset();
-        // Handle login logic here (form validation, API calls, etc.)
-    // Assuming successful login:
     dispatch(setIsLoggedIn(true)); // Dispatch action to set isLoggedIn to true
     // Redirect user to explore page or handle navigation as needed
     // Example using Next.js Router:
     router.push('/explore');
+    reset();
+   
   };
 
   return (
@@ -74,7 +72,7 @@ const Login = () => {
             Forgot Password?
           </p>
 
-          <button disabled={isSubmitting} type="submit" className="mt-5 h-12 w-full rounded-md bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500 hover:bg-gradient-to-r hover:from-yellow-400 hover:via-yellow-500 hover:to-yellow-600 transition duration-300 ease-in-out text-center font-bold shadow-sm disabled:bg-gray-500">
+          <button  disabled={isSubmitting} type="submit" className="mt-5 h-12 w-full rounded-md bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500 hover:bg-gradient-to-r hover:from-yellow-400 hover:via-yellow-500 hover:to-yellow-600 transition duration-300 ease-in-out text-center font-bold shadow-sm disabled:bg-gray-500">
             LOGIN NOW
           </button>
           <p className="py-2 font-semibold text-sm text-center">
