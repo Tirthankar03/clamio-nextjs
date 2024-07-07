@@ -1,5 +1,4 @@
 'use client'
-import Footer from "@/components/shared/Footer";
 import { store } from "@/Store/store";
 import { Provider } from "react-redux";
 
