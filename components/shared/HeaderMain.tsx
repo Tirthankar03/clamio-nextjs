@@ -5,8 +5,6 @@ import Link from 'next/link'
 import { Button } from '../ui/button'
 import NavItems from './NavItems'
 import MobileNav from './MobileNav'
-import { Provider } from 'react-redux'
-import { store } from '@/Store/store'
 
 const HeaderMain = () => {
   return (
@@ -22,10 +20,10 @@ const HeaderMain = () => {
 
         {/* <SignedIn> */}
           <nav className="md:flex-between hidden md:mr-6 w-full max-w-sm">
-            <Provider store={store}>
+ 
 
                <NavItems />
-            </Provider>
+          
            
           </nav>
         {/* </SignedIn> */}
@@ -35,10 +33,10 @@ const HeaderMain = () => {
 
         {/* <SignedIn> */}
             {/* <UserButton afterSignOutUrl="/" /> */}
-            <Provider store={store}>
+
 
               <MobileNav />
-            </Provider>
+         
             
           {/* </SignedIn> */}
 
