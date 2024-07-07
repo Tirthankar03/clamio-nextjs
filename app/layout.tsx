@@ -27,8 +27,8 @@ export default function RootLayout({
       <ReduxProvider>
         <body className={poppins.variable}>{children}</body>
       </ReduxProvider>
-      <Toaster richColors={true}/>
-      
+      <Toaster richColors={true} />
+
     </html>
   );
 }

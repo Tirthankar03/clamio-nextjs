@@ -1,10 +1,11 @@
-// src/components/shared/cardsCard.tsx
-"use client";
+// src/components/shared/cards/ProductCard.tsx
 import { faHeart, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import LikeBtn from "../LikeBtn";
 import Link from "next/link";
+import { useDispatch } from 'react-redux';
+import { addToCart } from '@/utils/cartSlice';
 
 interface ProductCardProps {
   id: number;
@@ -16,6 +17,12 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({ id, productName, name, stars, price, imageUrl }: ProductCardProps) => {
+  const dispatch = useDispatch();
+
+  const handleAddToCart = () => {
+    dispatch(addToCart({ id, productName, name, stars, price, imageUrl, quantity: 1 }));
+  };
+
   return (
     <div className="relative bg-white border border-gray-300 rounded-lg overflow-hidden text-black w-full shadow-lg h-108 flex flex-col justify-between">
       <div className="absolute top-6 right-6">
@@ -38,6 +45,7 @@ const ProductCard = ({ id, productName, name, stars, price, imageUrl }: ProductC
               <FontAwesomeIcon
                 icon={faShoppingCart}
                 className="text-gray-600 cursor-pointer bg-slate-100 rounded-full px-3 py-3 mr-2"
+                onClick={handleAddToCart} // Add click handler
               />
             </div>
           </div>
