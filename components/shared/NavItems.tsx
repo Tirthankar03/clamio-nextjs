@@ -6,6 +6,7 @@ import { headerLinks } from "@/constants/data";
 import { RootState } from "@/Store/store";
 import { Button } from "../ui/button";
 import { setIsLoggedIn } from "@/utils/authSlice";
+import DropDown from "../Reusable Components/DropDownMenu";
 
 const NavItems = () => {
   const pathname = usePathname();
@@ -30,16 +31,8 @@ const NavItems = () => {
         );
       })}
       {isLoggedIn && (
-        <li>
-          <Button
-            onClick={() => {
-              dispatch(setIsLoggedIn(false));
-            }}
-            className="font-semibold hover:bg-yellow-400 px-4 py-2 rounded-md shadow-md"
-          >
-            Logout
-          </Button>
-        </li>
+         <li className='hidden md:block '><DropDown/></li>
+         
       )}
       {!isLoggedIn && (
         <div className=" flex gap-2">

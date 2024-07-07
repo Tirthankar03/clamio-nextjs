@@ -8,17 +8,16 @@ import { Button } from '@/components/ui/button';
 import { headerLinks } from '@/constants/data' 
 import { RootState } from '@/Store/store';
 import { setIsLoggedIn } from '@/utils/authSlice';
-import { useRouter } from "next/navigation";
+
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useDispatch, useSelector } from 'react-redux';
 
 const NavItems = () => {
-  const isLoggedIn = useSelector((state: RootState) => state.user.isLoggedIn);
-  const dispatch = useDispatch();
+
   const pathname = usePathname();
-  const router = useRouter();
+ 
 
   return (
     <ul className="md:flex-between flex w-full flex-col items-start gap-5  md:flex-row">
@@ -41,7 +40,7 @@ const NavItems = () => {
          
         )
       })}
-            {isLoggedIn && (
+            {/* {isLoggedIn && (
         <li>
           <Button
             onClick={() => {
@@ -53,8 +52,8 @@ const NavItems = () => {
             Logout
           </Button>
         </li>
-      )}
-       <li className='hidden md:block lg:hidden'><DropDown/></li>
+      )} */}
+       <li className='hidden md:block '><DropDown/></li>
       {/* {headerLinksDashboard.map((link) => {
         const isActive = pathname === link.route;
 
