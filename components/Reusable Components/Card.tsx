@@ -7,12 +7,13 @@ import Image from 'next/image';
 const Card = ({ card, idx }:any) => {
   return (
     <div key={card.id} className="bg-white p-4 shadow-lg rounded-lg relative">
-      <Link href={`/product/${card.id}`}>
+     
       
       <div className="relative  w-full rounded-t-lg overflow-hidden">
         <FavoriteButton key={idx} idx={idx} />
+        <Link href={`/product/${card.id}`}>
         <Image
-          src="/assets/product-img/imgone.png" // Replace with your dummy image path
+          src="/assets/product-img/imgone.png" 
           alt="product card"
           layout="responsive"
           width={1000}
@@ -20,8 +21,9 @@ const Card = ({ card, idx }:any) => {
           objectFit="cover"
           className="cursor-pointer"
         />
+         </Link>
       </div>
-      </Link>
+     
       
         
       <div className="mt-4">

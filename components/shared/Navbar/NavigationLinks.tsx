@@ -1,4 +1,5 @@
 // src/components/shared/Navbar/NavigationLinks.tsx
+'use client'
 import React from 'react';
 import Link from 'next/link';
 import { FaHeart, FaShoppingCart } from 'react-icons/fa';
