@@ -1,13 +1,8 @@
+import { CardProps } from "@/lib/types";
 import { cn } from "@/lib/utils";
 import { LucideIcon } from "lucide-react";
 import React from "react";
 
-export type CardProps = {
-  label: string;
-  icon: LucideIcon;
-  amount: string;
-  discription: string;
-};
 
 export default function Card(props: CardProps) {
   return <CardContent>

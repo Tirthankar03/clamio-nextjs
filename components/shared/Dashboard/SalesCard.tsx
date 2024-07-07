@@ -1,10 +1,6 @@
+import { SalesProps } from '@/lib/types'
 import React from 'react'
 
- export type SalesProps = {
-    name: string,
-    email: string,
-    saleAmount: string,
- }
 
 export default function SalesCard(props: SalesProps) {
   return (

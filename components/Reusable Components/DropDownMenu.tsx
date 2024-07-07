@@ -1,16 +1,20 @@
 import React from 'react';
 import {
   BarChartBig,
+  BugPlay,
   ChevronDown,
   Coins,
   CreditCard,
   Github,
+  Home,
   Keyboard,
   LifeBuoy,
   LogOut,
   NotebookTabs,
   Plus,
   Settings,
+  ShoppingBasket,
+  ShoppingCart,
   User,
   Users,
 } from 'lucide-react';
@@ -18,8 +22,18 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuShortc
 import { Button } from "@/components/ui/button";
 import Link from 'next/link'; // Import Link from Next.js
 import { DropdownMenuSeparator } from '@radix-ui/react-dropdown-menu';
-
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'; // Import Avatar components
+import { setIsLoggedIn } from '@/utils/authSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '@/Store/store';
+import { useRouter } from "next/navigation";
+import { FaShopify } from 'react-icons/fa';
 const headerLinksDashboard = [
+  {
+    label: 'Shop',
+    route: '/',
+    icon: <ShoppingCart className="h-4 w-4" />,
+  },
   {
     label: 'Dashboard',
     route: '/dashboard',
@@ -75,19 +89,26 @@ const headerLinksDashboard = [
 ];
 
 function DropDown() {
+
+  const isLoggedIn = useSelector((state: RootState) => state.user.isLoggedIn);
+  const dispatch = useDispatch();
+  const router = useRouter();
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <div className="flex items-center border px-2 lg:hidden 2xl:hidden rounded-md bg-primary justify-center">
-          <Button className="md:block lg:hidden 2xl:hidden" variant="default">More</Button>
-          <ChevronDown className="h-4 w-4 lg:hidden" />
-        </div>
+        {/* <div className="flex items-center border px-2 lg:hidden 2xl:hidden rounded-md bg-primary justify-center"> */}
+          <Avatar>
+            <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
+          {/* <ChevronDown className="h-4 w-4 lg:hidden" /> */}
+        {/* </div> */}
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56 mx-5 bg-white lg:hidden">
+      <DropdownMenuContent className="w-56 mx-5 bg-white">
         {headerLinksDashboard.map((item) => (
           <Link href={item.route} key={item.route}>
             <p>
-              <DropdownMenuItem>
+              <DropdownMenuItem className='cursor-pointer hover:bg-gray-300'>
                 {item.icon}
                 <span className='px-2'>{item.label}</span>
               </DropdownMenuItem>
@@ -95,10 +116,12 @@ function DropDown() {
           </Link>
         ))}
         <DropdownMenuSeparator />
-        <DropdownMenuItem>
-          <LogOut className="mr-2 h-4 w-4" />
+        <DropdownMenuItem  onClick={() => {
+              dispatch(setIsLoggedIn(false));
+              router.push('/explore');
+            }} className='cursor-pointer hover:bg-gray-300'>
+          <LogOut className="mr-2 h-4 w-4 " />
           <span>Log out</span>
-          
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
