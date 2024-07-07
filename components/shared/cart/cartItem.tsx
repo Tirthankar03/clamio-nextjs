@@ -3,10 +3,10 @@ import { useDispatch } from 'react-redux';
 import { updateQuantity, removeFromCart } from '@/utils/cartSlice';
 import Image from 'next/image';
 
-function CartItem({ item }: any) {
+function CartItem({ item }) {
     const dispatch = useDispatch();
 
-    const handleQuantityChange = ({ amount }: any) => {
+    const handleQuantityChange = (amount) => {
         if (item.quantity + amount >= 0) {
             dispatch(updateQuantity({ id: item.id, amount }));
         }
