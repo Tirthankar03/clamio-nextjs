@@ -24,7 +24,7 @@ function CreatorCard({
   id = 1,
 }: CreatorCardProps) {
   return (
-    <Link href={`/creator/${id}`}>
+  
       <Card className="w-full bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 relative overflow-hidden border border-gray-200 cursor-pointer">
         <div className="relative px-6 py-5">
           <img
@@ -41,7 +41,9 @@ function CreatorCard({
             <FavoriteButton idx={idx} />
           </div>
         </div>
+        
         <CardContent className="relative mt-5 p-4">
+        <Link href={`/creator/${id}`}>
           <h3 className="text-xl font-semibold text-gray-900 text-center mb-2">{name}</h3>
           <div className="flex justify-center mb-2 items-center">
             <AiOutlineUser className="text-gray-600 mr-1" />
@@ -55,9 +57,10 @@ function CreatorCard({
               <FaUserPlus className="text-xl mr-2" /> Follow
             </button>
           </div>
+           </Link>
         </CardContent>
       </Card>
-    </Link>
+   
   );
 }
 
