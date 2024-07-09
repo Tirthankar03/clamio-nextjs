@@ -93,24 +93,114 @@ export const chartOptions = {
 
 
 // communityData.js
-export const communityCardsData = [
-  {
+export interface Product {
+  id: number;
+  title: string;
+  description: string;
+  price: number;
+  image: string;
+}
+
+export interface CommunityCardData {
+  id: number;
+  title: string;
+  members: string;
+  products: {
+    topSellingProducts: Product[];
+    allProducts: Product[];
+  };
+}
+
+// data.ts
+
+export const communityCardsData = {
+  1: {
+    id: 1,
     title: "Gaming Legends",
-    members: "1k Members"
+    members: "1k Members",
+    img_url: "/assets/product-img/imgone.png",
+    products: {
+      topSellingProducts: [
+        { id: 101, title: "Gaming Headset", description: "High quality gaming headset", price: 99, image: "/images/headset.jpg", author: "TechBrand", ratings: 4.5, numReviews: 120 },
+        { id: 102, title: "Gaming Chair", description: "Comfortable gaming chair", price: 199, image: "/images/chair.jpg", author: "ComfortSeats", ratings: 4.8, numReviews: 80 },
+        { id: 103, title: "Gaming Keyboard", description: "RGB mechanical keyboard", price: 79, image: "/images/keyboard.jpg", author: "TypeMaster", ratings: 4.7, numReviews: 150 },
+      ],
+      allProducts: [
+        { id: 101, title: "Gaming Headset", description: "High quality gaming headset", price: 99, image: "/images/headset.jpg", author: "TechBrand", ratings: 4.5, numReviews: 120 },
+        { id: 102, title: "Gaming Chair", description: "Comfortable gaming chair", price: 199, image: "/images/chair.jpg", author: "ComfortSeats", ratings: 4.8, numReviews: 80 },
+        { id: 103, title: "Gaming Keyboard", description: "RGB mechanical keyboard", price: 79, image: "/images/keyboard.jpg", author: "TypeMaster", ratings: 4.7, numReviews: 150 },
+        { id: 104, title: "Gaming Mouse", description: "Precision gaming mouse", price: 49, image: "/images/mouse.jpg", author: "ClickFast", ratings: 4.6, numReviews: 100 },
+        { id: 105, title: "Gaming Monitor", description: "4K gaming monitor", price: 299, image: "/images/monitor.jpg", author: "ScreenSharp", ratings: 4.9, numReviews: 60 },
+        { id: 106, title: "Gaming Desk", description: "Ergonomic gaming desk", price: 159, image: "/images/desk.jpg", author: "DeskMate", ratings: 4.4, numReviews: 70 },
+      ],
+    },
   },
-  {
+  2: {
+    id: 2,
     title: "Travel Enthusiasts",
-    members: "2k Members"
+    members: "2k Members",
+    img_url: "/assets/product-img/imgone.png",
+    products: {
+      topSellingProducts: [
+        { id: 201, title: "Travel Backpack", description: "Spacious travel backpack", price: 79, image: "/images/backpack.jpg", author: "TravelPro", ratings: 4.8, numReviews: 200 },
+        { id: 202, title: "Travel Pillow", description: "Comfortable travel pillow", price: 19, image: "/images/pillow.jpg", author: "ComfortCo", ratings: 4.3, numReviews: 150 },
+        { id: 203, title: "Travel Jacket", description: "Waterproof travel jacket", price: 129, image: "/images/jacket.jpg", author: "WeatherGuard", ratings: 4.7, numReviews: 90 },
+      ],
+      allProducts: [
+        { id: 201, title: "Travel Backpack", description: "Spacious travel backpack", price: 79, image: "/images/backpack.jpg", author: "TravelPro", ratings: 4.8, numReviews: 200 },
+        { id: 202, title: "Travel Pillow", description: "Comfortable travel pillow", price: 19, image: "/images/pillow.jpg", author: "ComfortCo", ratings: 4.3, numReviews: 150 },
+        { id: 203, title: "Travel Jacket", description: "Waterproof travel jacket", price: 129, image: "/images/jacket.jpg", author: "WeatherGuard", ratings: 4.7, numReviews: 90 },
+        { id: 204, title: "Travel Adapter", description: "Universal travel adapter", price: 15, image: "/images/adapter.jpg", author: "AdaptAll", ratings: 4.6, numReviews: 110 },
+        { id: 205, title: "Travel Shoes", description: "Lightweight travel shoes", price: 99, image: "/images/shoes.jpg", author: "FootGlide", ratings: 4.5, numReviews: 80 },
+        { id: 206, title: "Travel Water Bottle", description: "Insulated travel bottle", price: 25, image: "/images/bottle.jpg", author: "HydrateMe", ratings: 4.9, numReviews: 130 },
+      ],
+    },
   },
-  {
+  3: {
+    id: 3,
     title: "Healthy Recipes",
-    members: "1.5k Members"
+    members: "5k Members",
+    img_url: "/assets/product-img/imgone.png",
+    products: {
+      topSellingProducts: [
+        { id: 301, title: "Vegan Cookbook", description: "Delicious vegan recipes", price: 29, image: "/images/vegan_cookbook.jpg", author: "Chef Green", ratings: 4.8, numReviews: 300 },
+        { id: 302, title: "Organic Spices Set", description: "A set of organic spices", price: 49, image: "/images/spices.jpg", author: "SpiceMaster", ratings: 4.7, numReviews: 250 },
+        { id: 303, title: "Smoothie Blender", description: "High-performance blender", price: 89, image: "/images/blender.jpg", author: "BlendIt", ratings: 4.6, numReviews: 180 },
+      ],
+      allProducts: [
+        { id: 301, title: "Vegan Cookbook", description: "Delicious vegan recipes", price: 29, image: "/images/vegan_cookbook.jpg", author: "Chef Green", ratings: 4.8, numReviews: 300 },
+        { id: 302, title: "Organic Spices Set", description: "A set of organic spices", price: 49, image: "/images/spices.jpg", author: "SpiceMaster", ratings: 4.7, numReviews: 250 },
+        { id: 303, title: "Smoothie Blender", description: "High-performance blender", price: 89, image: "/images/blender.jpg", author: "BlendIt", ratings: 4.6, numReviews: 180 },
+        { id: 304, title: "Salad Spinner", description: "Efficient salad spinner", price: 24, image: "/images/spinner.jpg", author: "SaladPro", ratings: 4.4, numReviews: 160 },
+        { id: 305, title: "Air Fryer", description: "Healthy air fryer", price: 119, image: "/images/air_fryer.jpg", author: "FryLite", ratings: 4.9, numReviews: 220 },
+        { id: 306, title: "Food Storage Containers", description: "Set of food storage containers", price: 39, image: "/images/containers.jpg", author: "StoreSmart", ratings: 4.5, numReviews: 140 },
+      ],
+    },
   },
-  {
-    title: "Digital Art Hub",
-    members: "3k Members"
+  4: {
+    id: 4,
+    title: "Digital Art Club",
+    members: "3k Members",
+    img_url: "/assets/product-img/imgone.png",
+
+    products: {
+      topSellingProducts: [
+        { id: 401, title: "Drawing Tablet", description: "Professional drawing tablet", price: 199, image: "/images/tablet.jpg", author: "ArtTech", ratings: 4.9, numReviews: 400 },
+        { id: 402, title: "Digital Brushes Pack", description: "High-quality digital brushes", price: 29, image: "/images/brushes.jpg", author: "BrushMaster", ratings: 4.8, numReviews: 350 },
+        { id: 403, title: "Art Software License", description: "Full-featured art software", price: 299, image: "/images/software.jpg", author: "SoftArt", ratings: 4.7, numReviews: 320 },
+      ],
+      allProducts: [
+        { id: 401, title: "Drawing Tablet", description: "Professional drawing tablet", price: 199, image: "/images/tablet.jpg", author: "ArtTech", ratings: 4.9, numReviews: 400 },
+        { id: 402, title: "Digital Brushes Pack", description: "High-quality digital brushes", price: 29, image: "/images/brushes.jpg", author: "BrushMaster", ratings: 4.8, numReviews: 350 },
+        { id: 403, title: "Art Software License", description: "Full-featured art software", price: 299, image: "/images/software.jpg", author: "SoftArt", ratings: 4.7, numReviews: 320 },
+        { id: 404, title: "Graphic Tablet Stand", description: "Adjustable graphic tablet stand", price: 49, image: "/images/stand.jpg", author: "StandFirm", ratings: 4.6, numReviews: 210 },
+        { id: 405, title: "Stylus Pen", description: "Precision stylus pen", price: 59, image: "/images/stylus.jpg", author: "PenPro", ratings: 4.5, numReviews: 270 },
+        { id: 406, title: "Digital Art Tutorials", description: "Comprehensive digital art tutorials", price: 99, image: "/images/tutorials.jpg", author: "ArtGuide", ratings: 4.7, numReviews: 290 },
+      ],
+    },
   },
-];
+  // Add more communities here
+};
 
 
 // categoryData.js
@@ -711,12 +801,12 @@ const headerLinksDashboard = [
   {
     label: 'Dashboard',
     route: '/dashboard',
-   
+
   },
   {
     label: 'Product',
     route: '/',
-    
+
   },
   {
     label: 'User',
@@ -731,7 +821,7 @@ const headerLinksDashboard = [
   {
     label: 'Settings',
     route: '/settings',
-   
+
   },
 ];
 export const headerLinkstwo = [
@@ -899,160 +989,160 @@ export const pricingData = [
 // data/products.ts
 export const productsInfo = [
   {
-      id: 1,
-      title: "Beverage Animation",
-      author: {
-          name: "David Jackoff",
-          id: 1
-      },
-      rating: 4.7,
-      reviews: "1k",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      price: 25,
-       image: "/assets/product-img/imgone.png"
+    id: 1,
+    title: "Beverage Animation",
+    author: {
+      name: "David Jackoff",
+      id: 1
+    },
+    rating: 4.7,
+    reviews: "1k",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    price: 25,
+    image: "/assets/product-img/imgone.png"
   },
   {
-      id: 2,
-      title: "Nature Landscape",
-      author: {
-          name: "Emily Watson",
-          id: 2
-      },
-      rating: 4.9,
-      reviews: "500",
-      description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      price: 30,
-        image: "/assets/product-img/imgone.png"
+    id: 2,
+    title: "Nature Landscape",
+    author: {
+      name: "Emily Watson",
+      id: 2
+    },
+    rating: 4.9,
+    reviews: "500",
+    description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    price: 30,
+    image: "/assets/product-img/imgone.png"
   },
   {
-      id: 3,
-      title: "Urban Photography",
-      author: {
-          name: "John Doe",
-          id: 3
-      },
-      rating: 4.8,
-      reviews: "800",
-      description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-      price: 40,
-       image: "/assets/product-img/imgone.png"
+    id: 3,
+    title: "Urban Photography",
+    author: {
+      name: "John Doe",
+      id: 3
+    },
+    rating: 4.8,
+    reviews: "800",
+    description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+    price: 40,
+    image: "/assets/product-img/imgone.png"
   },
   {
-      id: 4,
-      title: "Abstract Art",
-      author: {
-          name: "Sarah Johnson",
-          id: 4
-      },
-      rating: 4.6,
-      reviews: "700",
-      description: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
-      price: 35,
-         image: "/assets/product-img/imgone.png"
+    id: 4,
+    title: "Abstract Art",
+    author: {
+      name: "Sarah Johnson",
+      id: 4
+    },
+    rating: 4.6,
+    reviews: "700",
+    description: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+    price: 35,
+    image: "/assets/product-img/imgone.png"
   },
   {
-      id: 5,
-      title: "Portrait Drawing",
-      author: {
-          name: "Michael Smith",
-          id: 5
-      },
-      rating: 4.5,
-      reviews: "1.2k",
-      description: "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
-      price: 20,
-         image: "/assets/product-img/imgone.png"
+    id: 5,
+    title: "Portrait Drawing",
+    author: {
+      name: "Michael Smith",
+      id: 5
+    },
+    rating: 4.5,
+    reviews: "1.2k",
+    description: "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+    price: 20,
+    image: "/assets/product-img/imgone.png"
   },
   {
-      id: 6,
-      title: "Wildlife Illustration",
-      author: {
-          name: "Jessica Brown",
-          id: 6
-      },
-      rating: 4.7,
-      reviews: "600",
-      description: "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
-      price: 45,
-         image: "/assets/product-img/imgone.png"
+    id: 6,
+    title: "Wildlife Illustration",
+    author: {
+      name: "Jessica Brown",
+      id: 6
+    },
+    rating: 4.7,
+    reviews: "600",
+    description: "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
+    price: 45,
+    image: "/assets/product-img/imgone.png"
   },
   {
-      id: 7,
-      title: "Fantasy World",
-      author: {
-          name: "Paul Wilson",
-          id: 7
-      },
-      rating: 4.9,
-      reviews: "900",
-      description: "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.",
-      price: 50,
-         image: "/assets/product-img/imgone.png"
+    id: 7,
+    title: "Fantasy World",
+    author: {
+      name: "Paul Wilson",
+      id: 7
+    },
+    rating: 4.9,
+    reviews: "900",
+    description: "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.",
+    price: 50,
+    image: "/assets/product-img/imgone.png"
   },
   {
-      id: 8,
-      title: "Sci-Fi Concepts",
-      author: {
-          name: "Laura Martinez",
-          id: 8
-      },
-      rating: 4.8,
-      reviews: "1.1k",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      price: 55,
-         image: "/assets/product-img/imgone.png"
+    id: 8,
+    title: "Sci-Fi Concepts",
+    author: {
+      name: "Laura Martinez",
+      id: 8
+    },
+    rating: 4.8,
+    reviews: "1.1k",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    price: 55,
+    image: "/assets/product-img/imgone.png"
   },
   {
-      id: 9,
-      title: "Historical Figures",
-      author: {
-          name: "Tom Harris",
-          id: 9
-      },
-      rating: 4.6,
-      reviews: "300",
-      description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      price: 60,
-        image: "/assets/product-img/imgone.png"
+    id: 9,
+    title: "Historical Figures",
+    author: {
+      name: "Tom Harris",
+      id: 9
+    },
+    rating: 4.6,
+    reviews: "300",
+    description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    price: 60,
+    image: "/assets/product-img/imgone.png"
   },
   {
-      id: 10,
-      title: "Cartoon Characters",
-      author: {
-          name: "Amy Lee",
-          id: 10
-      },
-      rating: 4.7,
-      reviews: "1.5k",
-      description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-      price: 22,
-         image: "/assets/product-img/imgone.png"
+    id: 10,
+    title: "Cartoon Characters",
+    author: {
+      name: "Amy Lee",
+      id: 10
+    },
+    rating: 4.7,
+    reviews: "1.5k",
+    description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+    price: 22,
+    image: "/assets/product-img/imgone.png"
   },
   {
-      id: 11,
-      title: "3D Modeling",
-      author: {
-          name: "Chris Moore",
-          id: 11
-      },
-      rating: 4.5,
-      reviews: "750",
-      description: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
-      price: 28,
-         image: "/assets/product-img/imgone.png"
+    id: 11,
+    title: "3D Modeling",
+    author: {
+      name: "Chris Moore",
+      id: 11
+    },
+    rating: 4.5,
+    reviews: "750",
+    description: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+    price: 28,
+    image: "/assets/product-img/imgone.png"
   },
   {
-      id: 12,
-      title: "Vintage Posters",
-      author: {
-          name: "Nancy White",
-          id: 12
-      },
-      rating: 4.6,
-      reviews: "400",
-      description: "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
-      price: 32,
-        image: "/assets/product-img/imgone.png"
+    id: 12,
+    title: "Vintage Posters",
+    author: {
+      name: "Nancy White",
+      id: 12
+    },
+    rating: 4.6,
+    reviews: "400",
+    description: "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+    price: 32,
+    image: "/assets/product-img/imgone.png"
   }
 ];
 
@@ -1060,3 +1150,11 @@ export const productsInfo = [
 // creator-login 
 
 export const Add = [{ image_url: "/assets/creator-login-img/Add.png" }]
+
+export const accounts = [
+  { id: 1, image_url: "/assets/your-account-img/order.png", title: "Your Order", description: "Track , return , or buy things" },
+  { id: 2, image_url: "/assets/your-account-img/address.png", title: "Address", description: "Edit adresses for orders and gift" },
+  { id: 3, image_url: "/assets/your-account-img/coin.png", title: "Clamio Coins", description: "See your Clamio Coins and purchase" },
+  { id: 3, image_url: "/assets/your-account-img/Payment.png", title: "Payment Methods", description: "Edit or add Payment Methods" },
+  { id: 3, image_url: "/assets/your-account-img/contact.png", title: "Contact Us", description: "" }
+]
