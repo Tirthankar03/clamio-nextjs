@@ -876,7 +876,7 @@ export const STAR3_PNG = "/star-medal (2).png"
 export const AMICO_PNG = "\amico.png"
 export const BLOCK_PNG = "\Chart.png"
 export const BLOCK_PNG2 = "\Frame (1).png"
-
+export const BG_IMAGE = "https://images.unsplash.com/photo-1539597833161-fd52d6ee5d8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjU2fHx5ZWxsb3clMjBiYWNrZ3JvdW5kJTIwaW1hZ2V8ZW58MHwwfDB8fHww"
 
 
 

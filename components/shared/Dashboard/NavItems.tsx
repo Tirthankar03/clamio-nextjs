@@ -1,6 +1,7 @@
 'use client';
 
 
+import DropDownMenu from '@/components/Reusable Components/DropDown';
 import DropDown from '@/components/Reusable Components/DropDownMenu';
 import { Button } from '@/components/ui/button';
 // import { headerLinks, headerLinksDashboard } from '@/constants/index'
@@ -53,7 +54,8 @@ const NavItems = () => {
           </Button>
         </li>
       )} */}
-       <li className='hidden md:block '><DropDown/></li>
+       <li className='hidden lg:block '><DropDownMenu/></li>
+       <li className='hidden md:block lg:hidden '><DropDown/></li>
       {/* {headerLinksDashboard.map((link) => {
         const isActive = pathname === link.route;
 

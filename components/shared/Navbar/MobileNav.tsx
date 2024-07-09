@@ -1,10 +1,10 @@
 import {
-    Sheet,
-    SheetContent,
-    SheetDescription,
-    SheetHeader,
-    SheetTitle,
-    SheetTrigger,
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
 } from "@/components/ui/sheet";
 import Image from "next/image";
 import { Separator } from "@/components/ui/separator";
@@ -14,27 +14,29 @@ import { useSelector, useDispatch } from "react-redux";
 import { setIsLoggedIn } from "@/utils/authSlice";
 import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
 import { LogOut } from "lucide-react";
+import { BG_IMAGE } from "@/constants/data";
 
 const MobileNav = () => {
-    const dispatch = useDispatch();
-    const isLoggedIn = useSelector((state: RootState) => state.user.isLoggedIn);
-  
-    const handleLogout = () => {
-      dispatch(setIsLoggedIn(false));
-    };
-    return (
-        <nav className="md:hidden">
-            <Sheet>
-                <SheetTrigger className="align-middle">
-                    <Image
-                        src="/assets/icons/menu.svg"
-                        alt="menu"
-                        width={24}
-                        height={24}
-                        className="cursor-pointer"
-                    />
-                </SheetTrigger>
-                <SheetContent className="bg-white md:hidden p-0">
+  const dispatch = useDispatch();
+  const isLoggedIn = useSelector((state: RootState) => state.user.isLoggedIn);
+
+  const handleLogout = () => {
+    dispatch(setIsLoggedIn(false));
+  };
+
+  return (
+    <nav className="md:hidden">
+      <Sheet>
+        <SheetTrigger className="align-middle">
+          <Image
+            src="/assets/icons/menu.svg"
+            alt="menu"
+            width={24}
+            height={24}
+            className="cursor-pointer"
+          />
+        </SheetTrigger>
+        <SheetContent className="bg-white md:hidden p-0">
           {!isLoggedIn && (
             <Image
               className="mx-5 my-5"
@@ -49,11 +51,10 @@ const MobileNav = () => {
               <div
                 className="relative h-40 w-full bg-cover bg-center"
                 style={{
-                  backgroundImage:
-                    'url(https://images.unsplash.com/photo-1539597833161-fd52d6ee5d8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjU2fHx5ZWxsb3clMjBiYWNrZ3JvdW5kJTIwaW1hZ2V8ZW58MHwwfDB8fHww)',
+                  backgroundImage: `url(${BG_IMAGE})`,
                 }}
               >
-                <div className="absolute inset-0 "></div>
+                <div className="absolute inset-0"></div>
                 <div className="absolute bottom-4 left-4 flex items-center space-x-3">
                   <Avatar className="w-12 h-12">
                     <AvatarImage
@@ -68,7 +69,7 @@ const MobileNav = () => {
                   </div>
                 </div>
               </div>
-              <div className="p-4 flex flex-col items-start ">
+              <div className="p-4 flex flex-col items-start">
                 <NavItems />
                 <button
                   onClick={handleLogout}
@@ -85,9 +86,9 @@ const MobileNav = () => {
             {!isLoggedIn && <NavItems />}
           </div>
         </SheetContent>
-            </Sheet>
-        </nav>
-    );
+      </Sheet>
+    </nav>
+  );
 };
 
 export default MobileNav;

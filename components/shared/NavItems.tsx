@@ -7,6 +7,7 @@ import { RootState } from "@/Store/store";
 import { Button } from "../ui/button";
 import { setIsLoggedIn } from "@/utils/authSlice";
 import DropDown from "../Reusable Components/DropDownMenu";
+import DropDownMenu from "../Reusable Components/DropDown";
 
 const NavItems = () => {
   const pathname = usePathname();
@@ -31,7 +32,7 @@ const NavItems = () => {
         );
       })}
       {isLoggedIn && (
-         <li className='hidden md:block '><DropDown/></li>
+         <li className='hidden md:block '><DropDownMenu/></li>
          
       )}
       {!isLoggedIn && (

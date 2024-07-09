@@ -63,6 +63,7 @@ const CommunityPage: React.FC = () => {
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto px-4">
         {filteredCommunities.map((card: CommunityCardData, index: number) => (
           <div key={index} className="text-center p-4 border border-gray-200 rounded-lg shadow-lg bg-white transition transform hover:scale-105">
+<<<<<<< HEAD
             <Link href={`/community/${card.id}`}>
               <div className="cursor-pointer">
                 <div className="relative w-full h-32 sm:h-48 mb-4">
@@ -81,6 +82,22 @@ const CommunityPage: React.FC = () => {
             <Link href={`/community/${card.id}`}>
               <button className="mt-4 bg-secondary text-white py-2 px-4 rounded">Join Community</button>
             </Link>
+=======
+            <div className=" mb-4 rounded-t-lg">
+            <Image
+          src="/assets/product-img/imgone.png" 
+          alt="product card"
+          layout="responsive"
+          width={1000}
+          height={600}
+          objectFit="cover"
+          className="cursor-pointer"
+        />
+            </div>
+            <h3 className="font-semibold text-lg">{card.title}</h3>
+            <p className="text-gray-500 mb-2">{card.members}</p>
+            <button className="bg-gray-800 text-white px-4 py-2 mt-3 rounded-lg hover:bg-gray-700">Join Community</button>
+>>>>>>> feature/faizkhan24
           </div>
         ))}
       </div>
