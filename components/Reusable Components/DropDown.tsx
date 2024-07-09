@@ -52,7 +52,7 @@ function DropDownMenu() {
       <DropdownMenuContent className="w-40 mx-5 bg-white hidden md:block lg:block">
       <DropdownMenuItem className='cursor-pointer hover:bg-yellow-300 transition-all duration-200'>
           <UserRound className="mr-2 h-4 w-4 " />
-          <Link href={'/account'}>
+          <Link href={'/your-account'}>
                <span>My Account</span>
           </Link>
      
