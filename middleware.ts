@@ -5,6 +5,7 @@ export default function middleware(request: NextRequest) {
   
   const loginUrl = new URL('/login', request.url)
   const dashboardUrl = new URL('/dashboard', request.url)
+  const exploreUrl = new URL('/explore', request.url)
 
   const protectedPath = ['/dashboard' ];
 
@@ -12,7 +13,7 @@ export default function middleware(request: NextRequest) {
   const isProtectedPath = protectedPath.some(path => request.nextUrl.pathname.startsWith(path));
 
   if (currentUser && request.nextUrl.pathname === '/login') {
-    return NextResponse.redirect(dashboardUrl)
+    return NextResponse.redirect(exploreUrl)
   }
 
   if (!currentUser && isProtectedPath) {
@@ -23,5 +24,5 @@ export default function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/dashboard/:path*'],
+  matcher: ['/dashboard/:path*', '/login'],
 }
