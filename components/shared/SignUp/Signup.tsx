@@ -7,6 +7,7 @@ import { FACEBOOK_PNG, GOOGLE_PNG, INSTAGRAM_PNG } from "@/constants/data";
 import { useDispatch } from "react-redux";
 import { useRouter } from "next/navigation";
 import { setIsLoggedIn } from "@/utils/authSlice";
+import { setCookie } from "cookies-next";
 
 const SignUp = () => {
   const dispatch = useDispatch();
@@ -29,6 +30,8 @@ const SignUp = () => {
     dispatch(setIsLoggedIn(true)); // Dispatch action to set isLoggedIn to true
     // Redirect user to explore page or handle navigation as needed
     // Example using Next.js Router:
+    setCookie('user', JSON.stringify({ email: data.email }), { path: '/', maxAge: 30 * 24 * 60 * 60 });
+
     router.push("/explore");
     reset();
   };

@@ -7,6 +7,7 @@ import { FACEBOOK_PNG, GOOGLE_PNG, INSTAGRAM_PNG } from "@/constants/data";
 import { useDispatch } from "react-redux";
 import { useRouter } from "next/navigation";
 import { setIsLoggedIn } from "@/utils/authSlice";
+import { setCookie } from "cookies-next";
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -18,13 +19,18 @@ const Login = () => {
 
 
   const onSubmit = async (data: FieldValues) => {
+    // Simulate async request (e.g., API call)
     await new Promise((resolve) => setTimeout(resolve, 1000));
+    
+    // Set user info in cookies
+    setCookie('user', JSON.stringify({ email: data.email }), { path: '/', maxAge: 30 * 24 * 60 * 60 });
+
+
     dispatch(setIsLoggedIn(true)); // Dispatch action to set isLoggedIn to true
     // Redirect user to explore page or handle navigation as needed
     // Example using Next.js Router:
     router.push('/explore');
     reset();
-   
   };
 
   return (
@@ -45,12 +51,13 @@ const Login = () => {
           <div className="relative mb-4">
             <input
               type={showPassword ? "text" : "password"}
-              {...register("password", { required: "Password is required",
-                minLength:{
-                     value: 8,
-                     message: "Password must be at least 8 characters"
+              {...register("password", {
+                required: "Password is required",
+                minLength: {
+                  value: 8,
+                  message: "Password must be at least 8 characters"
                 }
-               })}
+              })}
               className="h-12 w-full rounded-lg border-2 border-black px-5 text-sm placeholder-gray-400"
               placeholder="Set your Password"
             />
@@ -72,7 +79,7 @@ const Login = () => {
             Forgot Password?
           </p>
 
-          <button  disabled={isSubmitting} type="submit" className="mt-5 h-12 w-full rounded-md bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500 hover:bg-gradient-to-r hover:from-yellow-400 hover:via-yellow-500 hover:to-yellow-600 transition duration-300 ease-in-out text-center font-bold shadow-sm disabled:bg-gray-500">
+          <button disabled={isSubmitting} type="submit" className="mt-5 h-12 w-full rounded-md bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500 hover:bg-gradient-to-r hover:from-yellow-400 hover:via-yellow-500 hover:to-yellow-600 transition duration-300 ease-in-out text-center font-bold shadow-sm disabled:bg-gray-500">
             LOGIN NOW
           </button>
           <p className="py-2 font-semibold text-sm text-center">
