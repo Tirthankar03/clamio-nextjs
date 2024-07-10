@@ -9,10 +9,10 @@ import { Button } from '@/components/ui/button';
 import { RootState } from '@/Store/store';
 import DropDownMenu from '@/components/Reusable Components/DropDown';
 
-
 const NavigationLinks = () => {
-    const cartItemCount = useSelector((state: RootState) => state.cart.items.reduce((count, item) => count + item.quantity, 0));
+    const cartItemCount = useSelector((state: RootState) => state.cart.items.length);
     const isLoggedIn = useSelector((state: RootState) => state.user.isLoggedIn);
+
     return (
         <>
             <Link href="/explore" className="text-lg hover:text-primary text-syne hidden md:block">
