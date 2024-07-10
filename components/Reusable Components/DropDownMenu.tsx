@@ -28,6 +28,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '@/Store/store';
 import { useRouter } from "next/navigation";
 import { FaShopify } from 'react-icons/fa';
+import { deleteCookie } from 'cookies-next';
 const headerLinksDashboard = [
   {
     label: 'Shop',
@@ -119,6 +120,7 @@ function DropDown() {
         <DropdownMenuItem  onClick={() => {
               dispatch(setIsLoggedIn(false));
               router.push('/explore');
+              deleteCookie('user')
             }} className='cursor-pointer hover:bg-yellow-300 transition-all duration-200'>
           <LogOut className="mr-2 h-4 w-4 " />
           <span>Log out</span>

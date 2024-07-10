@@ -13,6 +13,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { LogOut } from 'lucide-react';
 import { setIsLoggedIn } from "@/utils/authSlice";
 import { BG_IMAGE } from "@/constants/data";
+import { deleteCookie } from "cookies-next";
 
 const MobileNav = () => {
   const dispatch = useDispatch();
@@ -20,6 +21,7 @@ const MobileNav = () => {
 
   const handleLogout = () => {
     dispatch(setIsLoggedIn(false));
+    deleteCookie('user')
   };
 
   return (
@@ -71,6 +73,7 @@ const MobileNav = () => {
                 <NavItems />
                 <button
                   onClick={handleLogout}
+
                   className="flex items-center my-5 gap-2 bg-red-500 text-white px-4 py-2 rounded-lg shadow hover:bg-red-600 transition"
                 >
                   <LogOut className="w-5 h-5" />
