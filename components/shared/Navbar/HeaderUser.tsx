@@ -7,8 +7,8 @@ import MobileNav from './MobileNav';
 
 const HeaderUser = () => {
   return (
-    <header className='border-b  w-full'>
-       <div className="w-11/12 lg:w- mx-auto py-4">
+    <header className='border-b max-w-7xl mx-auto  w-full'>
+       <div className="w-11/12  mx-auto py-4">
       <div className="flex items-center justify-between">
         <Link href="/" className="w-36">
           <Image

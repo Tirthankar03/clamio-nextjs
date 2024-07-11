@@ -8,6 +8,7 @@ import DropDown from '@/components/Reusable Components/DropDownMenu';
 import { Button } from '@/components/ui/button';
 import { RootState } from '@/Store/store';
 import DropDownMenu from '@/components/Reusable Components/DropDown';
+import { LucideShoppingBag } from 'lucide-react';
 
 const NavigationLinks = () => {
     const cartItemCount = useSelector((state: RootState) => state.cart.items.length);
@@ -15,8 +16,14 @@ const NavigationLinks = () => {
 
     return (
         <>
+        <div>
+            
+        </div>
             <Link href="/explore" className="text-lg hover:text-primary text-syne hidden md:block">
-                <button type='button' className='bg-black text-white rounded-lg px-4 py-2'>Sell Your Product</button>
+            <Button type="button" className="flex items-center bg-black text-white rounded-lg px-4 py-2">
+                    <LucideShoppingBag className="w-5 h-5 mr-2" />
+                    SELL
+                </Button>
             </Link>
             <Link href="/wishlist">
                 <button type='button'><FaHeart className="w-6 h-6" /></button>
