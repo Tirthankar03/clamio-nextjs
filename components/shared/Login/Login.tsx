@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React, { useState } from "react";
 import { useForm, FieldValues } from "react-hook-form";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
@@ -8,6 +8,8 @@ import { useDispatch } from "react-redux";
 import { useRouter } from "next/navigation";
 import { setIsLoggedIn } from "@/utils/authSlice";
 import { setCookie } from "cookies-next";
+import { Label } from "@/components/ui/label";
+import { Switch } from "@/components/ui/switch";
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -15,29 +17,52 @@ const Login = () => {
 
   const [showPassword, setShowPassword] = useState(false);
 
-  const { register, handleSubmit, formState: { errors, isSubmitting }, reset } = useForm();
-
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+    reset,
+  } = useForm();
 
   const onSubmit = async (data: FieldValues) => {
     // Simulate async request (e.g., API call)
     await new Promise((resolve) => setTimeout(resolve, 1000));
-    
-    // Set user info in cookies
-    setCookie('user', JSON.stringify({ email: data.email }), { path: '/', maxAge: 30 * 24 * 60 * 60 });
 
+    if(data.isCreator){
+          // Set creator info in cookies
+    setCookie("creator", JSON.stringify({ email: data.email }), {
+      path: "/",
+      maxAge: 30 * 24 * 60 * 60,
+    });
 
     dispatch(setIsLoggedIn(true)); // Dispatch action to set isLoggedIn to true
-    // Redirect user to explore page or handle navigation as needed
-    // Example using Next.js Router:
-    router.push('/explore');
+
+}else{
+  // Set user info in cookies
+  setCookie("user", JSON.stringify({ email: data.email }), {
+    path: "/",
+    maxAge: 30 * 24 * 60 * 60,
+  });
+  
+  dispatch(setIsLoggedIn(true)); // Dispatch action to set isLoggedIn to true
+  // Redirect user to explore page or handle navigation as needed
+  // Example using Next.js Router:
+}
+
+    router.push("/explore");
     reset();
-  };
+  }
 
   return (
     <div className="flex items-center justify-center h-screen w-screen bg-secondary overflow-hidden">
       <div className="w-11/12 sm:w-3/4 md:w-1/2 lg:w-1/3 xl:w-1/4 rounded-lg bg-white p-5">
         <h1 className="text-center text-xl font-bold">Login</h1>
         <form onSubmit={handleSubmit(onSubmit)} className="mx-6">
+          <Switch
+            // checked={field.value}
+            // onCheckedChange={field.onChange}
+            className="border-black"
+          />
           <label className="block text-md py-2 font-semibold">Email*</label>
           <input
             type="email"
@@ -45,7 +70,9 @@ const Login = () => {
             className="mb-2 h-12 w-full rounded-lg border-2 border-black px-5 text-sm placeholder-gray-400"
             placeholder="Enter your email"
           />
-          {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
+          {errors.email && (
+            <p className="text-red-500 text-sm">{errors.email.message}</p>
+          )}
 
           <label className="block text-md py-2 font-semibold">Password*</label>
           <div className="relative mb-4">
@@ -55,8 +82,8 @@ const Login = () => {
                 required: "Password is required",
                 minLength: {
                   value: 8,
-                  message: "Password must be at least 8 characters"
-                }
+                  message: "Password must be at least 8 characters",
+                },
               })}
               className="h-12 w-full rounded-lg border-2 border-black px-5 text-sm placeholder-gray-400"
               placeholder="Set your Password"
@@ -73,18 +100,24 @@ const Login = () => {
               )}
             </button>
           </div>
-          {errors.password && <p className="text-red-500 text-sm">{errors.password.message}</p>}
+          {errors.password && (
+            <p className="text-red-500 text-sm">{errors.password.message}</p>
+          )}
 
           <p className="cursor-pointer text-xs text-gray-400 underline text-right">
             Forgot Password?
           </p>
 
-          <button disabled={isSubmitting} type="submit" className="mt-5 h-12 w-full rounded-md bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500 hover:bg-gradient-to-r hover:from-yellow-400 hover:via-yellow-500 hover:to-yellow-600 transition duration-300 ease-in-out text-center font-bold shadow-sm disabled:bg-gray-500">
+          <button
+            disabled={isSubmitting}
+            type="submit"
+            className="mt-5 h-12 w-full rounded-md bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500 hover:bg-gradient-to-r hover:from-yellow-400 hover:via-yellow-500 hover:to-yellow-600 transition duration-300 ease-in-out text-center font-bold shadow-sm disabled:bg-gray-500"
+          >
             LOGIN NOW
           </button>
           <p className="py-2 font-semibold text-sm text-center">
             Don't have an account?{" "}
-            <Link href='/signup'>
+            <Link href="/signup">
               <span className="cursor-pointer underline">Register Now</span>
             </Link>
           </p>
