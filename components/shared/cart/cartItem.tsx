@@ -1,14 +1,22 @@
 'use client';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { updateQuantity, removeFromCart } from '@/utils/cartSlice';
 import Image from 'next/image';
-
+import { RootState } from '@/Store/store';
+import { toast } from 'sonner';
 function CartItem({ item }) {
+    const isLoggedIn = useSelector((store: RootState) => store.user.isLoggedIn);
+
     const dispatch = useDispatch();
 
     const handleQuantityChange = (amount) => {
-        if (item.quantity + amount >= 0) {
-            dispatch(updateQuantity({ id: item.id, amount }));
+        if (isLoggedIn) {
+            if (item.quantity + amount >= 0) {
+                dispatch(updateQuantity({ id: item.id, amount }));
+            }
+            toast.success('Item added to cart')
+        } else {
+            toast.warning('you need to login first!')
         }
     };
 

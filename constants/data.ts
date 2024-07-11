@@ -182,7 +182,6 @@ export const communityCardsData = {
     title: "Digital Art Club",
     members: "3k Members",
     img_url: "/assets/product-img/imgone.png",
-
     products: {
       topSellingProducts: [
         { id: 401, title: "Drawing Tablet", description: "Professional drawing tablet", price: 199, image: "/images/tablet.jpg", author: "ArtTech", ratings: 4.9, numReviews: 400 },
