@@ -8,6 +8,7 @@ import SimilarCommunities from '@/components/shared/community-id/SimilarCommunit
 import { communityCardsData } from '@/constants/data';
 import ProfileSection from '@/components/shared/community-id/ProfileSection';
 import ProductsSection from '@/components/shared/community-id/ProductsSection';
+import TopCreatorsList from '@/components/shared/community-id/TopCreatorsList';
 
 interface Product {
     id: number;
@@ -16,6 +17,13 @@ interface Product {
     price: number;
     image: string;
 }
+interface Creator {
+    id: number;
+    name: string;
+    products: string;
+    followers: string;
+    description: string;
+}
 interface CommunityCardData {
     id: number;
     title: string;
@@ -23,8 +31,10 @@ interface CommunityCardData {
     img_url: string;
     products: {
         topSellingProducts: Product[];
-        allProducts: Product[];
     };
+    creators: {
+        TopCreatorData: Creator[];
+    }
     author: string;
     ratings: number;
     numReviews: number;
@@ -49,7 +59,9 @@ const CommunityDetail: React.FC = () => {
                 <div className="col-span-1 md:col-span-3 p-4">
                     <ProductsSection
                         topSellingProducts={community.products.topSellingProducts}
-                        allProducts={community.products.allProducts}
+                    />
+                    <TopCreatorsList
+                        TopCreatorData={community.creators.TopCreatorData}
                     />
                     <CommunityHighlights />
                     <CommunityReviews />
