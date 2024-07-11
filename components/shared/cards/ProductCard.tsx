@@ -4,10 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import LikeBtn from "../LikeBtn";
 import Link from "next/link";
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { addToCart } from '@/utils/cartSlice';
-import { RootState, store } from "@/Store/store";
-import { toast } from "sonner";
 
 interface ProductCardProps {
   id: number;
@@ -20,14 +18,9 @@ interface ProductCardProps {
 
 const ProductCard = ({ id, productName, name, stars, price, imageUrl }: ProductCardProps) => {
   const dispatch = useDispatch();
-  const isLoggedIn = useSelector((store: RootState) => store.user.isLoggedIn)
+
   const handleAddToCart = () => {
-    if (isLoggedIn) {
-      dispatch(addToCart({ id, productName, name, stars, price, imageUrl, quantity: 1 }));
-      toast.success(`Item added to cart`)
-    } else {
-      toast.warning('you need to login first')
-    }
+    dispatch(addToCart({ id, productName, name, stars, price, imageUrl, quantity: 1 }));
   };
 
   return (
