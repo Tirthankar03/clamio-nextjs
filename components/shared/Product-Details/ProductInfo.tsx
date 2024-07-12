@@ -8,7 +8,7 @@ import { productsInfo } from '@/constants/data';
 // Select the product you want to display
 const product = productsInfo[0]; // Replace 0 with the index of the desired product
 
-const ProductInfo = () => (
+const ProductInfo = ( {id}: {id: string}) => (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
         <div className="relative h-96 w-full rounded-lg overflow-hidden">
             <Image
@@ -24,7 +24,7 @@ const ProductInfo = () => (
                 <h1 className="text-3xl font-bold mb-4">{product.title}</h1>
                 <div className="flex items-center mb-4">
                     <FaUserCircle className="text-yellow-500 text-2xl" />
-                    <Link href={`/creator/1`} className="ml-2 text-blue-500 text-xl">{product.author.name}</Link>
+                    <Link href={`/creator/${id}`} className="ml-2 text-blue-500 text-xl">{product.author.name}</Link>
                 </div>
                 <div className="flex items-center mb-4">
                     <FaStar className="text-yellow-500 text-xl" />

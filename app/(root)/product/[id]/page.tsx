@@ -6,10 +6,14 @@ import Reviews from "@/components/shared/Product-Details/Reviews";
 import SimilarProducts from "@/components/shared/Product-Details/SimilarProducts";
 
 
-const ProductDetail = () => {
+
+
+const ProductDetail = ( { params }: { params: { id: string } }) => {
+  //api calls 
+
   return (
     <div className="container mx-auto p-6">
-      <ProductInfo   />
+      <ProductInfo id={params.id}   />
       <ProductHighlights />
       <Reviews />
       <SimilarProducts />

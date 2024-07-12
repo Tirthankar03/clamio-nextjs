@@ -7,6 +7,7 @@ import { RootState } from "@/Store/store";
 import { Button } from "../ui/button";
 import { setIsLoggedIn } from "@/utils/authSlice";
 import DropDown from "../Reusable Components/DropDownMenu";
+import DropDownMenu from "../Reusable Components/DropDown";
 
 const NavItems = () => {
   const pathname = usePathname();
@@ -31,11 +32,11 @@ const NavItems = () => {
         );
       })}
       {isLoggedIn && (
-         <li className='hidden md:block '><DropDown/></li>
+         <li className='hidden md:block '><DropDownMenu/></li>
          
       )}
       {!isLoggedIn && (
-        <div className=" flex gap-2">
+        <ul className=" flex gap-2">
           <li>
             <Button className="font-semibold hover:bg-yellow-400 px-4 py-2 rounded-md shadow-md">
               <Link href="/login">Login</Link>
@@ -46,7 +47,7 @@ const NavItems = () => {
               <Link href="/signup">Signup</Link>
             </Button>
           </li>
-        </div>
+        </ul>
       )}
     </ul>
   );

@@ -9,13 +9,16 @@ import {
   Home,
   Keyboard,
   LifeBuoy,
+  ListOrdered,
   LogOut,
   NotebookTabs,
   Plus,
   Settings,
   ShoppingBasket,
   ShoppingCart,
+  SquareUserRound,
   User,
+  UserRound,
   Users,
 } from 'lucide-react';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuShortcut, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
@@ -28,68 +31,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '@/Store/store';
 import { useRouter } from "next/navigation";
 import { FaShopify } from 'react-icons/fa';
-import { deleteCookie } from 'cookies-next';
-const headerLinksDashboard = [
-  {
-    label: 'Shop',
-    route: '/',
-    icon: <ShoppingCart className="h-4 w-4" />,
-  },
-  {
-    label: 'Dashboard',
-    route: '/dashboard',
-    icon: <User className="h-4 w-4" />,
-  },
-  {
-    label: 'Product',
-    route: '/dashboard/create-product',
-    icon: <CreditCard className="h-4 w-4" />,
-  },
-  {
-    label: 'User',
-    route: '/dashboard/users',
-    icon: <Users className="h-4 w-4" />,
-  },
-  {
-    label: 'Orders',
-    route: '/dashboard/orders',
-    icon: <LifeBuoy className="h-4 w-4" />,
-  },
-  {
-    label: "Analytics",
-    route: "/dashboard/analytics",
-    icon: <BarChartBig className="h-4 w-4" />,
-    variant: "ghost",
-  },
-  {
-    label: "Product Listing",
-    route: "/dashboard/product-listing",
-    icon: <NotebookTabs className="h-4 w-4" />,
-    variant: "ghost",
-  },
-  {
-    label: 'Settings',
-    route: '/dashboard/settings',
-    icon: <Settings className="h-4 w-4" />,
-  },
-  {
-    label: 'Payouts',
-    route: '/dashboard/payouts',
-    icon: <Keyboard className="h-4 w-4" />,
-  },
-  {
-    label: 'Followers',
-    route: '/dashboard/followers',
-    icon: <Plus className="h-4 w-4" />,
-  },
-  {
-    label: 'Reward',
-    route: '/dashboard/reward',
-    icon: <Coins className="h-4 w-4" />,
-  },
-];
+import { AiOutlineAccountBook } from 'react-icons/ai';
+import { deleteCookie } from "cookies-next";
 
-function DropDown() {
+function DropDownMenu() {
 
   const isLoggedIn = useSelector((state: RootState) => state.user.isLoggedIn);
   const dispatch = useDispatch();
@@ -105,17 +50,19 @@ function DropDown() {
           {/* <ChevronDown className="h-4 w-4 lg:hidden" /> */}
         {/* </div> */}
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-48 mx-5 bg-white hidden md:block lg:hidden">
-        {headerLinksDashboard.map((item) => (
-          <Link href={item.route} key={item.route}>
-            <p>
-              <DropdownMenuItem className='cursor-pointer hover:bg-yellow-300 transition-all duration-200'>
-                {item.icon}
-                <span className='px-2'>{item.label}</span>
-              </DropdownMenuItem>
-            </p>
+      <DropdownMenuContent className="w-40 mx-5 bg-white hidden md:block lg:block">
+      <DropdownMenuItem className='cursor-pointer hover:bg-yellow-300 transition-all duration-200'>
+          <UserRound className="mr-2 h-4 w-4 " />
+          <Link href={'/your-account'}>
+               <span>My Account</span>
           </Link>
-        ))}
+     
+        </DropdownMenuItem>
+      <DropdownMenuItem className='cursor-pointer hover:bg-yellow-300 transition-all duration-200'>
+          <ListOrdered className="mr-2 h-4 w-4 " />
+          <span>Orders</span>
+        </DropdownMenuItem>
+        
         <DropdownMenuSeparator />
         <DropdownMenuItem  onClick={() => {
               dispatch(setIsLoggedIn(false));
@@ -123,11 +70,11 @@ function DropDown() {
               deleteCookie('user')
             }} className='cursor-pointer hover:bg-yellow-300 transition-all duration-200'>
           <LogOut className="mr-2 h-4 w-4 " />
-          <span>Log out</span>
+          <span>Sign out</span>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );
 }
 
-export default DropDown;
+export default DropDownMenu;

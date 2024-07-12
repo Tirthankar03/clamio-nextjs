@@ -15,7 +15,7 @@ const HeaderDashboard = () => {
             alt="Clamio logo"
           />
         </Link>
-        <nav className="md:flex-between md:mr-24 lg:mr-8  xl:mr-0 hidden w-full max-w-sm">
+        <nav className="md:flex-between md:mr-5 lg:mr-8  xl:mr-0 hidden w-full max-w-sm">
      
 
              <NavItems />

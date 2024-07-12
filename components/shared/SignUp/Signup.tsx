@@ -1,21 +1,27 @@
-'use client'
+"use client";
 import React, { useState } from "react";
 import { useForm, FieldValues } from "react-hook-form";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
-import  Link  from "next/link";
+import Link from "next/link";
 import { FACEBOOK_PNG, GOOGLE_PNG, INSTAGRAM_PNG } from "@/constants/data";
 import { useDispatch } from "react-redux";
 import { useRouter } from "next/navigation";
 import { setIsLoggedIn } from "@/utils/authSlice";
+import { setCookie } from "cookies-next";
 
 const SignUp = () => {
-    const dispatch = useDispatch();
-    const router = useRouter();
+  const dispatch = useDispatch();
+  const router = useRouter();
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
-
-  const { register, handleSubmit, formState: { errors, isSubmitting }, reset, watch } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+    reset,
+    watch,
+  } = useForm();
   const password = watch("password");
 
   const onSubmit = async (data: FieldValues) => {
@@ -24,7 +30,9 @@ const SignUp = () => {
     dispatch(setIsLoggedIn(true)); // Dispatch action to set isLoggedIn to true
     // Redirect user to explore page or handle navigation as needed
     // Example using Next.js Router:
-    router.push('/explore');
+    setCookie('user', JSON.stringify({ email: data.email }), { path: '/', maxAge: 30 * 24 * 60 * 60 });
+
+    router.push("/explore");
     reset();
   };
 
@@ -40,7 +48,9 @@ const SignUp = () => {
             className="mb-2 h-12 w-full rounded-lg border-2 border-black px-5 text-sm placeholder-gray-400"
             placeholder="Enter your username"
           />
-          {errors.username && <p className="text-red-500 text-sm">{errors.username.message}</p>}
+          {errors.username && (
+            <p className="text-red-500 text-sm">{errors.username.message}</p>
+          )}
 
           <label className="block text-md py-2 font-semibold">Email*</label>
           <input
@@ -49,17 +59,20 @@ const SignUp = () => {
             className="mb-2 h-12 w-full rounded-lg border-2 border-black px-5 text-sm placeholder-gray-400"
             placeholder="Enter your email"
           />
-          {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
+          {errors.email && (
+            <p className="text-red-500 text-sm">{errors.email.message}</p>
+          )}
 
           <label className="block text-md py-2 font-semibold">Password*</label>
           <div className="relative mb-4">
             <input
               type={showPassword ? "text" : "password"}
-              {...register("password", { required: "Password is required" ,
-                minLength:{
-                    value: 8,
-                    message: "Password must be at least 8 characters"
-               }
+              {...register("password", {
+                required: "Password is required",
+                minLength: {
+                  value: 8,
+                  message: "Password must be at least 8 characters",
+                },
               })}
               className="h-12 w-full rounded-lg border-2 border-black px-5 text-sm placeholder-gray-400"
               placeholder="Set your Password"
@@ -76,19 +89,24 @@ const SignUp = () => {
               )}
             </button>
           </div>
-          {errors.password && <p className="text-red-500 text-sm">{errors.password.message}</p>}
+          {errors.password && (
+            <p className="text-red-500 text-sm">{errors.password.message}</p>
+          )}
 
-          <label className="block text-md py-2 font-semibold">Confirm Password*</label>
+          <label className="block text-md py-2 font-semibold">
+            Confirm Password*
+          </label>
           <div className="relative mb-2">
             <input
               type={showConfirmPassword ? "text" : "password"}
               {...register("confirmPassword", {
                 required: "Confirm Password is required",
-                validate: value => value === password || "Passwords do not match",
-                minLength:{
-                    value: 8,
-                    message: "Password must be at least 8 characters"
-               }
+                validate: (value) =>
+                  value === password || "Passwords do not match",
+                minLength: {
+                  value: 8,
+                  message: "Password must be at least 8 characters",
+                },
               })}
               className="h-12 w-full rounded-lg border-2 border-black px-5 text-sm placeholder-gray-400"
               placeholder="Confirm password"
@@ -105,7 +123,11 @@ const SignUp = () => {
               )}
             </button>
           </div>
-          {errors.confirmPassword && <p className="text-red-500 text-sm">{errors.confirmPassword.message}</p>}
+          {errors.confirmPassword && (
+            <p className="text-red-500 text-sm">
+              {errors.confirmPassword.message}
+            </p>
+          )}
 
           <p className="text-xs text-gray-400 mx-1">
             By tapping 'Register' you are agreeing to the{" "}
@@ -113,7 +135,11 @@ const SignUp = () => {
             and <span className="underline cursor-pointer">Privacy Policy</span>
           </p>
 
-          <button  disabled={isSubmitting} type="submit" className="mt-5 h-12 w-full rounded-md bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500 hover:bg-gradient-to-r hover:from-yellow-400 hover:via-yellow-500 hover:to-yellow-600 transition duration-300 ease-in-out text-center font-bold shadow-sm disabled:bg-gray-500">
+          <button
+            disabled={isSubmitting}
+            type="submit"
+            className="mt-5 h-12 w-full rounded-md bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500 hover:bg-gradient-to-r hover:from-yellow-400 hover:via-yellow-500 hover:to-yellow-600 transition duration-300 ease-in-out text-center font-bold shadow-sm disabled:bg-gray-500"
+          >
             SIGN UP
           </button>
           <p className="py-2 font-semibold text-sm text-center">

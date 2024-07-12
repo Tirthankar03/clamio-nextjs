@@ -11,6 +11,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 import { LogOut } from 'lucide-react';
 import { setIsLoggedIn } from "@/utils/authSlice";
+import { BG_IMAGE } from "@/constants/data";
 
 const MobileNav = () => {
   const dispatch = useDispatch();
@@ -47,8 +48,7 @@ const MobileNav = () => {
               <div
                 className="relative h-40 w-full bg-cover bg-center"
                 style={{
-                  backgroundImage:
-                    'url(https://images.unsplash.com/photo-1539597833161-fd52d6ee5d8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjU2fHx5ZWxsb3clMjBiYWNrZ3JvdW5kJTIwaW1hZ2V8ZW58MHwwfDB8fHww)',
+                  backgroundImage: `url(${BG_IMAGE})`,
                 }}
               >
                 <div className="absolute inset-0 "></div>
