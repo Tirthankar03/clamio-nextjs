@@ -12,12 +12,13 @@ import DropDownMenu from "../Reusable Components/DropDown";
 const NavItems = () => {
   const pathname = usePathname();
   const isLoggedIn = useSelector((state: RootState) => state.user.isLoggedIn);
+  const isCreatorLogin = useSelector((store: RootState) => store.creator.isCreatorLoggedIn);
   const dispatch = useDispatch();
 
   return (
     <ul className="md:flex-between flex w-full flex-col items-start gap-5 md:mr-10 md:flex-row">
       {headerLinks.map((link) => {
-        if (link.label === "Dashboard" && !isLoggedIn) {
+        if (link.label === "Dashboard" && !isLoggedIn && !isCreatorLogin) {
           return null;
         }
         return (
@@ -31,11 +32,12 @@ const NavItems = () => {
           </li>
         );
       })}
-      {isLoggedIn && (
-         <li className='hidden md:block '><DropDownMenu/></li>
-         
+     {(isLoggedIn || isCreatorLogin) && (
+        <li className="hidden md:block">
+          <DropDownMenu /> {/* Render your dropdown menu component */}
+        </li>
       )}
-      {!isLoggedIn && (
+      {!isLoggedIn && !isCreatorLogin &&(
         <ul className=" flex gap-2">
           <li>
             <Button className="font-semibold hover:bg-yellow-400 px-4 py-2 rounded-md shadow-md">

@@ -4,14 +4,14 @@ import FavoriteButton from './FavoriteButton';
 import Link from 'next/link';
 import Image from 'next/image';
 
-const Card = ({ card, idx }:any) => {
+const Card = ({ card, idx,id }:any) => {
   return (
     <div key={card.id} className="bg-white p-4 shadow-lg rounded-lg relative">
      
       
       <div className="relative  w-full rounded-t-lg overflow-hidden">
         <FavoriteButton key={idx} idx={idx} />
-        <Link href={`/product/${card.id}`}>
+        <Link href={`/product/${id}`}>
         <Image
           src="/assets/product-img/imgone.png" 
           alt="product card"

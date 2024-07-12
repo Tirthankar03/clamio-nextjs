@@ -1,10 +1,10 @@
 import ProfilePage from '@/components/shared/ProfilePage'
 import React from 'react'
 
-function page() {
+function page({ params }: { params: { id: string } }) {
   return (
     <div>
-      <ProfilePage />
+      <ProfilePage id={params.id} />
     </div>
   )
 }

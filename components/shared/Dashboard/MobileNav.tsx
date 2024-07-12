@@ -1,31 +1,44 @@
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import Image from "next/image";
 import NavItems from "./NavItems";
 import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
 import { RootState } from "@/Store/store";
 import { useSelector, useDispatch } from "react-redux";
 
-import { LogOut } from 'lucide-react';
+import { LogOut } from "lucide-react";
 import { setIsLoggedIn } from "@/utils/authSlice";
 import { BG_IMAGE } from "@/constants/data";
+import { deleteCookie } from "cookies-next";
+import { setIsCreatorLoggedIn } from "@/utils/creatorSlice";
+import { useRouter } from "next/navigation";
 
 const MobileNav = () => {
   const dispatch = useDispatch();
-  const isLoggedIn = useSelector((state: RootState) => state.user.isLoggedIn);
+  const isLoggedIn = useSelector((store: RootState) => store.user.isLoggedIn);
+  const isCreatorLogin = useSelector(
+    (store: RootState) => store.creator.isCreatorLoggedIn
+  );
+  const router = useRouter();
 
   const handleLogout = () => {
-    dispatch(setIsLoggedIn(false));
+    if (isLoggedIn) {
+      deleteCookie("user");
+      dispatch(setIsLoggedIn(false));
+      router.push("/");
+    }
+
+    if (isCreatorLogin) {
+      deleteCookie("creator");
+      dispatch(setIsCreatorLoggedIn(false));
+      router.push("/explore");
+    }
   };
 
   return (
     <nav className="md:hidden">
       <Sheet>
         <SheetTrigger className="align-middle">
-          <Image 
+          <Image
             src="/assets/icons/menu.svg"
             alt="menu"
             width={24}
@@ -34,7 +47,7 @@ const MobileNav = () => {
           />
         </SheetTrigger>
         <SheetContent className="bg-white md:hidden p-0">
-          {!isLoggedIn && (
+          {!isLoggedIn && !isCreatorLogin && (
             <Image
               className="mx-5 my-5"
               src="/assets/images/CLAMIO.svg"
@@ -43,7 +56,7 @@ const MobileNav = () => {
               height={38}
             />
           )}
-          {isLoggedIn && (
+          {(isLoggedIn || isCreatorLogin) && (
             <div>
               <div
                 className="relative h-40 w-full bg-cover bg-center"
@@ -78,10 +91,8 @@ const MobileNav = () => {
               </div>
             </div>
           )}
-         
-          <div className="p-6">
-            {!isLoggedIn && <NavItems />}
-          </div>
+
+          <div className="p-6">{!isLoggedIn && !isCreatorLogin && <NavItems />}</div>
         </SheetContent>
       </Sheet>
     </nav>

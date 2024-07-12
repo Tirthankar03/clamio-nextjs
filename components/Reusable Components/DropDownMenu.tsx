@@ -29,6 +29,7 @@ import { RootState } from '@/Store/store';
 import { useRouter } from "next/navigation";
 import { FaShopify } from 'react-icons/fa';
 import { deleteCookie } from 'cookies-next';
+import { setIsCreatorLoggedIn } from '@/utils/creatorSlice';
 const headerLinksDashboard = [
   {
     label: 'Shop',
@@ -91,9 +92,25 @@ const headerLinksDashboard = [
 
 function DropDown() {
 
-  const isLoggedIn = useSelector((state: RootState) => state.user.isLoggedIn);
+  // const isLoggedIn = useSelector((state: RootState) => state.user.isLoggedIn);
   const dispatch = useDispatch();
   const router = useRouter();
+  const isLoggedIn = useSelector((store: RootState) => store.user.isLoggedIn);
+  const isCreatorLogin = useSelector((store: RootState) => store.creator.isCreatorLoggedIn);
+
+  const handleLogout = () => {
+    if (isLoggedIn) {
+      deleteCookie('user');
+      dispatch(setIsLoggedIn(false));
+      router.push('/');
+    }
+
+    if (isCreatorLogin) {
+      deleteCookie('creator');
+      dispatch(setIsCreatorLoggedIn(false));
+      router.push('/explore');
+    }
+  };
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -117,11 +134,7 @@ function DropDown() {
           </Link>
         ))}
         <DropdownMenuSeparator />
-        <DropdownMenuItem  onClick={() => {
-              dispatch(setIsLoggedIn(false));
-              router.push('/explore');
-              deleteCookie('user')
-            }} className='cursor-pointer hover:bg-yellow-300 transition-all duration-200'>
+        <DropdownMenuItem  onClick={handleLogout} className='cursor-pointer hover:bg-yellow-300 transition-all duration-200'>
           <LogOut className="mr-2 h-4 w-4 " />
           <span>Log out</span>
         </DropdownMenuItem>
