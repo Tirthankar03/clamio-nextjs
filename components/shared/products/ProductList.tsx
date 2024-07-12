@@ -15,7 +15,7 @@ interface ProductListProps {
     title: string;
 }
 
-const ProductList: React.FC<ProductListProps> = ({ products, title }) => {
+const ProductList: React.FC<ProductListProps> = (  { products, title }) => {
     return (
         <div className='pt-0'>
             <div className="grid grid-cols-2 py-10">

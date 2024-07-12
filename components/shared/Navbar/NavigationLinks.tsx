@@ -13,6 +13,7 @@ import { LucideShoppingBag } from 'lucide-react';
 const NavigationLinks = () => {
     const cartItemCount = useSelector((state: RootState) => state.cart.items.length);
     const isLoggedIn = useSelector((state: RootState) => state.user.isLoggedIn);
+    const isCreatorLogin = useSelector((store: RootState) => store.creator.isCreatorLoggedIn);
 
     return (
         <>
@@ -38,7 +39,7 @@ const NavigationLinks = () => {
                     )}
                 </button>
             </Link>
-            {isLoggedIn ? (
+            {(isLoggedIn || isCreatorLogin) ? (
                 <DropDownMenu />
             ) : (
                 <div className="flex gap-2">

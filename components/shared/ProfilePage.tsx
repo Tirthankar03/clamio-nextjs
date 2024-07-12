@@ -10,7 +10,7 @@ import Card from "@/components/Reusable Components/Card";
 import ToggleText from "@/components/Reusable Components/ToggleText";
 import { cardData } from "@/constants/data";
 
-const ProfilePage = () => {
+const ProfilePage = ({id}: {id: string}) => {
   return (
     <div className="container mx-auto p-4">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
@@ -50,7 +50,7 @@ const ProfilePage = () => {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
             {cardData.slice(0, 3).map((product, idx) => (
-              <Card key={idx} card={product} idx={idx} />
+              <Card id={id} key={idx} card={product} idx={idx} />
             ))}
           </div>
 
@@ -59,7 +59,7 @@ const ProfilePage = () => {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
             {cardData.map((product, idx) => (
-              <Card key={idx} card={product} idx={idx} />
+              <Card id={id} key={idx} card={product} idx={idx} />
             ))}
           </div>
         </div>

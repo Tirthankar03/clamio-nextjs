@@ -14,11 +14,12 @@ import { RootState } from "@/Store/store";
 
 const Explore = () => {
   const isLoggedIn = useSelector((store: RootState) => store.user.isLoggedIn);
+  const isCreatorLogin = useSelector((store: RootState) => store.creator.isCreatorLoggedIn);
 
   
   return (
     <div className="">
-      {isLoggedIn ? (
+      {isLoggedIn || isCreatorLogin ? (
         <>
           <HeroPage />
           <Pricing />
