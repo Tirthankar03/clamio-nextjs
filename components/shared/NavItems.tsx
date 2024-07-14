@@ -18,7 +18,7 @@ const NavItems = () => {
   return (
     <ul className="md:flex-between flex w-full flex-col items-start gap-5 md:mr-10 md:flex-row">
       {headerLinks.map((link) => {
-        if (link.label === "Dashboard" && !isLoggedIn && !isCreatorLogin) {
+         if (link.label === "Dashboard" && !isCreatorLogin) {
           return null;
         }
         return (

@@ -8,6 +8,7 @@ import { useSelector } from "react-redux";
 
 function FavoriteButton({ idx }: any) {
   const isLoggedIn = useSelector((store: RootState) => store.user.isLoggedIn);
+  const isCreatorLogin = useSelector((store: RootState) => store.creator.isCreatorLoggedIn);
   // Receive idx as a prop
   const [favorites, setFavorites] = useState(
     Array(ProductDetailsData[0].similarProducts.length).fill(false)
@@ -17,11 +18,17 @@ function FavoriteButton({ idx }: any) {
     const newFavorites = [...favorites];
     newFavorites[idx] = !newFavorites[idx];
     setFavorites(newFavorites);
-    if(isLoggedIn){
-      toast.success("added to wishlist");
+    if(isLoggedIn || isCreatorLogin){
+      if(newFavorites[idx]){
+        toast.success("Added to wishlist");
+      }
+      else{
+        toast.error("Removed from wishlist");
+      }
+      
     }
     else{
-      toast.warning("you need to login first");
+      toast.warning("You need to login first");
     }
     
   };

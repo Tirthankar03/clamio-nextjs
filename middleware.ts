@@ -16,6 +16,12 @@ export default function middleware(request: NextRequest) {
     request.nextUrl.pathname.startsWith(path)
   );
 
+    // Redirect non-creators trying to access the dashboard
+    if (isProtectedPath && !currentCreator) {
+      return NextResponse.redirect(rootUrl);
+    }
+
+
   // Redirect logged-in users trying to access the login page
   if (currentCreator && request.nextUrl.pathname === '/login') {
     return NextResponse.redirect(exploreUrl);

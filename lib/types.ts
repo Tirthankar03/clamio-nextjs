@@ -24,7 +24,7 @@ export type SalesProps = {
  };
  
  export type Creator = {
-   _id: string;
+   _id: number;
    user_id: string;
    title: string;
    description: string;
@@ -34,8 +34,8 @@ export type SalesProps = {
    social_links: string[];
    expertise: string[];
    averageRating: number;
-   numFollowers: number;
-   totalSales: number;
+   numFollowers: string;
+   totalSales: string;
    earnings: number;
    bankAccount: BankAccount;
  };
@@ -65,7 +65,7 @@ export type SalesProps = {
  
  // Define the Product type
  export type Product = {
-   _id: string;
+   _id: number;
    product_url: string;
    creator_id: string;
    created_date: Date;
