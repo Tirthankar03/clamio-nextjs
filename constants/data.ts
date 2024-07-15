@@ -1,14 +1,14 @@
 export const CreatorData = [
-  { id: 1, name: 'David Jackoff', followers: '12k followers', products: '1k Products', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.' },
-  { id: 2, name: 'Alex Doe', followers: '15k followers', products: '2k Products', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.' },
-  { id: 3, name: 'Jane Smith', followers: '20k followers', products: '3k Products', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.' },
-  { id: 4, name: 'John Doe', followers: '10k followers', products: '1k Products', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.' },
-  { id: 5, name: 'Emma Johnson', followers: '18k followers', products: '2k Products', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.' },
-  { id: 6, name: 'Michael Brown', followers: '25k followers', products: '4k Products', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.' },
-  { id: 7, name: 'Chris Green', followers: '14k followers', products: '1.5k Products', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.' },
-  { id: 8, name: 'Patricia White', followers: '19k followers', products: '3.5k Products', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.' },
-  { id: 9, name: 'Linda Black', followers: '22k followers', products: '2k Products', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.' },
-  { id: 10, name: 'Kevin Blue', followers: '17k followers', products: '1.8k Products', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.' },
+  { id: 1, name: 'David Jackoff', followers: '12k followers', products: '1k Products', description: 'Lorem ipsum dnsectetur adipiscing elit, sed dssssssssssssssssssssssssssssssssossssssssssssssss.' },
+  { id: 2, name: 'Alex Doe', followers: '15k followers', products: '2k Products', description: 'Lorem ipsum dnsectetur adisssssssssssssssssssssssssssssssssssssspisco..' },
+  { id: 3, name: 'Jane Smith', followers: '20k followers', products: '3k Products', description: 'Lorem ipsum dnsectetur adipissssssssssssssssscing elit, sed do.' },
+  { id: 4, name: 'John Doe', followers: '10k followers', products: '1k Products', description: 'Lorem ipsum dnsectetur adipiscssssssssssssssssssssssssssssssssssing elit, sed do..' },
+  { id: 5, name: 'Emma Johnson', followers: '18k followers', products: '2k Products', description: 'Lorem ipsipiscing elit, sed do.' },
+  { id: 6, name: 'Michael Brown', followers: '25k followers', products: '4k Products', description: 'Lorem ipsum dnsectetur adipiscing elit, sed do.' },
+  { id: 7, name: 'Chris Green', followers: '14k followers', products: '1.5k Products', description: 'Lorem ipsum dnsectetur adipiscing elit, sed do.' },
+  { id: 8, name: 'Patricia White', followers: '19k followers', products: '3.5k Products', description: 'Lorem ipsum dnsectetur adipiscing elit, sed do..' },
+  { id: 9, name: 'Linda Black', followers: '22k followers', products: '2k Products', description: 'Lorem ipsum dnsectetur adipiscing elit, sed do.' },
+  { id: 10, name: 'Kevin Blue', followers: '17k followers', products: '1.8k Products', description: 'Lorem ipsum dnsectetur adipiscing elit, sed do.' },
 ];
 // Payout Page 
 //Payout Chart Data
@@ -99,15 +99,25 @@ export interface Product {
   price: number;
   image: string;
 }
-
+export interface Creator {
+  id: number
+  name: string
+  followers: string
+  products: string
+  description: string
+  img_url: string
+  profile_url: string
+}
 export interface CommunityCardData {
   id: number;
   title: string;
   members: string;
   products: {
     topSellingProducts: Product[];
-    allProducts: Product[];
   };
+  creators: {
+    TopCreatorData: Creator[];
+  }
 }
 
 // data.ts
@@ -127,10 +137,9 @@ export const communityCardsData = {
     },
     creators: {
       TopCreatorData: [
-        { id: 1, name: 'GamerOne', followers: '12k followers', products: '1k Products', description: 'Pro gamer with years of experience.' },
-        { id: 2, name: 'EliteGamer', followers: '15k followers', products: '2k Products', description: 'Top-tier gamer and content creator.' },
-        { id: 3, name: 'GameMaster', followers: '20k followers', products: '3k Products', description: 'Master of various game genres.' },
-        { id: 4, name: 'ProGamer', followers: '10k followers', products: '1k Products', description: 'Expert in competitive gaming.' }
+        { id: 1, name: 'GamerOne', followers: '12k followers', products: '1k Products', description: 'Pro gamer with years of experience. ', img_url: 'https://images.unsplash.com/photo-1583621908511-e082803e3aa2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8eWVsbG93JTIwYmFja2dyb3VuZHxlbnwwfDB8MHx8fDA%3D', profile_url: "/assets/creator-id-img/profile.png" },
+        { id: 2, name: 'EliteGamer', followers: '15k followers', products: '2k Products', description: 'Top-tier gamer and content creator.', img_url: 'https://images.unsplash.com/photo-1583621908511-e082803e3aa2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8eWVsbG93JTIwYmFja2dyb3VuZHxlbnwwfDB8MHx8fDA%3D', profile_url: '/assets/creator-id-img/profile.png' },
+        { id: 3, name: 'GameMaster', followers: '20k followers', products: '3k Products', description: 'Master of various game genres.', img_url: 'https://images.unsplash.com/photo-1583621908511-e082803e3aa2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8eWVsbG93JTIwYmFja2dyb3VuZHxlbnwwfDB8MHx8fDA%3D', profile_url: '/assets/creator-id-img/profile.png' },
       ]
     }
   },
@@ -148,10 +157,9 @@ export const communityCardsData = {
     },
     creators: {
       TopCreatorData: [
-        { id: 1, name: 'TravelGuru', followers: '12k followers', products: '1k Products', description: 'Expert in travel gear and destinations.' },
-        { id: 2, name: 'Wanderlust', followers: '15k followers', products: '2k Products', description: 'Avid traveler and travel blogger.' },
-        { id: 3, name: 'GlobeTrotter', followers: '20k followers', products: '3k Products', description: 'Exploring the world one place at a time.' },
-        { id: 4, name: 'NomadSpirit', followers: '10k followers', products: '1k Products', description: 'Lover of off-the-beaten-path travel.' }
+        { id: 1, name: 'TravelGuru', followers: '12k followers', products: '1k Products', description: 'Expert in travel gear and destinations.', img_url: 'https://images.unsplash.com/photo-1583621908511-e082803e3aa2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8eWVsbG93JTIwYmFja2dyb3VuZHxlbnwwfDB8MHx8fDA%3D', profile_url: "/assets/creator-id-img/profile.png" },
+        { id: 2, name: 'Wanderlust', followers: '15k followers', products: '2k Products', description: 'Avid traveler and travel blogger.', img_url: 'https://images.unsplash.com/photo-1583621908511-e082803e3aa2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8eWVsbG93JTIwYmFja2dyb3VuZHxlbnwwfDB8MHx8fDA%3D', profile_url: "/assets/creator-id-img/profile.png" },
+        { id: 3, name: 'GlobeTrotter', followers: '20k followers', products: '3k Products', description: 'Exploring the world one place at a time.', img_url: 'https://images.unsplash.com/photo-1583621908511-e082803e3aa2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8eWVsbG93JTIwYmFja2dyb3VuZHxlbnwwfDB8MHx8fDA%3D', profile_url: "/assets/creator-id-img/profile.png" },
       ]
     }
   },
@@ -169,10 +177,9 @@ export const communityCardsData = {
     },
     creators: {
       TopCreatorData: [
-        { id: 1, name: 'ChefHealthy', followers: '12k followers', products: '1k Products', description: 'Specialist in healthy and nutritious recipes.' },
-        { id: 2, name: 'FitChef', followers: '15k followers', products: '2k Products', description: 'Combining fitness and healthy eating.' },
-        { id: 3, name: 'VeganQueen', followers: '20k followers', products: '3k Products', description: 'Expert in vegan and plant-based diets.' },
-        { id: 4, name: 'OrganicGuru', followers: '10k followers', products: '1k Products', description: 'Advocate for organic and clean eating.' }
+        { id: 1, name: 'ChefHealthy', followers: '12k followers', products: '1k Products', description: 'Specialist in healthy and nutritious recipes.', img_url: 'https://images.unsplash.com/photo-1583621908511-e082803e3aa2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8eWVsbG93JTIwYmFja2dyb3VuZHxlbnwwfDB8MHx8fDA%3D', profile_url: '/assets/creator-id-img/profile.png' },
+        { id: 2, name: 'FitChef', followers: '15k followers', products: '2k Products', description: 'Combining fitness and healthy eating.', img_url: 'https://images.unsplash.com/photo-1583621908511-e082803e3aa2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8eWVsbG93JTIwYmFja2dyb3VuZHxlbnwwfDB8MHx8fDA%3D', profile_url: '/assets/creator-id-img/profile.png' },
+        { id: 3, name: 'VeganQueen', followers: '20k followers', products: '3k Products', description: 'Expert in vegan and plant-based diets.', img_url: 'https://images.unsplash.com/photo-1583621908511-e082803e3aa2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8eWVsbG93JTIwYmFja2dyb3VuZHxlbnwwfDB8MHx8fDA%3D', profile_url: '/assets/creator-id-img/profile.png' },
       ]
     }
   },
@@ -190,10 +197,9 @@ export const communityCardsData = {
     },
     creators: {
       TopCreatorData: [
-        { id: 1, name: 'ArtVirtuoso', followers: '12k followers', products: '1k Products', description: 'Creating stunning digital art.' },
-        { id: 2, name: 'PixelPainter', followers: '15k followers', products: '2k Products', description: 'Master of digital painting techniques.' },
-        { id: 3, name: 'SketchArtist', followers: '20k followers', products: '3k Products', description: 'Expert in digital sketching and illustrations.' },
-        { id: 4, name: 'CreativeGenius', followers: '10k followers', products: '1k Products', description: 'Innovative digital art creator.' }
+        { id: 1, name: 'ArtVirtuoso', followers: '12k followers', products: '1k Products', description: 'Creating stunning digital art.', img_url: 'https://images.unsplash.com/photo-1583621908511-e082803e3aa2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8eWVsbG93JTIwYmFja2dyb3VuZHxlbnwwfDB8MHx8fDA%3D', profile_url: '/assets/creator-id-img/profile.png' },
+        { id: 2, name: 'PixelPainter', followers: '15k followers', products: '2k Products', description: 'Master of digital painting techniques.', img_url: 'https://images.unsplash.com/photo-1583621908511-e082803e3aa2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8eWVsbG93JTIwYmFja2dyb3VuZHxlbnwwfDB8MHx8fDA%3D', profile_url: '/assets/creator-id-img/profile.png' },
+        { id: 3, name: 'SketchArtist', followers: '20k followers', products: '3k Products', description: 'Expert in digital sketching and illustrations.', img_url: 'https://images.unsplash.com/photo-1583621908511-e082803e3aa2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8eWVsbG93JTIwYmFja2dyb3VuZHxlbnwwfDB8MHx8fDA%3D', profile_url: '/assets/creator-id-img/profile.png' },
       ]
     }
   },

@@ -1,4 +1,4 @@
-// src/app/(root)/layout.tsx
+
 // 'use client';
 import Footer from "@/components/shared/Footer";
 import HeaderUser from "@/components/shared/Navbar/HeaderUser";

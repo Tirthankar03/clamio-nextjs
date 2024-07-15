@@ -15,13 +15,13 @@ const DiscoverCreator = () => {
         <CategoryCarousel />
       </div>
       <div className="p-4">
-        <div className="flex justify-center mt-4">
+        {/* <div className="flex justify-center mt-4">
           <input
             type="text"
             placeholder="Search Creator"
             className="px-5 border-4 border-black rounded-lg py-3 w-80 md:w-1/2 text-black"
           />
-        </div>
+        </div> */}
       </div>
       <div className="p-4">
         <CreatorSlider type="Gaming" />

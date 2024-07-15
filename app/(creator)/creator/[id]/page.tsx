@@ -1,7 +1,7 @@
 import ProfilePage from '@/components/shared/ProfilePage'
 import React from 'react'
 
-function page() {
+function creatorid() {
   return (
     <div>
       <ProfilePage />
@@ -9,4 +9,4 @@ function page() {
   )
 }
 
-export default page
+export default creatorid

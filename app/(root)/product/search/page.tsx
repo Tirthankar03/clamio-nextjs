@@ -1,8 +1,6 @@
-// src/pages/index.tsx
 import HorizontalScrollfirst from "@/components/shared/HorizontalScroll";
-import FilteredProductList from '@/components/shared/products/ProductFilter';
-
-export default function Home() {
+import Search from "@/components/shared/products/Search"
+export default function search() {
     return (
         <main>
             <div className="bg-secondary text-white min-h-screen">
@@ -10,7 +8,7 @@ export default function Home() {
                 <br />
                 <div className="transition-all duration-500 ease-in-out">
                     <HorizontalScrollfirst />
-                    <FilteredProductList />
+                    <Search />
                 </div>
             </div>
         </main>
