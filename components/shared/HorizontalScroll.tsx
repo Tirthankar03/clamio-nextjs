@@ -12,7 +12,7 @@ const categories = [
 
 const HorizontalScrollfirst = () => {
     return (
-        <div className="flex overflow-x-scroll scrollbar-hide space-x-4 py-2 px-4 bg-secondary w-5/6 mx-auto ">
+        <div className="flex overflow-x-scroll scrollbar-hide space-x-4 py-2 bg-secondary w-5/6 mx-auto ">
             {categories.map((category, index) => (
                 <div
                     key={index}

@@ -20,7 +20,7 @@ const SearchPage = () => {
     }, [searchQuery]);
 
     return (
-        <div className="grid gap-4 px-4 w-11/12 md:w-5/6 mx-auto pb-10">
+        <div className="grid gap-4 w-full md:w-5/6 lg:11/12 mx-auto pb-10">
             {filteredProducts.length > 0 ? (
                 <ProductList products={filteredProducts} title={`Search Results for "${searchQuery}"`} />
             ) : (
