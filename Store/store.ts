@@ -4,6 +4,7 @@ import productReducer from '@/utils/productSlice';
 import userReducer from '@/utils/authSlice';
 import cartReducer from '@/utils/cartSlice';
 import communityReducer from '@/utils/communitySlice';
+import wishlistReducer from '@/utils/wishlistSlice';
 import storage from 'redux-persist/lib/storage';
 import { persistReducer, persistStore } from 'redux-persist';
 
@@ -18,6 +19,7 @@ const rootReducer = combineReducers({
     user: userReducer,
     cart: cartReducer,
     community: communityReducer,
+    wishlist: wishlistReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
