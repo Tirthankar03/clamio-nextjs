@@ -1,11 +1,10 @@
-// src/components/shared/LikeBtn.tsx
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "@/Store/store";
 import React, { useState } from 'react';
 import { toast } from 'sonner';
-import { addToWishlist } from '@/utils/wishlistSlice'; // Assuming you have a slice for wishlist
+import { addToWishlist } from '@/utils/wishlistSlice';
 
 interface LikeBtnProps {
   product: {
@@ -19,18 +18,20 @@ interface LikeBtnProps {
 }
 
 const LikeBtn: React.FC<LikeBtnProps> = ({ product }) => {
-  const isLoggedIn = useSelector((store: RootState) => store.user.isLoggedIn);
+  // const isLoggedIn = useSelector((store: RootState) => store.user.isLoggedIn);
   const dispatch = useDispatch();
   const [isFavorited, setIsFavorited] = useState(false);
 
   const toggleFavorite = () => {
-    if (isLoggedIn) {
-      setIsFavorited(!isFavorited);
-      dispatch(addToWishlist(product)); // Dispatch action to add product to wishlist
-      toast.success('Added to wishlist!');
-    } else {
-      toast.warning('You need to login first!');
-    }
+    // if(isLoggedIn){}
+
+    setIsFavorited(!isFavorited);
+    dispatch(addToWishlist(product));
+    toast.success('Added to Favourites!');
+
+    // } else {
+    //   toast.warning('You need to login first!');
+    // }
   };
 
   return (

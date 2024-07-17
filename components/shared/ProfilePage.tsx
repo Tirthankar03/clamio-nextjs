@@ -2,15 +2,12 @@
 
 import React from "react";
 import Link from "next/link";
-import { FaHeart, FaShoppingCart, FaStar, FaUserCircle, FaYoutube, FaInstagram, FaLinkedin } from "react-icons/fa";
-
-
-
 import Card from "@/components/Reusable Components/Card";
 import ToggleText from "@/components/Reusable Components/ToggleText";
 import { cardData } from "@/constants/data";
+import { InstagramIcon, LinkedinIcon, YoutubeIcon } from "lucide-react";
 
-const ProfilePage = () => {
+const ProfilePage = ({ id }: { id: string }) => {
   return (
     <div className="container mx-auto p-4">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
@@ -32,13 +29,13 @@ const ProfilePage = () => {
           </div>
           <div className="flex justify-center mt-4 space-x-4">
             <span className="bg-red-500 p-2 rounded-full">
-              <FaYoutube size={20} color="white" />
+              <YoutubeIcon size={20} color="white" />
             </span>
             <span className="bg-pink-500 p-2 rounded-full">
-              <FaInstagram size={20} color="white" />
+              <InstagramIcon size={20} color="white" />
             </span>
             <span className="bg-blue-500 p-2 rounded-full">
-              <FaLinkedin size={20} color="white" />
+              <LinkedinIcon size={20} color="white" />
             </span>
           </div>
         </div>
@@ -50,7 +47,7 @@ const ProfilePage = () => {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
             {cardData.slice(0, 3).map((product, idx) => (
-              <Card key={idx} card={product} idx={idx} />
+              <Card id={id} key={idx} card={product} idx={idx} />
             ))}
           </div>
 
@@ -59,7 +56,7 @@ const ProfilePage = () => {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
             {cardData.map((product, idx) => (
-              <Card key={idx} card={product} idx={idx} />
+              <Card id={id} key={idx} card={product} idx={idx} />
             ))}
           </div>
         </div>

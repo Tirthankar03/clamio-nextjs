@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
-import ProductList from '@/components/shared/products/ProductList';
+import ProductList from './ProductListSearch';
 import { TopSellingproductData, HotNewproductData, TopDiscountProduct } from '@/constants/data';
 
 const SearchPage = () => {
