@@ -47,15 +47,15 @@ export default function FilterMobile() {
                             </Select>
                             <Select>
                                 <SelectTrigger className="w-full px-4 ">
-                                    <SelectValue placeholder="Select a fruit" />
+                                    <SelectValue placeholder="sort 2" />
                                 </SelectTrigger>
                                 <SelectContent>
                                     <SelectGroup className='bg-white p-0 m-0 border-none'>
-                                        <SelectLabel>Fruits</SelectLabel>
-                                        <SelectItem className='px-1 m-0' value="apple">Apple</SelectItem>
-                                        <SelectItem className='px-1 m-0' value="banana">Banana</SelectItem>
-                                        <SelectItem className='px-1 m-0' value="blueberry">Blueberry</SelectItem>
-                                        <SelectItem className='px-1 m-0' value="grapes">Grapes</SelectItem>
+                                        <SelectLabel></SelectLabel>
+                                        <SelectItem className='px-1 m-0' value="apple">type 1</SelectItem>
+                                        <SelectItem className='px-1 m-0' value="banana">type 2</SelectItem>
+                                        <SelectItem className='px-1 m-0' value="blueberry">type 3</SelectItem>
+                                        <SelectItem className='px-1 m-0' value="grapes">type 4</SelectItem>
                                     </SelectGroup>
                                 </SelectContent>
                             </Select>

@@ -25,7 +25,12 @@ export default function SearchPage() {
                     {/* Mobile View */}
 
                     <div className="block md:hidden w-5/6 mx-auto">
-                        <FilterMobile />
+                        <div className="bg-secondary border border-white w-full mx-auto flex justify-between items-center p-4">
+                            <p className="items-center justify-start text-sm">Showing 2-44 products</p>
+                            <div className="ml-auto">
+                                <FilterMobile />
+                            </div>
+                        </div>
                         <div className="">
                             <Search />
                         </div>

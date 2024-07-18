@@ -1158,7 +1158,6 @@ export const Add = [{ image_url: "/assets/creator-login-img/Add.png" }]
 export const accounts = [
   { id: 1, image_url: "/assets/your-account-img/order.png", title: "Your Order", description: "Track , return , or buy things" },
   { id: 2, image_url: "/assets/your-account-img/address.png", title: "Address", description: "Edit adresses for orders and gift" },
-  { id: 3, image_url: "/assets/your-account-img/coin.png", title: "Clamio Coins", description: "See your Clamio Coins and purchase" },
   { id: 3, image_url: "/assets/your-account-img/Payment.png", title: "Payment Methods", description: "Edit or add Payment Methods" },
   { id: 3, image_url: "/assets/your-account-img/contact.png", title: "Contact Us", description: "" }
 ]
