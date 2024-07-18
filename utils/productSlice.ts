@@ -1,15 +1,6 @@
-// src/Store/productSlice.ts
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+// src/utils/productSlice.ts
 import { RootState } from '@/Store/store';
-
-interface Product {
-    id: number;
-    productName: string;
-    name: string;
-    stars: string;
-    price: string;
-    imageUrl: string;
-}
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface ProductState {
     searchQuery: string;

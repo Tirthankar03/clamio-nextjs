@@ -1,7 +1,7 @@
 import ProfilePage from '@/components/shared/ProfilePage'
 import React from 'react'
 
-function page({ params }: { params: { id: string } }) {
+function creatorid({ params }: { params: { id: string } }) {
   return (
     <div>
       <ProfilePage id={params.id} />
@@ -9,4 +9,4 @@ function page({ params }: { params: { id: string } }) {
   )
 }
 
-export default page
+export default creatorid

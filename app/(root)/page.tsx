@@ -8,7 +8,7 @@ export default function Home() {
             <div className="bg-secondary text-white min-h-screen">
                 <br />
                 <br />
-                <div className="transition-all duration-500 ease-in-out ">
+                <div className="transition-all duration-500 ease-in-out">
                     <HorizontalScrollfirst />
                     <FilteredProductList />
                 </div>

@@ -1,3 +1,4 @@
+// src/store/store.ts
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
 import productReducer from '@/utils/productSlice';
 import userReducer from '@/utils/authSlice';
@@ -5,6 +6,7 @@ import creatorReducer from '@/utils/creatorSlice';
 import cartReducer from '@/utils/cartSlice';
 import communityReducer from '@/utils/communitySlice';
 import loginTypeReducer from '@/utils/loginTypeSlice';
+import wishlistReducer from '@/utils/wishlistSlice';
 import storage from 'redux-persist/lib/storage';
 import { persistReducer, persistStore } from 'redux-persist';
 import thunk from 'redux-thunk';
@@ -23,6 +25,7 @@ const rootReducer = combineReducers({
   community: communityReducer,
   creator: creatorReducer,
   loginType: loginTypeReducer, // Add the loginType reducer here
+    wishlist: wishlistReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

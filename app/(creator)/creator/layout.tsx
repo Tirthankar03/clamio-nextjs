@@ -1,5 +1,5 @@
 import Footer from "@/components/shared/Footer";
-import HeaderMain from "@/components/shared/HeaderMain";
+import HeaderUser from "@/components/shared/Navbar/HeaderUser";
 import { Toaster } from 'sonner';
 
 export default function RootLayout({
@@ -9,7 +9,7 @@ export default function RootLayout({
 }>) {
     return (
         <div className=" flex min-h-screen flex-col">
-            <HeaderMain />
+            <HeaderUser placeholder="search creator" />
             <main className="flex-1">{children}</main>
             <Footer />
             <Toaster />

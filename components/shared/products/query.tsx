@@ -1,17 +1,18 @@
+// src/pages/query.tsx
 'use client';
 import React from 'react';
+import { useRouter } from 'next/router';
 import { useSelector } from 'react-redux';
-import { useRouter } from 'next/navigation';
 import { RootState } from '@/Store/store';
 import ProductList from '@/components/shared/products/ProductList';
 import { TopSellingproductData, HotNewproductData, TopDiscountProduct } from '@/constants/data';
 
-const FilteredProductList = () => {
-    const searchQuery = useSelector((state: RootState) => state.product.searchQuery);
+const QueryPage = () => {
     const router = useRouter();
+    const { query } = router.query;
+    const searchQuery = query ? query.toString() : '';
 
     const filterProducts = (products: any) => {
-        if (router.pathname !== '/query') return products; // Only filter products on /query route
         if (!searchQuery) return products;
         return products.filter((product: any) =>
             product.productName.toLowerCase().includes(searchQuery.toLowerCase())
@@ -40,4 +41,4 @@ const FilteredProductList = () => {
     );
 };
 
-export default FilteredProductList;
+export default QueryPage;

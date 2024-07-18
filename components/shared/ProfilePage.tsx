@@ -7,7 +7,7 @@ import ToggleText from "@/components/Reusable Components/ToggleText";
 import { cardData } from "@/constants/data";
 import { InstagramIcon, LinkedinIcon, YoutubeIcon } from "lucide-react";
 
-const ProfilePage = ({id}: {id: string}) => {
+const ProfilePage = ({ id }: { id: string }) => {
   return (
     <div className="container mx-auto p-4">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
