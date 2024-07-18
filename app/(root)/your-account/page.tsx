@@ -3,6 +3,7 @@ import { useState } from "react";
 import { accounts } from "@/constants/data";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 import {
     Dialog,
     DialogContent,
@@ -10,7 +11,6 @@ import {
     DialogFooter,
     DialogHeader,
     DialogTitle,
-    DialogTrigger,
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -22,16 +22,22 @@ import {
     SelectLabel,
     SelectTrigger,
     SelectValue,
-} from "@/components/ui/select"
-
-import { Textarea } from "@/components/ui/textarea"
+} from "@/components/ui/select";
+import { Textarea } from "@/components/ui/textarea";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhone } from '@fortawesome/free-solid-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-
+import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 export default function Page() {
+    const router = useRouter();
     const [isDialogOpen, setIsDialogOpen] = useState(false);
+
+    const handleAccountClick = (accountId: number) => {
+        if (accountId === 4) {
+            handleDialogOpen();
+        } else if (accountId === 2) {
+            router.push('/your-account/address');
+        }
+    };
 
     const handleDialogOpen = () => {
         setIsDialogOpen(true);
@@ -48,8 +54,8 @@ export default function Page() {
                 {accounts.map((account) => (
                     <div
                         key={account.id}
-                        className="flex shadow-md hover:shadow-lg transition duration-300 p-4"
-                        onClick={account.id === 4 ? handleDialogOpen : undefined}
+                        className="flex shadow-md hover:shadow-lg transition duration-300 p-4 cursor-pointer"
+                        onClick={() => handleAccountClick(account.id)}
                     >
                         <div className="w-20 h-20 flex-shrink-0 justify-center">
                             <Image
@@ -69,10 +75,7 @@ export default function Page() {
             </div>
 
             <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-                <DialogTrigger asChild>
-                    <div></div>
-                </DialogTrigger>
-                <DialogContent className="sm:max-w-525px] bg-white">
+                <DialogContent className="sm:max-w-[525px] bg-white">
                     <DialogHeader>
                         <DialogTitle>Contact Us</DialogTitle>
                         <DialogDescription className="py-1">
@@ -81,47 +84,45 @@ export default function Page() {
                     </DialogHeader>
                     <Select>
                         <SelectTrigger className="w-[180px]">
-                            <SelectValue placeholder="select" />
+                            <SelectValue placeholder="Select" />
                         </SelectTrigger>
                         <SelectContent>
                             <SelectGroup className="bg-white">
-                                <SelectItem className='px-2' value="order">Order</SelectItem>
-                                <SelectItem className='px-2' value="creator">Creator</SelectItem>
-                                <SelectItem className='px-2' value="download">Download</SelectItem>
-                                <SelectItem className='px-2' value="other">Other</SelectItem>
+                                <SelectItem className="px-2" value="order">Order</SelectItem>
+                                <SelectItem className="px-2" value="creator">Creator</SelectItem>
+                                <SelectItem className="px-2" value="download">Download</SelectItem>
+                                <SelectItem className="px-2" value="other">Other</SelectItem>
                             </SelectGroup>
                         </SelectContent>
                     </Select>
-                    <div className="">
+                    <div>
                         <Textarea placeholder="Type your query or feedback here." />
                     </div>
-                    <div className="grid md:grid-cols-2">
-                        <div className="phone flex">
-                            <div className="icon">
-                                <FontAwesomeIcon icon={faPhone} />
-                            </div>
-                            <div className="number pl-2">
-                                +91 235-XXX-538-XX
+                    <Label htmlFor="message">To reach out to you </Label>
+                    <div className="grid grid-cols-2 gap-4">
+                        <div className="phone-no">
+                            <div>
+                                <Textarea placeholder="provide email" />
                             </div>
                         </div>
-                        <div className="email flex">
-                            <div className="icon">
-                                <FontAwesomeIcon icon={faEnvelope} />
-                            </div>
-                            <address className="number pl-2">
-                                contact@clamio.in
-                            </address>
+                        <div className="user-email"><div>
+                            <Textarea placeholder="provide telephone no " />
+                        </div></div>
+                    </div>
+                    <div className="grid md:grid-cols-2 gap-4 py-4">
+                        <div className="flex items-center">
+                            <FontAwesomeIcon icon={faPhone} className="mr-2" />
+                            <span>+91 235-XXX-538-XX</span>
+                        </div>
+                        <div className="flex items-center">
+                            <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
+                            <address className="not-italic">contact@clamio.in</address>
                         </div>
                     </div>
-                    <div className="flex flex-end justify-end gap-2">
-                        <DialogFooter>
-                            <Button onClick={handleDialogClose}>Submit</Button>
-                        </DialogFooter>
-                        <DialogFooter>
-                            <Button onClick={handleDialogClose}>Close</Button>
-                        </DialogFooter>
+                    <div className="flex justify-end gap-2">
+                        <Button onClick={handleDialogClose}>Submit</Button>
+                        <Button onClick={handleDialogClose}>Close</Button>
                     </div>
-
                 </DialogContent>
             </Dialog>
         </div>

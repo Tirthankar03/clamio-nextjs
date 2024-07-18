@@ -1161,3 +1161,30 @@ export const accounts = [
   { id: 3, image_url: "/assets/your-account-img/Payment.png", title: "Payment Methods", description: "Edit or add Payment Methods" },
   { id: 4, image_url: "/assets/your-account-img/contact.png", title: "Contact Us", description: "" }
 ]
+// constants/addresses.js
+export const addresses = [
+  {
+    id: 1,
+    name: "John USA",
+    line1: "Dhemaji Engineering College",
+    line2: "Tekjuri No 5, Dhemaji-787057",
+    city: "Dhemaji",
+    state: "ASSAM",
+    zip: "787057",
+    country: "India",
+    phone: "94XXX00X12",
+    isDefault: true,
+  },
+  {
+    id: 2,
+    name: "John India",
+    line1: "Maligaon",
+    line2: "Gate 3",
+    city: "Guwahati",
+    state: "ASSAM",
+    zip: "784XX3",
+    country: "India",
+    phone: "9XX-XX9549-X",
+    isDefault: false,
+  },
+];
