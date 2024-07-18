@@ -10,9 +10,25 @@ import {
     DialogFooter,
     DialogHeader,
     DialogTitle,
+    DialogTrigger,
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import {
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectLabel,
+    SelectTrigger,
+    SelectValue,
+} from "@/components/ui/select"
+
+import { Textarea } from "@/components/ui/textarea"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+
 
 export default function Page() {
     const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -53,30 +69,59 @@ export default function Page() {
             </div>
 
             <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-                <DialogContent className="sm:max-w-[425px]">
+                <DialogTrigger asChild>
+                    <div></div>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-525px] bg-white">
                     <DialogHeader>
                         <DialogTitle>Contact Us</DialogTitle>
-                        <DialogDescription>
-                            Make changes to your profile here. Click save when you're done.
+                        <DialogDescription className="py-1">
+                            Feel free to reach us for any query or feedback
                         </DialogDescription>
                     </DialogHeader>
-                    <div className="grid gap-4 py-4">
-                        <div className="grid grid-cols-4 items-center gap-4">
-                            <Label htmlFor="name" className="text-right">
-                                Name
-                            </Label>
-                            <Input id="name" className="col-span-3" />
+                    <Select>
+                        <SelectTrigger className="w-[180px]">
+                            <SelectValue placeholder="select" />
+                        </SelectTrigger>
+                        <SelectContent>
+                            <SelectGroup className="bg-white">
+                                <SelectItem className='px-2' value="order">Order</SelectItem>
+                                <SelectItem className='px-2' value="creator">Creator</SelectItem>
+                                <SelectItem className='px-2' value="download">Download</SelectItem>
+                                <SelectItem className='px-2' value="other">Other</SelectItem>
+                            </SelectGroup>
+                        </SelectContent>
+                    </Select>
+                    <div className="">
+                        <Textarea placeholder="Type your query or feedback here." />
+                    </div>
+                    <div className="grid md:grid-cols-2">
+                        <div className="phone flex">
+                            <div className="icon">
+                                <FontAwesomeIcon icon={faPhone} />
+                            </div>
+                            <div className="number pl-2">
+                                +91 235-XXX-538-XX
+                            </div>
                         </div>
-                        <div className="grid grid-cols-4 items-center gap-4">
-                            <Label htmlFor="username" className="text-right">
-                                Username
-                            </Label>
-                            <Input id="username" className="col-span-3" />
+                        <div className="email flex">
+                            <div className="icon">
+                                <FontAwesomeIcon icon={faEnvelope} />
+                            </div>
+                            <address className="number pl-2">
+                                contact@clamio.in
+                            </address>
                         </div>
                     </div>
-                    <DialogFooter>
-                        <Button onClick={handleDialogClose}>Close</Button>
-                    </DialogFooter>
+                    <div className="flex flex-end justify-end gap-2">
+                        <DialogFooter>
+                            <Button onClick={handleDialogClose}>Submit</Button>
+                        </DialogFooter>
+                        <DialogFooter>
+                            <Button onClick={handleDialogClose}>Close</Button>
+                        </DialogFooter>
+                    </div>
+
                 </DialogContent>
             </Dialog>
         </div>
