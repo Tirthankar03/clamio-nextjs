@@ -84,7 +84,7 @@ export default function Page() {
                     </DialogHeader>
                     <Select>
                         <SelectTrigger className="w-[180px]">
-                            <SelectValue placeholder="Select" />
+                            <SelectValue placeholder="Select Type" />
                         </SelectTrigger>
                         <SelectContent>
                             <SelectGroup className="bg-white">
