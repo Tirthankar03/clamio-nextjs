@@ -1259,3 +1259,10 @@ export const orders = [
   },
   // Add more orders here with the appropriate type
 ];
+
+// constants.ts
+export const COUPONS = [
+  { code: 'DISCOUNT10', value: 10 },
+  { code: 'DISCOUNT20', value: 20 },
+  { code: 'DISCOUNT30', value: 30 },
+];
