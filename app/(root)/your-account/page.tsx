@@ -36,6 +36,8 @@ export default function Page() {
             handleDialogOpen();
         } else if (accountId === 2) {
             router.push('/your-account/address');
+        } else if (accountId === 1) {
+            router.push('/your-account/your-orders');
         }
     };
 
