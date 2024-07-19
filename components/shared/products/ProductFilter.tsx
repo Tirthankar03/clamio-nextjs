@@ -11,13 +11,13 @@ const FilteredProductList = () => {
     const router = useRouter();
 
     const filterProducts = (products: any) => {
-        if (router.pathname !== '/query') return products; // Only filter products on /query route
+        if (router.pathname !== '/query') return products; 
         if (!searchQuery) return products;
         return products.filter((product: any) =>
             product.productName.toLowerCase().includes(searchQuery.toLowerCase())
         );
     };
-
+    
     const filteredTopSellingProducts = filterProducts(TopSellingproductData);
     const filteredHotNewProducts = filterProducts(HotNewproductData);
     const filteredTopDiscountProduct = filterProducts(TopDiscountProduct);

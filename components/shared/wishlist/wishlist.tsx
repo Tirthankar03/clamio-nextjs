@@ -7,6 +7,7 @@ import { removeFromWishlist } from '@/utils/wishlistSlice';
 import ProductCard from '@/components/shared/cards/ProductCard';
 
 
+
 const WishlistPage = () => {
     const wishlistItems = useSelector((state: RootState) => state.wishlist.items);
     const dispatch = useDispatch();
