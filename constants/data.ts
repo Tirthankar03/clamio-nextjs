@@ -1266,3 +1266,11 @@ export const COUPONS = [
   { code: 'DISCOUNT20', value: 20 },
   { code: 'DISCOUNT30', value: 30 },
 ];
+
+export const states = [
+  { name: "California" },
+  { name: "New York" },
+  { name: "Texas" },
+  { name: "Florida" },
+  { name: "Illinois" },
+];

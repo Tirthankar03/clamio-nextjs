@@ -27,6 +27,7 @@ function OrderSummary({ totalItems, totalCost }: any) {
     const handleClick = () => {
         if (isLoggedIn) {
             toast.success('Checking out');
+            router.push('/checkout');
         } else {
             toast.warning('You need to log in first');
             setTimeout(() => {

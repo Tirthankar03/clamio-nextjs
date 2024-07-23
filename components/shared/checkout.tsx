@@ -173,9 +173,9 @@ const Checkout = () => {
                         <FormItem>
                           <FormLabel>Name</FormLabel>
                           <FormControl>
-                            <Input {...field}   placeholder="Name"  />
+                            <Input {...field} />
                           </FormControl>
-                          <FormMessage  className="text-red-500 text-xs"/>
+                          <FormMessage />
                         </FormItem>
                       )}
                     />
@@ -186,9 +186,9 @@ const Checkout = () => {
                         <FormItem>
                           <FormLabel>Phone</FormLabel>
                           <FormControl>
-                            <Input {...field}    placeholder="10-digit mobile number" />
+                            <Input {...field} />
                           </FormControl>
-                          <FormMessage className="text-red-500 text-xs" />
+                          <FormMessage />
                         </FormItem>
                       )}
                     />
@@ -201,9 +201,9 @@ const Checkout = () => {
                         <FormItem>
                           <FormLabel>Pincode</FormLabel>
                           <FormControl>
-                            <Input {...field}     placeholder="Pincode" />
+                            <Input {...field} />
                           </FormControl>
-                          <FormMessage className="text-red-500 text-xs" />
+                          <FormMessage />
                         </FormItem>
                       )}
                     />
@@ -214,9 +214,9 @@ const Checkout = () => {
                         <FormItem>
                           <FormLabel>Locality</FormLabel>
                           <FormControl>
-                            <Input {...field} placeholder="City/District/Town" />
+                            <Input {...field} />
                           </FormControl>
-                          <FormMessage className="text-red-500 text-xs" />
+                          <FormMessage />
                         </FormItem>
                       )}
                     />
@@ -228,9 +228,9 @@ const Checkout = () => {
                       <FormItem>
                         <FormLabel>Address</FormLabel>
                         <FormControl>
-                          <Textarea {...field} placeholder="City/District/Town" />
+                          <Textarea {...field} />
                         </FormControl>
-                        <FormMessage className="text-red-500 text-xs " />
+                        <FormMessage />
                       </FormItem>
                     )}
                   />
@@ -242,9 +242,9 @@ const Checkout = () => {
                         <FormItem>
                           <FormLabel>City</FormLabel>
                           <FormControl>
-                            <Input {...field} placeholder="City/District/Town" />
+                            <Input {...field} />
                           </FormControl>
-                          <FormMessage className="text-red-500 text-xs" />
+                          <FormMessage />
                         </FormItem>
                       )}
                     />
@@ -278,7 +278,7 @@ const Checkout = () => {
                               </SelectContent>
                             </Select>
                           </FormControl>
-                          <FormMessage className="text-red-500 text-xs" />
+                          <FormMessage />
                         </FormItem>
                       )}
                     />
@@ -291,7 +291,7 @@ const Checkout = () => {
                         <FormItem>
                           <FormLabel>Landmark</FormLabel>
                           <FormControl>
-                            <Input {...field} placeholder="Landmark (Optional)" />
+                            <Input {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -304,9 +304,9 @@ const Checkout = () => {
                         <FormItem>
                           <FormLabel>Alternative Phone</FormLabel>
                           <FormControl>
-                            <Input {...field} placeholder="Alternate Phone (Optional)" />
+                            <Input {...field} />
                           </FormControl>
-                          <FormMessage  />
+                          <FormMessage />
                         </FormItem>
                       )}
                     />
@@ -328,9 +328,9 @@ const Checkout = () => {
                             <SelectContent className="bg-white">
                               <SelectGroup>
                                 <SelectLabel>Type</SelectLabel>
-                                <SelectItem className="hover:bg-yellow-300" value="Home">Home</SelectItem>
-                                <SelectItem className="hover:bg-yellow-300" value="Work">Work</SelectItem>
-                                <SelectItem className="hover:bg-yellow-300" value="Other">Other</SelectItem>
+                                <SelectItem value="Home">Home</SelectItem>
+                                <SelectItem value="Work">Work</SelectItem>
+                                <SelectItem value="Other">Other</SelectItem>
                               </SelectGroup>
                             </SelectContent>
                           </Select>
@@ -339,10 +339,12 @@ const Checkout = () => {
                       </FormItem>
                     )}
                   />
+
                   <div className="flex justify-between items-center">
-                      <Button
+
+                    <Button
                     type="submit"
-                    className="bg-yellow-500 text-white py-3 my-3 w-full md:w-48 font-semibold hover:bg-yellow-600"
+                    className="bg-yellow-500 text-white py-3 w-full my-3 md:w-48 font-semibold hover:bg-yellow-600"
                   >
                     {isEditing ? "Update Address" : "Add Address"}
                   </Button>
@@ -359,7 +361,7 @@ const Checkout = () => {
                     Cancel
                   </Button>
                   </div>
-                
+                  
                 </form>
               </Form>
             )}
