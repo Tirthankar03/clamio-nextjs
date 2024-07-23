@@ -6,14 +6,14 @@ import { FaCreditCard, FaWallet, FaUniversity, FaMobileAlt, FaCalendarAlt, FaTru
 const PaymentOptions = () => {
   const [selectedOption, setSelectedOption] = useState('');
 
-  const handleOptionChange = (event) => {
-    setSelectedOption(event.target.value);
+  const handleOptionChange = (value) => {
+    setSelectedOption(value);
   };
 
   return (
     <div className="w-full border mx-auto p-6 bg-white rounded-lg shadow-md">
       <h4 className="text-xl font-semibold mb-6">Payment Options</h4>
-      <RadioGroup onChange={handleOptionChange} value={selectedOption}>
+      <RadioGroup value={selectedOption} onValueChange={handleOptionChange}>
         <div className="mb-6">
           <label className="block mb-2 font-medium text-gray-700">UPI</label>
           <div className="flex items-center mb-3">
