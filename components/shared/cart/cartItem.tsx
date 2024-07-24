@@ -17,7 +17,7 @@ function CartItem({ item }) {
     };
 
     return (
-        <div className="grid grid-cols-4 items-center border-b py-4">
+        <div className="grid grid-cols-4 gap-3  items-center border-b py-4">
             <div className="col-span-1 flex justify-center">
                 <Image
                     src={item.imageUrl}

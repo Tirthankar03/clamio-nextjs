@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 import { useState } from "react";
 import { accounts } from "@/constants/data";
@@ -62,3 +63,14 @@ export default function page() {
         </div>
     )
 }
+=======
+import React from 'react'
+
+const ContactUs = () => {
+  return (
+    <div>ContactUs</div>
+  )
+}
+
+export default ContactUs
+>>>>>>> 91be6bb34231367c9009ccc56d0b8d4e85867bbb

@@ -5,6 +5,7 @@ import Checkout from '@/components/shared/checkout'; // Adjust the import path a
 import { useSelector } from "react-redux";
 import { RootState } from "@/Store/store";
 import CartItem from "@/components/shared/cart/cartItem";
+import PaymentOptions from "@/components/shared/PaymentOptions";
 
 const steps = [
   { label: "DELIVERY ADDRESS" },
@@ -36,9 +37,14 @@ export default function StepperFooterInside() {
                         <p className="text-center">Your cart is empty.</p>
                       )}
                     </div>
-                  ) : (
+                  ) : index==2 ? (
+                    <div>
+                      <PaymentOptions/>
+                    </div>
+                  
+                  ):( 
                     null
-                  )}
+                  ) }
                 </div>
                 <StepButtons />
               </Step>
@@ -76,8 +82,8 @@ export default function StepperFooterInside() {
 const StepButtons = () => {
   const { nextStep, prevStep, isLastStep, isOptionalStep, isDisabledStep } = useStepper();
   return (
-    <div className="w-full flex gap-2 mb-4">
-      <Button disabled={isDisabledStep} onClick={prevStep} size="sm" variant="secondary">
+    <div className="w-full my-3 flex gap-2 mb-4">
+      <Button disabled={isDisabledStep} onClick={prevStep} size="sm" variant="default">
         Prev
       </Button>
       <Button size="sm" onClick={nextStep}>
@@ -94,7 +100,7 @@ const FinalStep = () => {
   }
   return (
     <>
-      <div className="h-40 flex items-center justify-center border bg-secondary text-primary rounded-md">
+      <div className="h-40 my-6 flex items-center justify-center border bg-secondary text-primary rounded-md">
         <h1 className="text-xl">Woohoo! All steps completed! 🎉</h1>
       </div>
       <div className="w-full flex justify-end gap-2">

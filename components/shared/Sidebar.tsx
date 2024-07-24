@@ -65,7 +65,11 @@ const Sidebar = () => {
               <span className="font-medium">Manage Addresses</span>
             </Link>
             <Link
+<<<<<<< HEAD
               href="/contact-us"
+=======
+              href="/your_account/contact-us"
+>>>>>>> 91be6bb34231367c9009ccc56d0b8d4e85867bbb
               className="flex items-center gap-3 rounded-lg px-4 py-2 hover:bg-yellow-300 transition-all text-gray-700"
             >
               <Contact2 className="h-5 w-5 text-gray-600" />

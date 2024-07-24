@@ -108,10 +108,10 @@ const Checkout = () => {
   };
 
   return (
-    <div className="md:w-full lg:max-w-7xl lg:mx-auto flex flex-col lg:flex-row gap-8 p-4">
+    <div className="md:w-full  lg:max-w-7xl lg:mx-auto flex flex-col lg:flex-row gap-8 md:p-4">
       <div className="lg:w-full w-full">
-        <div className="bg-white shadow-md rounded-lg">
-          <div className="flex flex-col space-y-4 p-6">
+        <div className="bg-white border shadow-md rounded-lg">
+          <div className="flex flex-col space-y-4 md:p-6">
             {addresses.map((address: any) => (
               <div
                 key={address.id}
@@ -150,7 +150,7 @@ const Checkout = () => {
               </div>
             ))}
             <Button
-              className="bg-blue-500 text-white py-3 w-full md:w-48 font-semibold hover:bg-blue-600"
+              className="bg-secondary text-white py-3 w-full md:w-48 font-semibold hover:bg-gray-800"
               onClick={() => setShowForm(!showForm)}
             >
               Add a new address
@@ -159,7 +159,7 @@ const Checkout = () => {
               <Form {...form}>
                 <form
                   onSubmit={form.handleSubmit(handleFormSubmit)}
-                  className="p-4 border mt-4 bg-zinc-100 shadow-md rounded-lg"
+                  className="p-4 border mt-4 bg-zinc-50 shadow-md rounded-lg"
                 >
                   <h3 className="text-lg font-semibold mb-2">
                     {isEditing ? "Edit Address" : "Add a new address"}
@@ -173,9 +173,9 @@ const Checkout = () => {
                         <FormItem>
                           <FormLabel>Name</FormLabel>
                           <FormControl>
-                            <Input {...field} />
+                            <Input {...field}   placeholder="Name"/>
                           </FormControl>
-                          <FormMessage />
+                           <FormMessage className="text-red-500"/>
                         </FormItem>
                       )}
                     />
@@ -186,9 +186,9 @@ const Checkout = () => {
                         <FormItem>
                           <FormLabel>Phone</FormLabel>
                           <FormControl>
-                            <Input {...field} />
+                            <Input {...field}  placeholder="10-digit mobile number" />
                           </FormControl>
-                          <FormMessage />
+                           <FormMessage className="text-red-500"/>
                         </FormItem>
                       )}
                     />
@@ -201,9 +201,9 @@ const Checkout = () => {
                         <FormItem>
                           <FormLabel>Pincode</FormLabel>
                           <FormControl>
-                            <Input {...field} />
+                            <Input {...field}  placeholder="Pincode" />
                           </FormControl>
-                          <FormMessage />
+                           <FormMessage className="text-red-500"/>
                         </FormItem>
                       )}
                     />
@@ -214,9 +214,9 @@ const Checkout = () => {
                         <FormItem>
                           <FormLabel>Locality</FormLabel>
                           <FormControl>
-                            <Input {...field} />
+                            <Input {...field}    placeholder="Locality"    />
                           </FormControl>
-                          <FormMessage />
+                           <FormMessage className="text-red-500"/>
                         </FormItem>
                       )}
                     />
@@ -228,9 +228,9 @@ const Checkout = () => {
                       <FormItem>
                         <FormLabel>Address</FormLabel>
                         <FormControl>
-                          <Textarea {...field} />
+                          <Textarea {...field}    placeholder="Address (Area and Street)"/>
                         </FormControl>
-                        <FormMessage />
+                         <FormMessage className="text-red-500"/>
                       </FormItem>
                     )}
                   />
@@ -242,9 +242,9 @@ const Checkout = () => {
                         <FormItem>
                           <FormLabel>City</FormLabel>
                           <FormControl>
-                            <Input {...field} />
+                            <Input {...field}   placeholder="City/District/Town" />
                           </FormControl>
-                          <FormMessage />
+                           <FormMessage className="text-red-500"/>
                         </FormItem>
                       )}
                     />
@@ -278,7 +278,7 @@ const Checkout = () => {
                               </SelectContent>
                             </Select>
                           </FormControl>
-                          <FormMessage />
+                           <FormMessage className="text-red-500"/>
                         </FormItem>
                       )}
                     />
@@ -291,9 +291,9 @@ const Checkout = () => {
                         <FormItem>
                           <FormLabel>Landmark</FormLabel>
                           <FormControl>
-                            <Input {...field} />
+                            <Input {...field}  placeholder="Landmark (Optional)" />
                           </FormControl>
-                          <FormMessage />
+                           <FormMessage className="text-red-500"/>
                         </FormItem>
                       )}
                     />
@@ -304,9 +304,9 @@ const Checkout = () => {
                         <FormItem>
                           <FormLabel>Alternative Phone</FormLabel>
                           <FormControl>
-                            <Input {...field} />
+                            <Input {...field} className="w-60"   placeholder="Alternate Phone (Optional)" />
                           </FormControl>
-                          <FormMessage />
+                           <FormMessage className="text-red-500"/>
                         </FormItem>
                       )}
                     />
@@ -328,14 +328,14 @@ const Checkout = () => {
                             <SelectContent className="bg-white">
                               <SelectGroup>
                                 <SelectLabel>Type</SelectLabel>
-                                <SelectItem value="Home">Home</SelectItem>
-                                <SelectItem value="Work">Work</SelectItem>
-                                <SelectItem value="Other">Other</SelectItem>
+                                <SelectItem className="hover:bg-yellow-300" value="Home">Home</SelectItem>
+                                <SelectItem className="hover:bg-yellow-300" value="Work">Work</SelectItem>
+                                <SelectItem className="hover:bg-yellow-300" value="Other">Other</SelectItem>
                               </SelectGroup>
                             </SelectContent>
                           </Select>
                         </FormControl>
-                        <FormMessage />
+                         <FormMessage className="text-red-500"/>
                       </FormItem>
                     )}
                   />
@@ -344,13 +344,13 @@ const Checkout = () => {
 
                     <Button
                     type="submit"
-                    className="bg-yellow-500 text-white py-3 w-full my-3 md:w-48 font-semibold hover:bg-yellow-600"
+                    className="bg-primary  py-3 w-36 my-3 md:w-48 font-semibold hover:bg-yellow-400"
                   >
                     {isEditing ? "Update Address" : "Add Address"}
                   </Button>
 
                   <Button
-                    className="bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600"
+                    className="bg-secondary text-white px-4 py-2 rounded-lg hover:bg-gray-800"
                     onClick={() => {
                       setShowForm(false);
                       setIsEditing(false);
