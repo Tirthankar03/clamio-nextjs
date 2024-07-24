@@ -1,9 +1,12 @@
+import { FancyMultiSelect } from '@/components/shared/FancyMultiSelect'
 import React from 'react'
 
 const ContactUs = () => {
-  return (
-    <div>ContactUs</div>
-  )
+    return (
+        <div>
+            <FancyMultiSelect/>
+        </div>
+    )
 }
 
 export default ContactUs

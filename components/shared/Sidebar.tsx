@@ -51,7 +51,7 @@ const Sidebar = () => {
               Account Settings
             </div>
             <Link
-              href="#"
+              href="/your_account/my-profile"
               className="flex items-center gap-3 rounded-lg px-4 py-2 hover:bg-yellow-300 transition-all text-gray-700"
             >
               <User className="h-5 w-5 text-gray-600" />
@@ -104,9 +104,9 @@ const Sidebar = () => {
             >
               <ClipboardList className="h-5 w-5 text-gray-600" />
               <span className="font-medium">My Coupons</span>
-            </Link>
+            </Link>``
             <Link
-              href="#"
+              href="/your_account/reviews-ratings"
               className="flex items-center gap-3 rounded-lg px-4 py-2 hover:bg-yellow-300 transition-all text-gray-700"
             >
               <Star className="h-5 w-5 text-gray-600" />

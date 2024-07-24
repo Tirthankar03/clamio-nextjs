@@ -1274,3 +1274,29 @@ export const states = [
   { name: "Florida" },
   { name: "Illinois" },
 ];
+
+
+// reviews-ratings 
+
+export const reviews = [
+  {
+    stars: 5,
+    name: 'italian pasta',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  },
+  {
+    stars: 4,
+    name: 'mystic tarrot card',
+    description: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+  },
+  {
+    stars: 3,
+    name: 'French fries',
+    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+  },
+  {
+    stars: 5,
+    name: 'Web3 Novel',
+    description: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  },
+];
