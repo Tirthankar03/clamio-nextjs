@@ -1,205 +1,170 @@
-'use client'
+'use client';
 import React, { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import * as z from 'zod';
 
-const MyProfile = () => {
-    const [formData, setFormData] = useState({
-        firstName: 'Anish',
-        lastName: '',
+// Define the form validation schema using Zod
+const schema = z.object({
+    firstName: z.string().nonempty('First name is required'),
+    lastName: z.string().nonempty('Last name is required'),
+    gender: z.enum(['Male', 'Female']),
+    email: z.string().email('Invalid email address'),
+    mobile: z.string().min(10, 'Mobile number should be at least 10 digits').max(15, 'Mobile number should be at most 15 digits'),
+});
+
+type ProfileFormInputs = z.infer<typeof schema>;
+
+const ProfileForm: React.FC = () => {
+    const [isEditing, setIsEditing] = useState(false);
+
+    // Initialize the form with default values
+    const defaultValues: ProfileFormInputs = {
+        firstName: 'John',
+        lastName: 'Doe',
         gender: 'Male',
-        email: 'sdnasoidsa@gmail.com',
-        mobile: '+9199X332323',
+        email: 'samplemail@clamio.in',
+        mobile: '+9199XX9C7XX9',
+    };
+
+    const { register, handleSubmit, formState: { errors }, reset } = useForm<ProfileFormInputs>({
+        resolver: zodResolver(schema),
+        defaultValues,
     });
 
-    const [editMode, setEditMode] = useState({
-        name: false,
-        email: false,
-        mobile: false,
-    });
-
-    const handleEditToggle = (field) => {
-        setEditMode((prev) => ({ ...prev, [field]: !prev[field] }));
+    const onSubmit = (data: ProfileFormInputs) => {
+        console.log(data);
+        setIsEditing(false);
     };
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData((prev) => ({ ...prev, [name]: value }));
+    const handleEdit = () => {
+        setIsEditing(true);
     };
 
-    const handleSave = (field) => {
-        setEditMode((prev) => ({ ...prev, [field]: false }));
-    };
-
-    const handleCancel = (field) => {
-        setEditMode((prev) => ({ ...prev, [field]: false }));
-        // Optionally reset the form data if needed
+    const handleCancel = () => {
+        setIsEditing(false);
+        reset(defaultValues); // Reset to initial values if editing is cancelled
     };
 
     return (
-        <div className="p-4">
-            <h2 className="text-2xl font-bold mb-4">Personal Information</h2>
-
-            <div className="mb-4">
-                <div className="flex justify-between">
-                    <label className="block text-sm font-medium">First Name</label>
-                    {!editMode.name ? (
-                        <button
-                            className="text-blue-500"
-                            onClick={() => handleEditToggle('name')}
-                        >
-                            Edit
-                        </button>
-                    ) : (
-                        <div className="flex space-x-2">
-                            <button
-                                className="text-blue-500"
-                                onClick={() => handleSave('name')}
-                            >
-                                Save
-                            </button>
-                            <button
-                                className="text-blue-500"
-                                onClick={() => handleCancel('name')}
-                            >
-                                Cancel
-                            </button>
-                        </div>
-                    )}
-                </div>
-                {!editMode.name ? (
-                    <div className="mt-1 block w-full p-2 border border-gray-300 rounded">
-                        {formData.firstName} {formData.lastName}
-                    </div>
-                ) : (
-                    <div className="flex space-x-2">
+        <div className="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-md">
+            <div className="flex justify-between items-center mb-6">
+                <h2 className="text-xl font-semibold text-gray-800">Personal Information</h2>
+                <button
+                    type="button"
+                    onClick={handleEdit}
+                    className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                >
+                    Edit
+                </button>
+            </div>
+            <form onSubmit={handleSubmit(onSubmit)} className="w-full">
+                <div className="grid grid-cols-2 gap-4 mb-4">
+                    <div>
+                        <label className="block text-gray-600 mb-1">First Name</label>
                         <input
                             type="text"
-                            name="firstName"
-                            value={formData.firstName}
-                            onChange={handleChange}
-                            className="mt-1 block w-full p-2 border border-gray-300 rounded"
+                            disabled={!isEditing}
+                            className={`w-full p-2 border rounded ${isEditing ? 'border-gray-300' : 'border-transparent bg-gray-100'}`}
+                            {...register('firstName')}
                         />
+                        {errors.firstName && <span className="text-red-500">{errors.firstName.message}</span>}
+                    </div>
+                    <div>
+                        <label className="block text-gray-600 mb-1">Last Name</label>
                         <input
                             type="text"
-                            name="lastName"
-                            value={formData.lastName}
-                            onChange={handleChange}
-                            className="mt-1 block w-full p-2 border border-gray-300 rounded"
+                            disabled={!isEditing}
+                            className={`w-full p-2 border rounded ${isEditing ? 'border-gray-300' : 'border-transparent bg-gray-100'}`}
+                            {...register('lastName')}
                         />
+                        {errors.lastName && <span className="text-red-500">{errors.lastName.message}</span>}
                     </div>
-                )}
-            </div>
-
-            <div className="mb-4">
-                <label className="block text-sm font-medium">Your Gender</label>
-                <div className="mt-1">
-                    <label className="mr-4">
-                        <input
-                            type="radio"
-                            name="gender"
-                            value="Male"
-                            checked={formData.gender === 'Male'}
-                            onChange={handleChange}
-                        />
-                        Male
-                    </label>
-                    <label>
-                        <input
-                            type="radio"
-                            name="gender"
-                            value="Female"
-                            checked={formData.gender === 'Female'}
-                            onChange={handleChange}
-                        />
-                        Female
-                    </label>
                 </div>
-            </div>
-
-            <div className="mb-4">
-                <div className="flex justify-between">
-                    <label className="block text-sm font-medium">Email Address</label>
-                    {!editMode.email ? (
-                        <button
-                            className="text-blue-500"
-                            onClick={() => handleEditToggle('email')}
-                        >
-                            Edit
-                        </button>
-                    ) : (
-                        <div className="flex space-x-2">
-                            <button
-                                className="text-blue-500"
-                                onClick={() => handleSave('email')}
-                            >
-                                Save
-                            </button>
-                            <button
-                                className="text-blue-500"
-                                onClick={() => handleCancel('email')}
-                            >
-                                Cancel
-                            </button>
-                        </div>
-                    )}
-                </div>
-                {!editMode.email ? (
-                    <div className="mt-1 block w-full p-2 border border-gray-300 rounded">
-                        {formData.email}
+                <div className="mb-4">
+                    <label className="block text-gray-600 mb-1">Your Gender</label>
+                    <div className="flex items-center space-x-4">
+                        <label className="flex items-center">
+                            <input type="radio" value="Male" disabled={!isEditing} {...register('gender')} className="mr-2" />
+                            Male
+                        </label>
+                        <label className="flex items-center">
+                            <input type="radio" value="Female" disabled={!isEditing} {...register('gender')} className="mr-2" />
+                            Female
+                        </label>
                     </div>
-                ) : (
+                    {errors.gender && <span className="text-red-500">{errors.gender.message}</span>}
+                </div>
+                <div className="mb-4">
+                    <label className="block text-gray-600 mb-1">Email Address</label>
+                    <input
+                        type="email"
+                        disabled={!isEditing}
+                        className={`w-full p-2 border rounded ${isEditing ? 'border-gray-300' : 'border-transparent bg-gray-100'}`}
+                        {...register('email')}
+                    />
+                    {errors.email && <span className="text-red-500">{errors.email.message}</span>}
+                </div>
+                <div className="mb-4">
+                    <label className="block text-gray-600 mb-1">Mobile Number</label>
                     <input
                         type="text"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        className="mt-1 block w-full p-2 border border-gray-300 rounded"
+                        disabled={!isEditing}
+                        className={`w-full p-2 border rounded ${isEditing ? 'border-gray-300' : 'border-transparent bg-gray-100'}`}
+                        {...register('mobile')}
                     />
-                )}
-            </div>
-
-            <div className="mb-4">
-                <div className="flex justify-between">
-                    <label className="block text-sm font-medium">Mobile Number</label>
-                    {!editMode.mobile ? (
-                        <button
-                            className="text-blue-500"
-                            onClick={() => handleEditToggle('mobile')}
-                        >
-                            Edit
-                        </button>
-                    ) : (
-                        <div className="flex space-x-2">
-                            <button
-                                className="text-blue-500"
-                                onClick={() => handleSave('mobile')}
-                            >
-                                Save
-                            </button>
-                            <button
-                                className="text-blue-500"
-                                onClick={() => handleCancel('mobile')}
-                            >
-                                Cancel
-                            </button>
-                        </div>
-                    )}
+                    {errors.mobile && <span className="text-red-500">{errors.mobile.message}</span>}
                 </div>
-                {!editMode.mobile ? (
-                    <div className="mt-1 block w-full p-2 border border-gray-300 rounded">
-                        {formData.mobile}
+                {isEditing && (
+                    <div className="flex justify-end space-x-4">
+                        <button type="submit" className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Save</button>
+                        <button type="button" onClick={handleCancel} className="bg-gray-300 text-gray-700 px-4 py-2 rounded hover:bg-gray-400">Cancel</button>
                     </div>
-                ) : (
-                    <input
-                        type="text"
-                        name="mobile"
-                        value={formData.mobile}
-                        onChange={handleChange}
-                        className="mt-1 block w-full p-2 border border-gray-300 rounded"
-                    />
                 )}
+            </form>
+            <div className="mt-12">
+                <h2 className="text-2xl font-semibold text-gray-800 mb-6">FAQs</h2>
+                <div className="space-y-4">
+                    <div>
+                        <h3 className="text-lg font-medium text-gray-900">
+                            What happens when I update my email address (or mobile number)?
+                        </h3>
+                        <p className="text-gray-700">
+                            Your login email id (or mobile number) changes, likewise. You'll receive all your account-related communication on your updated email address (or mobile number).
+                        </p>
+                    </div>
+                    <div>
+                        <h3 className="text-lg font-medium text-gray-900">
+                            When will my Clamio account be updated with the new email address (or mobile number)?
+                        </h3>
+                        <p className="text-gray-700">
+                            It happens as soon as you confirm the verification code sent to your email (or mobile) and save the changes.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 className="text-lg font-medium text-gray-900">
+                            What happens to my existing Clamio account when I update my email address (or mobile number)?
+                        </h3>
+                        <p className="text-gray-700">
+                            Updating your email address (or mobile number) doesn't invalidate your account. Your account remains fully functional. You'll continue seeing your order history, saved information, and personal details.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 className="text-lg font-medium text-gray-900">
+                            Does my Seller account get affected when I update my email address?
+                        </h3>
+                        <p className="text-gray-700">
+                            Clamio has a 'single sign-on' policy. Any changes will reflect in your Seller account also.
+                        </p>
+                    </div>
+                </div>
+                <div className="mt-6 space-y-2">
+                    <a href="#deactivate" className="text-blue-600 hover:underline">Deactivate Account</a><br />
+                    <a href="#delete" className="text-red-600 hover:underline">Delete Account</a>
+                </div>
             </div>
         </div>
     );
 };
 
-export default MyProfile;
+export default ProfileForm;
