@@ -4,7 +4,7 @@ import React from 'react'
 const ContactUs = () => {
     return (
         <div>
-            <FancyMultiSelect/>
+           
         </div>
     )
 }

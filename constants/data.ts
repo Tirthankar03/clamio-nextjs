@@ -780,7 +780,7 @@ export const productListings = [
 
 
 
-import { User, CreditCard, Users, LifeBuoy, Settings, Keyboard, Plus, Coins } from 'lucide-react';
+import { User, CreditCard, Users, LifeBuoy, Settings, Keyboard, Plus, Coins, ListOrdered, MapPin, Contact2, Gift, Wallet, ClipboardList, Star, AlertCircle, Heart } from 'lucide-react';
 export const headerLinks = [
   {
     label: 'Community',
@@ -1300,3 +1300,30 @@ export const reviews = [
     description: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
   },
 ];
+
+export const sidebarlinks = [
+  { title: "My Orders", icon: ListOrdered, href: "/your_account/my-orders" },
+  { title: "Profile Information", icon: User, href: "/your_account/my-profile" },
+  { title: "Manage Addresses", icon: MapPin, href: "/your_account/manage-address" },
+  { title: "Contact Us", icon: Contact2, href: "/your_account/contact-us" },
+  { title: "Gift Cards", icon: Gift, href: "#" },
+  { title: "Saved UPI", icon: CreditCard, href: "#" },
+  { title: "Saved Cards", icon: Wallet, href: "#" },
+  { title: "My Coupons", icon: ClipboardList, href: "#" },
+  { title: "My Reviews & Ratings", icon: Star, href: "/your_account/reviews-ratings" },
+  { title: "All Notifications", icon: AlertCircle, href: "#" },
+  { title: "My Wishlist", icon: Heart, href: "#" },
+];
+
+// data.js
+export const colourOptions = [
+  { value: "red", label: "Red" },
+  { value: "blue", label: "Blue" },
+  { value: "green", label: "Green" },
+  { value: "yellow", label: "Yellow" },
+  { value: "purple", label: "Purple" },
+  { value: "orange", label: "Orange" },
+  { value: "pink", label: "Pink" },
+  { value: "brown", label: "Brown" }
+];
+
