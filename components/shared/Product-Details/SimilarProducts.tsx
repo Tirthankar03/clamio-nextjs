@@ -3,8 +3,7 @@ import React from 'react';
 import { FaHeart, FaShoppingCart, FaStar, FaUserCircle } from 'react-icons/fa';
 import { cardData } from '@/constants/data';
 import Card from '@/components/Reusable Components/Card';
-import ViewButton from '../buttons/ViewButton';
-import Link from 'next/link';
+
 import { useParams } from 'next/navigation';
 
 const SimilarProducts = () => {
@@ -14,12 +13,7 @@ const SimilarProducts = () => {
     return (
         <>
             <div>
-                <div className="grid grid-cols-2 py-10">
-                    <h2 className="text-2xl font-bold">Explore Similar Products</h2>
-                    <div className="text-right">
-                        <Link href={`/product/${productId}/reviews`}><ViewButton /></Link>
-                    </div>
-                </div>
+                <h2 className="text-2xl font-bold">Explore Similar Products</h2>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                 {cardData.slice(0, 4).map((product, idx) => (
