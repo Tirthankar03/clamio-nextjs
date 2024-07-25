@@ -41,7 +41,7 @@ const Sidebar = () => {
         <div className="flex-1 overflow-y-auto">
           <nav className="px-4 py-6 space-y-2">
             <Link
-              href="/your_account/my-orders"
+              href="/your-account/my-orders"
               className="flex items-center gap-3 rounded-lg px-4 py-2 hover:bg-yellow-300 transition-all text-gray-700"
             >
               <ListOrdered className="h-5 w-5 text-gray-600" />
@@ -51,7 +51,7 @@ const Sidebar = () => {
               Account Settings
             </div>
             <Link
-              href="/your_account/my-profile"
+              href="/your-account/my-profile"
               className="flex items-center gap-3 rounded-lg px-4 py-2 hover:bg-yellow-300 transition-all text-gray-700"
             >
               <User className="h-5 w-5 text-gray-600" />
@@ -65,7 +65,7 @@ const Sidebar = () => {
               <span className="font-medium">Manage Addresses</span>
             </Link>
             <Link
-              href="/your_account/contact-us"
+              href="/your-account/contact-us"
               className="flex items-center gap-3 rounded-lg px-4 py-2 hover:bg-yellow-300 transition-all text-gray-700"
             >
               <Contact2 className="h-5 w-5 text-gray-600" />
@@ -106,7 +106,7 @@ const Sidebar = () => {
               <span className="font-medium">My Coupons</span>
             </Link>``
             <Link
-              href="/your_account/reviews-ratings"
+              href="/your-account/reviews-ratings"
               className="flex items-center gap-3 rounded-lg px-4 py-2 hover:bg-yellow-300 transition-all text-gray-700"
             >
               <Star className="h-5 w-5 text-gray-600" />
@@ -120,7 +120,7 @@ const Sidebar = () => {
               <span className="font-medium">All Notifications</span>
             </Link>
             <Link
-              href="/your_account/wishlist"
+              href="/your-account/wishlist"
               className="flex items-center gap-3 rounded-lg px-4 py-2 hover:bg-yellow-300 transition-all text-gray-700"
             >
               <Heart className="h-5 w-5 text-gray-600" />
