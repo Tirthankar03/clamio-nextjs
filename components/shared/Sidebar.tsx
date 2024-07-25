@@ -20,7 +20,7 @@ import { FaIdCard } from "react-icons/fa";
 const Sidebar = () => {
   return (
     <div className="hidden border-r bg-white mt-8 md:block">
-      <div className="flex w-80 h-full max-h-screen flex-col">
+      <div className="flex w-80 min-h-screen flex-col">
         <div className="flex h-16 items-center border-b px-4 bg-gray-50">
           <Link href="/" className="flex items-center gap-4 font-semibold">
             <Avatar className="w-10 h-10">
