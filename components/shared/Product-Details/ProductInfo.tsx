@@ -1,21 +1,32 @@
 // components/ProductInfo.tsx
-'use client'
+'use client';
 import React from 'react';
 import { useParams } from 'next/navigation';
 import { FaStar, FaUserCircle } from 'react-icons/fa';
 import Image from 'next/image';
 import { HotNewproductData, TopDiscountProduct, TopSellingproductData } from '@/constants/data';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '@/utils/cartSlice';
 
 const allProducts = [...TopSellingproductData, ...HotNewproductData, ...TopDiscountProduct];
 
 const ProductInfo = () => {
     const params = useParams();
     const id = Array.isArray(params.id) ? params.id[0] : params.id;
+    const dispatch = useDispatch();
+
+    // Find the product based on the ID from the URL
     const product = allProducts.find(p => p.id === parseInt(id));
 
     if (!product) {
         return <div>Product not found</div>;
     }
+
+    // Handler for adding the product to the cart
+    const handleAddToCart = () => {
+        const { id, productName, name, stars, price, imageUrl } = product;
+        dispatch(addToCart({ id, productName, name, stars, price, imageUrl, quantity: 1 }));
+    };
 
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
@@ -42,7 +53,7 @@ const ProductInfo = () => {
                     <span className="text-2xl font-bold mb-4">{product.price}</span>
                 </div>
                 <div className="flex my-5 md:my-0 lg:my-0 2xl:my-0 space-x-4">
-                    <button className="bg-black text-white px-4 py-2 rounded">Add To Cart</button>
+                    <button onClick={handleAddToCart} className="bg-black text-white px-4 py-2 rounded">Add To Cart</button>
                     <button className="bg-yellow-500 text-black px-4 py-2 rounded">Buy Now</button>
                 </div>
             </div>
