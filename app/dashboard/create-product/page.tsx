@@ -7,6 +7,7 @@ import FileUploader from '@/components/shared/CreateProductPage/FileUploader';
 import Input from '@/components/shared/CreateProductPage/Input';
 import TextArea from '@/components/shared/CreateProductPage/TextArea';
 import ProductsPage from '@/components/shared/explore/ProductsPage';
+import { FancyMultiSelect } from '@/components/shared/FancyMultiSelect';
 
 
 const CreateProduct = () => {
@@ -34,7 +35,7 @@ const CreateProduct = () => {
           </div>
           <h2 className="text-2xl font-semibold mb-4 text-gray-700">Input Product Category</h2>
           
-          <ProductsPage/>
+          <FancyMultiSelect/>
       
           <h2 className="text-2xl font-semibold mb-4 text-gray-700">Your Product Highlights</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">

@@ -780,7 +780,7 @@ export const productListings = [
 
 
 
-import { User, CreditCard, Users, LifeBuoy, Settings, Keyboard, Plus, Coins } from 'lucide-react';
+import { User, CreditCard, Users, LifeBuoy, Settings, Keyboard, Plus, Coins, ListOrdered, MapPin, Contact2, Gift, Wallet, ClipboardList, Star, AlertCircle, Heart } from 'lucide-react';
 export const headerLinks = [
   {
     label: 'Community',
@@ -881,7 +881,7 @@ export const AMICO_PNG = "\amico.png"
 export const BLOCK_PNG = "\Chart.png"
 export const BLOCK_PNG2 = "\Frame (1).png"
 export const BG_IMAGE = "https://images.unsplash.com/photo-1539597833161-fd52d6ee5d8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjU2fHx5ZWxsb3clMjBiYWNrZ3JvdW5kJTIwaW1hZ2V8ZW58MHwwfDB8fHww"
-
+export const MOBILE_PAYMENT = '/cashless-payment.png'
 
 
 
@@ -1266,3 +1266,64 @@ export const COUPONS = [
   { code: 'DISCOUNT20', value: 20 },
   { code: 'DISCOUNT30', value: 30 },
 ];
+
+export const states = [
+  { name: "California" },
+  { name: "New York" },
+  { name: "Texas" },
+  { name: "Florida" },
+  { name: "Illinois" },
+];
+
+
+// reviews-ratings 
+
+export const reviews = [
+  {
+    stars: 5,
+    name: 'italian pasta',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  },
+  {
+    stars: 4,
+    name: 'mystic tarrot card',
+    description: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+  },
+  {
+    stars: 3,
+    name: 'French fries',
+    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+  },
+  {
+    stars: 5,
+    name: 'Web3 Novel',
+    description: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  },
+];
+
+export const sidebarlinks = [
+  { title: "My Orders", icon: ListOrdered, href: "/your_account/my-orders" },
+  { title: "Profile Information", icon: User, href: "/your_account/my-profile" },
+  { title: "Manage Addresses", icon: MapPin, href: "/your_account/manage-address" },
+  { title: "Contact Us", icon: Contact2, href: "/your_account/contact-us" },
+  { title: "Gift Cards", icon: Gift, href: "#" },
+  { title: "Saved UPI", icon: CreditCard, href: "#" },
+  { title: "Saved Cards", icon: Wallet, href: "#" },
+  { title: "My Coupons", icon: ClipboardList, href: "#" },
+  { title: "My Reviews & Ratings", icon: Star, href: "/your_account/reviews-ratings" },
+  { title: "All Notifications", icon: AlertCircle, href: "#" },
+  { title: "My Wishlist", icon: Heart, href: "#" },
+];
+
+// data.js
+export const colourOptions = [
+  { value: "red", label: "Red" },
+  { value: "blue", label: "Blue" },
+  { value: "green", label: "Green" },
+  { value: "yellow", label: "Yellow" },
+  { value: "purple", label: "Purple" },
+  { value: "orange", label: "Orange" },
+  { value: "pink", label: "Pink" },
+  { value: "brown", label: "Brown" }
+];
+
