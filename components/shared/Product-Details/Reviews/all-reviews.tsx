@@ -16,7 +16,7 @@ const ReviewsPage = () => {
     }
 
     return (
-        <div className="w-4/5 mx-auto p-6">
+        <div className="w-full xl:w-11/12 mx-auto xl:p-6  ">
             <h1 className="text-3xl font-bold mb-6">Reviews for {product.productName}</h1>
             <div className="">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
