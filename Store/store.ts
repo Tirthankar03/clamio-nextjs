@@ -17,6 +17,7 @@ const persistConfig = {
     version: 1,
     storage,
     middleware: [thunk],
+    blacklist: ['cart'], // Exclude cart from persistence
 };
 
 const rootReducer = combineReducers({

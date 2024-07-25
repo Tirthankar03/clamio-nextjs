@@ -6,7 +6,7 @@ import { FaCreditCard, FaWallet, FaUniversity, FaMobileAlt, FaCalendarAlt, FaTru
 const PaymentOptions = () => {
   const [selectedOption, setSelectedOption] = useState('');
 
-  const handleOptionChange = (value) => {
+  const handleOptionChange = (value:any) => {
     setSelectedOption(value);
   };
 
@@ -19,7 +19,7 @@ const PaymentOptions = () => {
           <div className="flex items-center mb-3">
             <RadioGroupItem value="phonepe" id="phonepe" />
             <label htmlFor="phonepe" className="ml-2 text-gray-800 cursor-pointer flex items-center">
-              <FaMobileAlt className="mr-2" /> PhonePe
+              <FaMobileAlt className="mr-2" /> PhonePe / GooglePay / Paytm
             </label>
           </div>
           <div className="flex items-center">

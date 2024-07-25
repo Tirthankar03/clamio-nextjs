@@ -8,6 +8,8 @@ import { COUPONS } from "@/constants/data";
 
 function OrderSummary({ totalItems, totalCost }: any) {
     const isLoggedIn = useSelector((store: RootState) => store.user.isLoggedIn);
+    const isCreatorLogin = useSelector((store: RootState) => store.creator.isCreatorLoggedIn);
+
     const router = useRouter();
 
     const [couponCode, setCouponCode] = useState('');
@@ -25,7 +27,7 @@ function OrderSummary({ totalItems, totalCost }: any) {
     };
 
     const handleClick = () => {
-        if (isLoggedIn) {
+        if (isLoggedIn || isCreatorLogin) {
             toast.success('Checking out');
             router.push('/checkout');
         } else {
