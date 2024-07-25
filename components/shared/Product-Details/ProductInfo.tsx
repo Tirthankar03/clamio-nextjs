@@ -1,12 +1,17 @@
 // components/ProductInfo.tsx
+'use client'
 import React from 'react';
+import { useParams } from 'next/navigation';
 import { FaStar, FaUserCircle } from 'react-icons/fa';
-import Link from 'next/link';
 import Image from 'next/image';
-import { productsInfo } from '@/constants/data';
+import { HotNewproductData, TopDiscountProduct, TopSellingproductData } from '@/constants/data';
 
-const ProductInfo = ({ id }: { id: string }) => {
-    const product = productsInfo.find(p => p.id === parseInt(id));
+const allProducts = [...TopSellingproductData, ...HotNewproductData, ...TopDiscountProduct];
+
+const ProductInfo = () => {
+    const params = useParams();
+    const id = Array.isArray(params.id) ? params.id[0] : params.id;
+    const product = allProducts.find(p => p.id === parseInt(id));
 
     if (!product) {
         return <div>Product not found</div>;
@@ -16,7 +21,7 @@ const ProductInfo = ({ id }: { id: string }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
             <div className="relative h-96 w-full rounded-lg overflow-hidden">
                 <Image
-                    src={product.image}
+                    src={product.imageUrl}
                     alt="product card"
                     layout="fill"
                     objectFit="cover"
@@ -25,19 +30,16 @@ const ProductInfo = ({ id }: { id: string }) => {
             </div>
             <div className="flex flex-col justify-between">
                 <div>
-                    <h1 className="text-3xl font-bold mb-4">{product.title}</h1>
+                    <h1 className="text-3xl font-bold mb-4">{product.productName}</h1>
                     <div className="flex items-center mb-4">
                         <FaUserCircle className="text-yellow-500 text-2xl" />
-                        <Link href={`/creator/${product.author.id}`} className="ml-2 text-blue-500 text-xl">{product.author.name}</Link>
+                        <span className="ml-2 text-blue-500 text-xl">{product.name}</span>
                     </div>
                     <div className="flex items-center mb-4">
                         <FaStar className="text-yellow-500 text-xl" />
-                        <span className="ml-2 text-xl">{product.rating} ({product.reviews})</span>
+                        <span className="ml-2 text-xl">{product.stars}</span>
                     </div>
-                    <p className="mb-8">
-                        {product.description}
-                    </p>
-                    <span className="text-2xl font-bold mb-4">${product.price}</span>
+                    <span className="text-2xl font-bold mb-4">{product.price}</span>
                 </div>
                 <div className="flex my-5 md:my-0 lg:my-0 2xl:my-0 space-x-4">
                     <button className="bg-black text-white px-4 py-2 rounded">Add To Cart</button>
