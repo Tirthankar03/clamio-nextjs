@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { HotNewproductData, TopDiscountProduct, TopSellingproductData } from '@/constants/data';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '@/utils/cartSlice';
+import Link from 'next/link'
 
 const allProducts = [...TopSellingproductData, ...HotNewproductData, ...TopDiscountProduct];
 
@@ -54,7 +55,7 @@ const ProductInfo = () => {
                 </div>
                 <div className="flex my-5 md:my-0 lg:my-0 2xl:my-0 space-x-4">
                     <button onClick={handleAddToCart} className="bg-black text-white px-4 py-2 rounded">Add To Cart</button>
-                    <button className="bg-yellow-500 text-black px-4 py-2 rounded">Buy Now</button>
+                    <Link href='/cart'><button className="bg-yellow-500 text-black px-4 py-2 rounded">Buy Now</button></Link>
                 </div>
             </div>
         </div>
