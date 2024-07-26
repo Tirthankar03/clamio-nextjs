@@ -20,10 +20,7 @@ module.exports = {
     },
     extend: {
 
-      screens: {
-        'xs': '375px',
-        'sm-xs': '430px',
-      },
+  
       // colors: {
       //   primary: {
       //     500: '#624CF5',

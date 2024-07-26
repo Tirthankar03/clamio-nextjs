@@ -14,7 +14,7 @@ const BottomNav = () => {
     <div className="fixed bottom-0 left-0 right-0 bg-white md:hidden border-t py-2 shadow-md z-50">
       <div className="flex justify-between items-center py-2 px-4">
         {/* Show 3 items on mobile and 4 items on small screens */}
-        <div className="flex gap-[3.5rem] xs:gap-[4rem] sm-xs:gap-[4.5rem] justify-between sm:hidden">
+        <div className="flex flex-1 gap-4 justify-around sm:hidden">
           {sidebarlinks.slice(0, 4).map((link, index) => (
             <Link
               key={index}
@@ -29,7 +29,7 @@ const BottomNav = () => {
           ))}
         </div>
 
-        <div className="hidden sm:flex  sm:justify-between sm:gap-[5.3rem] md:hidden">
+        <div className="hidden sm:flex  sm:justify-between sm:gap-[4.3rem] md:hidden">
           {sidebarlinks.slice(0, 4).map((link, index) => (
             <Link
               key={index}
@@ -48,7 +48,7 @@ const BottomNav = () => {
         <DropdownMenu >
           <DropdownMenuTrigger>
             <div className="flex flex-col items-center md:hidden">
-              <SquareMenu className="h-6 w-6 text-gray-600" />
+              <SquareMenu className="h-6 w-6 mx-3 text-gray-600" />
               <span className="hidden sm:block text-sm text-gray-600">More</span>
             </div>
           </DropdownMenuTrigger>

@@ -1531,15 +1531,15 @@ export const reviews = [
 ];
 
 export const sidebarlinks = [
-  { title: "My Orders", icon: ListOrdered, href: "/your_account/my-orders" },
-  { title: "Profile Information", icon: User, href: "/your_account/my-profile" },
-  { title: "Manage Addresses", icon: MapPin, href: "/your_account/manage-address" },
-  { title: "Contact Us", icon: Contact2, href: "/your_account/contact-us" },
+  { title: "My Orders", icon: ListOrdered, href: "/your-account/my-orders" },
+  { title: "Profile Information", icon: User, href: "/your-account/my-profile" },
+  { title: "Manage Addresses", icon: MapPin, href: "/your-account/manage-address" },
+  { title: "Contact Us", icon: Contact2, href: "/your-account/contact-us" },
   { title: "Gift Cards", icon: Gift, href: "#" },
   { title: "Saved UPI", icon: CreditCard, href: "#" },
   { title: "Saved Cards", icon: Wallet, href: "#" },
   { title: "My Coupons", icon: ClipboardList, href: "#" },
-  { title: "My Reviews & Ratings", icon: Star, href: "/your_account/reviews-ratings" },
+  { title: "My Reviews & Ratings", icon: Star, href: "/your-account/reviews-ratings" },
   { title: "All Notifications", icon: AlertCircle, href: "#" },
   { title: "My Wishlist", icon: Heart, href: "#" },
 ];
