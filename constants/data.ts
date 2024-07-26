@@ -224,26 +224,255 @@ export const categoryData = [
 //Product Data
 //Top Selling Product Data
 export const TopSellingproductData = [
-  { id: 1, productName: "Mystic Tarot Reading", name: "Luna Lovegood", stars: "4.8", price: "$15", imageUrl: "/assets/product-img/imgone.png" },
-  { id: 2, productName: "Paris Travel Guide", name: "John Doe", stars: "4.5", price: "$20", imageUrl: "/assets/product-img/imgone.png" },
-  { id: 3, productName: "Italian Pasta Recipes", name: "Gordon Ramsay", stars: "4.9", price: "$30", imageUrl: "/assets/product-img/imgone.png" },
-  { id: 4, productName: "Keto Diet Plan", name: "Jane Smith", stars: "4.6", price: "$25", imageUrl: "/assets/product-img/imgone.png" },
-
+  {
+    id: 1,
+    productName: "Mystic Tarot Reading",
+    name: "Luna Lovegood",
+    stars: "4.8",
+    price: "$15",
+    imageUrl: "/assets/product-img/imgone.png",
+    reviews: [
+      { title: "Great reading", content: "Very insightful and accurate. I felt like Luna really understood my situation and provided clarity on issues that I have been struggling with for a while.", stars: 5 },
+      { title: "Amazing", content: "Loved every bit of the reading. It was so detailed and personalized. Luna's reading gave me a lot of peace and hope.", stars: 5 },
+      { title: "Not bad", content: "It was okay, not too great. Some parts resonated with me but others didn't seem relevant to my life at all.", stars: 3 },
+      { title: "Accurate", content: "Pretty accurate and detailed. I was surprised at how much she got right about my current circumstances and future prospects.", stars: 4 },
+      { title: "Helpful", content: "Helped me a lot in understanding things. Her advice was practical and I could see how to apply it in my life.", stars: 5 },
+      { title: "Insightful", content: "Very deep and meaningful reading. I appreciated the depth and thoughtfulness of her interpretations.", stars: 4 },
+      { title: "Fantastic", content: "Absolutely fantastic experience. Luna is a true professional and has a real gift.", stars: 5 },
+      { title: "Good", content: "Good reading, satisfied. It was worth the time and money.", stars: 4 },
+      { title: "Average", content: "It was an average reading. I didn't find anything particularly enlightening but it was interesting nonetheless.", stars: 3 },
+      { title: "Excellent", content: "Excellent reading, highly recommend. Luna is truly gifted and her readings are spot on.", stars: 5 },
+    ]
+  },
+  {
+    id: 2,
+    productName: "Paris Travel Guide",
+    name: "John Doe",
+    stars: "4.5",
+    price: "$20",
+    imageUrl: "/assets/product-img/imgone.png",
+    reviews: [
+      { title: "Very Helpful", content: "The guide was very detailed and helpful. It covered everything from must-see attractions to hidden gems that aren't crowded with tourists.", stars: 5 },
+      { title: "Loved it", content: "Loved the tips and tricks. The guide made my trip to Paris so much easier and enjoyable. I felt like I was exploring with a local.", stars: 5 },
+      { title: "Not what I expected", content: "Expected more details. Some sections were quite brief and lacked the depth I was hoping for.", stars: 3 },
+      { title: "Informative", content: "Very informative guide. It provided a lot of historical context which made visiting the sites more meaningful.", stars: 4 },
+      { title: "Great Guide", content: "Great travel guide for Paris. It was well-organized and easy to follow.", stars: 5 },
+      { title: "Helpful Tips", content: "The tips were very helpful. I particularly appreciated the restaurant recommendations which were spot on.", stars: 4 },
+      { title: "Good Guide", content: "Good guide, worth the money. It helped me plan my itinerary efficiently.", stars: 4 },
+      { title: "Okay", content: "It was okay, could have been better. Some sections were repetitive and not very useful.", stars: 3 },
+      { title: "Very Informative", content: "Very informative and detailed. It made navigating Paris a breeze.", stars: 5 },
+      { title: "Nice Guide", content: "Nice guide with good information. The maps were particularly useful.", stars: 4 },
+    ]
+  },
+  {
+    id: 3,
+    productName: "Italian Pasta Recipes",
+    name: "Gordon Ramsay",
+    stars: "4.9",
+    price: "$30",
+    imageUrl: "/assets/product-img/imgone.png",
+    reviews: [
+      { title: "Delicious recipes", content: "Easy to follow and delicious recipes. I've tried several so far and each one has been a hit with my family.", stars: 5 },
+      { title: "Love it", content: "Love the recipes. Gordon Ramsay really knows his stuff and his passion for cooking comes through in every recipe.", stars: 5 },
+      { title: "Great!", content: "Great recipes, very tasty. The instructions are clear and the results are always impressive.", stars: 5 },
+      { title: "Good", content: "Good recipes, easy to make. Even a novice cook like me can create restaurant-quality dishes.", stars: 4 },
+      { title: "Fantastic", content: "Fantastic recipes, love it. Each dish is a masterpiece and a joy to make.", stars: 5 },
+      { title: "Yummy", content: "Yummy and easy to make. My kids especially love the creamy Alfredo pasta.", stars: 5 },
+      { title: "Good Book", content: "Good recipe book. It has become a staple in my kitchen.", stars: 4 },
+      { title: "Excellent", content: "Excellent recipes, highly recommend. These dishes are perfect for entertaining guests.", stars: 5 },
+      { title: "Nice", content: "Nice recipes, very detailed. The step-by-step instructions make it easy to follow along.", stars: 4 },
+      { title: "Tasty", content: "Very tasty recipes. Every dish I've made so far has been delicious.", stars: 5 },
+    ]
+  },
+  {
+    id: 4,
+    productName: "Keto Diet Plan",
+    name: "Jane Smith",
+    stars: "4.6",
+    price: "$25",
+    imageUrl: "/assets/product-img/imgone.png",
+    reviews: [
+      { title: "Great plan", content: "Very effective and easy to follow. I've lost 10 pounds in the first month and I feel fantastic.", stars: 5 },
+      { title: "Helpful", content: "Helped me a lot in my diet. The meal plans are varied and delicious, making it easy to stick to the diet.", stars: 4 },
+      { title: "Good", content: "Good diet plan, effective. The recipes are tasty and the plan is well-structured.", stars: 4 },
+      { title: "Nice", content: "Nice and effective plan. It's helped me understand how to eat healthier.", stars: 4 },
+      { title: "Effective", content: "Very effective diet plan. I've seen significant improvements in my energy levels and overall health.", stars: 5 },
+      { title: "Loved it", content: "Loved the diet plan. It's not just about weight loss, but also about feeling better and healthier.", stars: 5 },
+      { title: "Okay", content: "It was okay, could have been better. Some of the recipes were a bit bland.", stars: 3 },
+      { title: "Detailed", content: "Very detailed and effective. It covers everything you need to know about the keto diet.", stars: 4 },
+      { title: "Fantastic", content: "Fantastic diet plan. It's easy to follow and has produced great results for me.", stars: 5 },
+      { title: "Good", content: "Good plan, worth the money. It makes following a keto diet much simpler.", stars: 4 },
+    ]
+  },
 ];
 
 export const HotNewproductData = [
-  { id: 1, productName: "Advanced Tarot Techniques", name: "Mystic Meg", stars: "4.9", price: "$18", imageUrl: "/assets/product-img/imgone.png" },
-  { id: 2, productName: "Tokyo Travel Guide", name: "Jane Doe", stars: "4.4", price: "$22", imageUrl: "/assets/product-img/imgone.png" },
-  { id: 3, productName: "Vegan Dessert Recipes", name: "Jamie Oliver", stars: "4.8", price: "$28", imageUrl: "/assets/product-img/imgone.png" },
-  { id: 4, productName: "Mediterranean Diet Plan", name: "Dr. Health", stars: "4.5", price: "$20", imageUrl: "/assets/product-img/imgone.png" },
+  {
+    id: 5,
+    productName: "Advanced Tarot Techniques",
+    name: "Mystic Meg",
+    stars: "4.9",
+    price: "$18",
+    imageUrl: "/assets/product-img/imgone.png",
+    reviews: [
+      { title: "Very advanced", content: "Loved the advanced techniques. They are well-explained and easy to follow, even for someone with some experience in tarot reading.", stars: 5 },
+      { title: "Amazing", content: "Amazing techniques. They have really helped deepen my understanding and practice.", stars: 5 },
+      { title: "Good", content: "Good techniques, very useful. I've already started incorporating them into my readings.", stars: 4 },
+      { title: "Detailed", content: "Very detailed and advanced. It's clear that a lot of thought and expertise went into this book.", stars: 5 },
+      { title: "Great", content: "Great techniques. They are practical and have enhanced my readings significantly.", stars: 5 },
+      { title: "Insightful", content: "Very insightful. I've learned a lot of new methods and approaches.", stars: 4 },
+      { title: "Fantastic", content: "Fantastic techniques. This book is a must-have for any serious tarot reader.", stars: 5 },
+      { title: "Good", content: "Good book, worth the money. It's filled with valuable information.", stars: 4 },
+      { title: "Nice", content: "Nice techniques, very detailed. The explanations are clear and easy to understand.", stars: 5 },
+      { title: "Excellent", content: "Excellent book, highly recommend. It has greatly improved my tarot reading skills.", stars: 5 },
+    ]
+  },
+  {
+    id: 6,
+    productName: "Tokyo Travel Guide",
+    name: "Jane Doe",
+    stars: "4.4",
+    price: "$22",
+    imageUrl: "/assets/product-img/imgone.png",
+    reviews: [
+      { title: "Great guide", content: "Very informative and detailed. It covered all the major attractions as well as some hidden gems that made my trip memorable.", stars: 5 },
+      { title: "Helpful", content: "Helped a lot in planning the trip. The restaurant recommendations were spot on and we loved the cultural tips.", stars: 4 },
+      { title: "Nice", content: "Nice guide, worth the money. It made navigating the city much easier.", stars: 4 },
+      { title: "Good", content: "Good guide with useful tips. The sections on transportation were particularly helpful.", stars: 4 },
+      { title: "Informative", content: "Very informative. It provided a lot of context about the history and culture of Tokyo.", stars: 5 },
+      { title: "Great", content: "Great guide, very detailed. It made our trip much more enjoyable and stress-free.", stars: 5 },
+      { title: "Okay", content: "It was okay, could have been better. Some sections felt a bit superficial.", stars: 3 },
+      { title: "Fantastic", content: "Fantastic guide. It really enhanced our travel experience.", stars: 5 },
+      { title: "Good", content: "Good guide, helpful. The maps and itineraries were very useful.", stars: 4 },
+      { title: "Detailed", content: "Very detailed and informative. It was like having a local friend guiding us.", stars: 5 },
+    ]
+  },
+  {
+    id: 7,
+    productName: "Vegan Dessert Recipes",
+    name: "Jamie Oliver",
+    stars: "4.8",
+    price: "$28",
+    imageUrl: "/assets/product-img/imgone.png",
+    reviews: [
+      { title: "Delicious desserts", content: "Healthy and tasty recipes. I was surprised at how delicious vegan desserts can be. These recipes are a hit in my house.", stars: 5 },
+      { title: "Loved it", content: "Loved the recipes. Jamie Oliver's passion for cooking is evident in every dish.", stars: 5 },
+      { title: "Great!", content: "Great recipes, very tasty. The instructions are clear and the ingredients are easy to find.", stars: 5 },
+      { title: "Good", content: "Good recipes, easy to make. Even my non-vegan friends loved them.", stars: 4 },
+      { title: "Fantastic", content: "Fantastic recipes, love it. Each dessert is a delight and surprisingly easy to prepare.", stars: 5 },
+      { title: "Yummy", content: "Yummy and easy to make. My kids especially love the chocolate mousse.", stars: 5 },
+      { title: "Good Book", content: "Good recipe book. It has become a staple in my kitchen.", stars: 4 },
+      { title: "Excellent", content: "Excellent recipes, highly recommend. These desserts are perfect for entertaining guests.", stars: 5 },
+      { title: "Nice", content: "Nice recipes, very detailed. The step-by-step instructions make it easy to follow along.", stars: 4 },
+      { title: "Tasty", content: "Very tasty recipes. Every dessert I've made so far has been delicious.", stars: 5 },
+    ]
+  },
+  {
+    id: 8,
+    productName: "Mediterranean Diet Plan",
+    name: "Dr. Health",
+    stars: "4.5",
+    price: "$20",
+    imageUrl: "/assets/product-img/imgone.png",
+    reviews: [
+      { title: "Great plan", content: "Very effective and easy to follow. I've lost weight and feel healthier than ever. The recipes are delicious and varied.", stars: 5 },
+      { title: "Helpful", content: "Helped me a lot in my diet. The meal plans are well-balanced and tasty, making it easy to stick to the diet.", stars: 4 },
+      { title: "Good", content: "Good diet plan, effective. The guidelines are clear and the results are impressive.", stars: 4 },
+      { title: "Nice", content: "Nice and effective plan. It's helped me understand how to eat healthier and maintain a balanced diet.", stars: 4 },
+      { title: "Effective", content: "Very effective diet plan. I've seen significant improvements in my energy levels and overall health.", stars: 5 },
+      { title: "Loved it", content: "Loved the diet plan. It's not just about weight loss, but also about feeling better and healthier.", stars: 5 },
+      { title: "Okay", content: "It was okay, could have been better. Some of the recipes were a bit bland.", stars: 3 },
+      { title: "Detailed", content: "Very detailed and effective. It covers everything you need to know about the Mediterranean diet.", stars: 4 },
+      { title: "Fantastic", content: "Fantastic diet plan. It's easy to follow and has produced great results for me.", stars: 5 },
+      { title: "Good", content: "Good plan, worth the money. It makes following a Mediterranean diet much simpler.", stars: 4 },
+    ]
+  },
 ];
 
+
 export const TopDiscountProduct = [
-  { id: 1, productName: "Vanilla Milkshake recipe", name: "Mystic Meg", stars: "4.9", price: "$18", imageUrl: "/assets/product-img/imgone.png" },
-  { id: 2, productName: "Dummy Data", name: "Jane Doe", stars: "4.4", price: "$22", imageUrl: "/assets/product-img/imgone.png" },
-  { id: 3, productName: "Chocolate Recipe", name: "Jamie Oliver", stars: "4.8", price: "$28", imageUrl: "/assets/product-img/imgone.png" },
-  { id: 4, productName: "Greek Diet Plan", name: "Dr. Health", stars: "4.5", price: "$20", imageUrl: "/assets/product-img/imgone.png" },
+  {
+    id: 9,
+    productName: "Vanilla Milkshake Recipe",
+    name: "Mystic Meg",
+    stars: "4.9",
+    price: "$18",
+    imageUrl: "/assets/product-img/imgone.png",
+    reviews: [
+      { title: "Delicious!", content: "This vanilla milkshake recipe is absolutely delicious. It's creamy, rich, and has just the right amount of sweetness. It's a hit every time I make it.", stars: 5 },
+      { title: "Amazing", content: "Loved the recipe. It’s easy to make and the result is fantastic. The shake is smooth and flavorful, perfect for hot summer days.", stars: 5 },
+      { title: "Good", content: "Good recipe, simple to follow. The milkshake turned out great and my kids loved it.", stars: 4 },
+      { title: "Nice", content: "Nice and creamy. The vanilla flavor really stands out and makes this milkshake special.", stars: 5 },
+      { title: "Yummy", content: "Yummy milkshake! It's become a regular treat in our household.", stars: 5 },
+      { title: "Tasty", content: "Very tasty milkshake. The recipe is straightforward and the shake is perfectly balanced.", stars: 4 },
+      { title: "Loved it", content: "Loved the recipe. It’s simple and the milkshake is so refreshing and delicious.", stars: 5 },
+      { title: "Great", content: "Great recipe. The milkshake is creamy and delicious, with a strong vanilla flavor.", stars: 5 },
+      { title: "Easy to make", content: "Easy to make and very tasty. The instructions are clear and the result is a perfect milkshake.", stars: 4 },
+      { title: "Perfect", content: "Perfect vanilla milkshake. The texture is just right and it's not too sweet.", stars: 5 },
+    ]
+  },
+  {
+    id: 10,
+    productName: "Dummy Data",
+    name: "Jane Doe",
+    stars: "4.4",
+    price: "$22",
+    imageUrl: "/assets/product-img/imgone.png",
+    reviews: [
+      { title: "Interesting", content: "This dummy data product was surprisingly interesting. It provided a lot of valuable information that I didn't expect.", stars: 4 },
+      { title: "Good", content: "Good product, worth the price. It has a lot of useful content and is well-organized.", stars: 4 },
+      { title: "Useful", content: "Very useful data. It helped me a lot in my research and analysis.", stars: 4 },
+      { title: "Detailed", content: "Detailed and comprehensive. It covers a wide range of topics and is very informative.", stars: 5 },
+      { title: "Nice", content: "Nice product. It’s well-structured and the information is easy to understand.", stars: 4 },
+      { title: "Informative", content: "Informative and valuable. It provided a lot of insights that I found helpful.", stars: 4 },
+      { title: "Helpful", content: "Helpful product. The data is accurate and well-presented.", stars: 4 },
+      { title: "Great", content: "Great product, very detailed. It has a lot of useful information.", stars: 5 },
+      { title: "Okay", content: "It was okay, could have been better. Some sections were not as detailed as I expected.", stars: 3 },
+      { title: "Excellent", content: "Excellent product. It’s very informative and well-organized.", stars: 5 },
+    ]
+  },
+  {
+    id: 11,
+    productName: "Chocolate Recipe",
+    name: "Jamie Oliver",
+    stars: "4.8",
+    price: "$28",
+    imageUrl: "/assets/product-img/imgone.png",
+    reviews: [
+      { title: "Delicious chocolate", content: "This chocolate recipe is simply amazing. It’s rich, creamy, and has the perfect balance of sweetness.", stars: 5 },
+      { title: "Loved it", content: "Loved the recipe. It’s easy to make and the chocolate is so delicious.", stars: 5 },
+      { title: "Great!", content: "Great recipe, very tasty. The instructions are clear and the chocolate is divine.", stars: 5 },
+      { title: "Good", content: "Good recipe, easy to follow. The chocolate turned out great and my family loved it.", stars: 4 },
+      { title: "Fantastic", content: "Fantastic recipe, love it. The chocolate is rich and flavorful, just like from a gourmet shop.", stars: 5 },
+      { title: "Yummy", content: "Yummy chocolate! It’s become a favorite treat in our household.", stars: 5 },
+      { title: "Good Book", content: "Good recipe book. The chocolate recipes are varied and all of them are delicious.", stars: 4 },
+      { title: "Excellent", content: "Excellent recipes, highly recommend. The chocolate is perfect for any occasion.", stars: 5 },
+      { title: "Nice", content: "Nice recipes, very detailed. The step-by-step instructions make it easy to follow along.", stars: 4 },
+      { title: "Tasty", content: "Very tasty recipes. Every chocolate I've made so far has been delicious.", stars: 5 },
+    ]
+  },
+  {
+    id: 12,
+    productName: "Greek Diet Plan",
+    name: "Dr. Health",
+    stars: "4.5",
+    price: "$20",
+    imageUrl: "/assets/product-img/imgone.png",
+    reviews: [
+      { title: "Great plan", content: "Very effective and easy to follow. I've lost weight and feel healthier than ever. The recipes are delicious and varied.", stars: 5 },
+      { title: "Helpful", content: "Helped me a lot in my diet. The meal plans are well-balanced and tasty, making it easy to stick to the diet.", stars: 4 },
+      { title: "Good", content: "Good diet plan, effective. The guidelines are clear and the results are impressive.", stars: 4 },
+      { title: "Nice", content: "Nice and effective plan. It's helped me understand how to eat healthier and maintain a balanced diet.", stars: 4 },
+      { title: "Effective", content: "Very effective diet plan. I've seen significant improvements in my energy levels and overall health.", stars: 5 },
+      { title: "Loved it", content: "Loved the diet plan. It's not just about weight loss, but also about feeling better and healthier.", stars: 5 },
+      { title: "Okay", content: "It was okay, could have been better. Some of the recipes were a bit bland.", stars: 3 },
+      { title: "Detailed", content: "Very detailed and effective. It covers everything you need to know about the Greek diet.", stars: 4 },
+      { title: "Fantastic", content: "Fantastic diet plan. It's easy to follow and has produced great results for me.", stars: 5 },
+      { title: "Good", content: "Good plan, worth the money. It makes following a Greek diet much simpler.", stars: 4 },
+    ]
+  },
 ];
+
 
 
 // ------------&&-------------
