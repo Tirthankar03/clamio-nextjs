@@ -1541,7 +1541,7 @@ export const sidebarlinks = [
   { title: "My Coupons", icon: ClipboardList, href: "#" },
   { title: "My Reviews & Ratings", icon: Star, href: "/your-account/reviews-ratings" },
   { title: "All Notifications", icon: AlertCircle, href: "#" },
-  { title: "My Wishlist", icon: Heart, href: "#" },
+  { title: "My Wishlist", icon: Heart, href: "/your-account/wishlist" },
 ];
 
 // data.js
@@ -1556,3 +1556,22 @@ export const colourOptions = [
   { value: "brown", label: "Brown" }
 ];
 
+export const CATEGORY = [
+  { value: "tarot Card Reading", label: "Tarot Card Reading" },
+  { value: "travel Guide", label: "Travel Guide" },
+  { value: "diet Plan", label: "Diet Plan" },
+  { value: "e-Sports Guide", label: "E-Sports Guide" },
+  { value: "food Recipes", label: "Food Recipes" },
+  { value: "digital Art", label: "Digital Art" },
+] 
+
+
+export const fansOptions = [
+  { value: 'fan1', label: 'Alice Johnson' },
+  { value: 'fan2', label: 'Bob Smith' },
+  { value: 'fan3', label: 'Charlie Brown' },
+  { value: 'fan4', label: 'Diana Prince' },
+  { value: 'fan5', label: 'Edward Davis' },
+  { value: 'fan6', label: 'Fiona Lee' },
+
+]
