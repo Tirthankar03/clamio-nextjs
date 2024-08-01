@@ -10,7 +10,7 @@ export default function YourOrder() {
                 <h1 className="text-3xl font-semibold mb-8">Your Orders</h1>
                 <div className="space-y-4 mb-4">
                     <Tabs defaultValue="orders" className="w-full">
-                        <TabsList className="flex flex-wrap gap-2 mb-4 border-b-2 border-gray-200 pb-2">
+                        <TabsList className="flex flex-wrap gap-2 mb-14 border-b-2 border-gray-200 pb-2">
                             <TabsTrigger value="orders" className="px-4 py-2 font-medium text-gray-700 hover:text-yellow-500 border-b-2 border-transparent hover:border-yellow-500 focus:outline-none">
                                 Orders
                             </TabsTrigger>
