@@ -1,8 +1,10 @@
-'use client';
+'use client'
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
+import { FaClipboard } from 'react-icons/fa'; // Import FontAwesome Clipboard icon
+import { toast } from 'sonner'; // Import the toast function from sonner
 
 // Define the form validation schema using Zod
 const schema = z.object({
@@ -17,6 +19,7 @@ type ProfileFormInputs = z.infer<typeof schema>;
 
 const ProfileForm: React.FC = () => {
     const [isEditing, setIsEditing] = useState(false);
+    const [referralCode] = useState('CLAMIO1234'); // Example referral code
 
     // Initialize the form with default values
     const defaultValues: ProfileFormInputs = {
@@ -44,6 +47,12 @@ const ProfileForm: React.FC = () => {
     const handleCancel = () => {
         setIsEditing(false);
         reset(defaultValues); // Reset to initial values if editing is cancelled
+    };
+
+    const copyToClipboard = () => {
+        navigator.clipboard.writeText(referralCode).then(() => {
+            toast('Referral code copied to clipboard!');
+        });
     };
 
     return (
@@ -122,6 +131,22 @@ const ProfileForm: React.FC = () => {
                     </div>
                 )}
             </form>
+
+            {/* Referral Code Section */}
+            <div className="mt-8">
+                <h2 className="text-xl font-semibold text-gray-800 mb-2">Referral Code</h2>
+                <p className="text-gray-600 mb-4">
+                    Share the referral code below with your friends and family. They can use it to sign up and enjoy benefits on our platform.
+                </p>
+                <div className="flex items-center">
+                    <span className="text-gray-700">{referralCode}</span>
+                    <button onClick={copyToClipboard} className="ml-4 p-2 bg-gray-200 rounded hover:bg-gray-300">
+                        <FaClipboard className="h-5 w-5 text-gray-600" />
+                    </button>
+                </div>
+            </div>
+
+            {/* FAQ Section */}
             <div className="mt-12">
                 <h2 className="text-2xl font-semibold text-gray-800 mb-6">FAQs</h2>
                 <div className="space-y-4">
