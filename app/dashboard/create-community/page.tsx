@@ -1,10 +1,10 @@
+import CreateCommunity from '@/components/shared/CreateCommunity'
 import React from 'react'
-import YourOrder from './my-orders/page'
 
 function page() {
   return (
     <div>
-      <YourOrder/>
+        <CreateCommunity/>
     </div>
   )
 }

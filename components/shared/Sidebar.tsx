@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import {
   Bell,
@@ -15,9 +17,13 @@ import {
 } from "lucide-react";
 import { Button } from "../ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
-import { FaIdCard } from "react-icons/fa";
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
+import { sidebarlinks } from "@/constants/data";
 
 const Sidebar = () => {
+  const pathName = usePathname();
+
   return (
     <div className="hidden border-r bg-white mt-8 md:block">
       <div className="flex w-80 min-h-screen flex-col">

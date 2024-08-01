@@ -1011,7 +1011,7 @@ export const productListings = [
 
 
 
-import { User, CreditCard, Users, LifeBuoy, Settings, Keyboard, Plus, Coins } from 'lucide-react';
+import { User, CreditCard, Users, LifeBuoy, Settings, Keyboard, Plus, Coins, ListOrdered, MapPin, Contact2, Gift, Wallet, ClipboardList, Star, AlertCircle, Heart } from 'lucide-react';
 export const headerLinks = [
   {
     label: 'Community',
@@ -1531,3 +1531,49 @@ export const reviews = [
     description: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
   },
 ];
+
+export const sidebarlinks = [
+  { title: "My Orders", icon: ListOrdered, href: "/your-account/my-orders" },
+  { title: "Profile Information", icon: User, href: "/your-account/my-profile" },
+  { title: "Manage Addresses", icon: MapPin, href: "/your-account/manage-address" },
+  { title: "Contact Us", icon: Contact2, href: "/your-account/contact-us" },
+  { title: "Gift Cards", icon: Gift, href: "#" },
+  { title: "Saved UPI", icon: CreditCard, href: "#" },
+  { title: "Saved Cards", icon: Wallet, href: "#" },
+  { title: "My Coupons", icon: ClipboardList, href: "#" },
+  { title: "My Reviews & Ratings", icon: Star, href: "/your-account/reviews-ratings" },
+  { title: "All Notifications", icon: AlertCircle, href: "#" },
+  { title: "My Wishlist", icon: Heart, href: "/your-account/wishlist" },
+];
+
+// data.js
+export const colourOptions = [
+  { value: "red", label: "Red" },
+  { value: "blue", label: "Blue" },
+  { value: "green", label: "Green" },
+  { value: "yellow", label: "Yellow" },
+  { value: "purple", label: "Purple" },
+  { value: "orange", label: "Orange" },
+  { value: "pink", label: "Pink" },
+  { value: "brown", label: "Brown" }
+];
+
+export const CATEGORY = [
+  { value: "tarot Card Reading", label: "Tarot Card Reading" },
+  { value: "travel Guide", label: "Travel Guide" },
+  { value: "diet Plan", label: "Diet Plan" },
+  { value: "e-Sports Guide", label: "E-Sports Guide" },
+  { value: "food Recipes", label: "Food Recipes" },
+  { value: "digital Art", label: "Digital Art" },
+] 
+
+
+export const fansOptions = [
+  { value: 'fan1', label: 'Alice Johnson' },
+  { value: 'fan2', label: 'Bob Smith' },
+  { value: 'fan3', label: 'Charlie Brown' },
+  { value: 'fan4', label: 'Diana Prince' },
+  { value: 'fan5', label: 'Edward Davis' },
+  { value: 'fan6', label: 'Fiona Lee' },
+
+]

@@ -1,7 +1,8 @@
+// components/FancySelect.tsx
 "use client";
 
 import React from "react";
-import CreatableSelect from "react-select/creatable";
+import Select from "react-select";
 import { Badge } from "@/components/ui/badge"; // Adjust path as needed
 import { customStyles } from "@/utils/customStyles"; // Adjust path as needed
 
@@ -10,19 +11,19 @@ type Category = {
   label: string;
 };
 
-interface FancyMultiSelectProps {
+interface FancySelectProps {
   options: Category[];
   initialSelected?: Category[];
   placeholder?: string;
   onChange?: (selected: Category[]) => void;
 }
 
-export function FancyMultiSelect({
+export function FancySelect({
   options,
   initialSelected = [],
   placeholder = "Select...",
   onChange,
-}: FancyMultiSelectProps) {
+}: FancySelectProps) {
   const [selected, setSelected] = React.useState<Category[]>(initialSelected);
 
   const handleChange = (newValue: Category[] | null) => {
@@ -36,7 +37,7 @@ export function FancyMultiSelect({
   return (
     <div className="relative w-full">
       <div className="flex flex-col gap-2 my-3">
-        <CreatableSelect
+        <Select
           isMulti
           value={selected}
           onChange={handleChange}
@@ -45,13 +46,12 @@ export function FancyMultiSelect({
           classNamePrefix="select"
           placeholder={placeholder}
           isClearable
-          formatCreateLabel={(inputValue: any) => `Create "${inputValue}"`}
           styles={customStyles}
         />
         <div className="flex flex-wrap gap-1 my-3">
-          {selected.map((framework) => (
-            <Badge key={framework.value} variant="default">
-              {framework.label}
+          {selected.map((item) => (
+            <Badge key={item.value} variant="default">
+              {item.label}
             </Badge>
           ))}
         </div>
