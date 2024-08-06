@@ -29,7 +29,7 @@ interface ProfileSectionProps {
 }
 
 const ProfileSection: React.FC<ProfileSectionProps> = ({ community }) => {
-    const communityLink = `https://example.com/community/${community.id}`;
+    const communityLink = `https://clamio.in/community/${community.id}`;
 
     const copyToClipboard = () => {
         navigator.clipboard.writeText(communityLink);
