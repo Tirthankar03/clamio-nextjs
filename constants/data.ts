@@ -1011,7 +1011,7 @@ export const productListings = [
 
 
 
-import { User, CreditCard, Users, LifeBuoy, Settings, Keyboard, Plus, Coins, ListOrdered, MapPin, Contact2, Gift, Wallet, ClipboardList, Star, AlertCircle, Heart } from 'lucide-react';
+import { User, CreditCard, Users, LifeBuoy, Settings, Keyboard, Plus, Coins, ListOrdered, MapPin, Contact2, Gift, Wallet, ClipboardList, Star, AlertCircle, Heart, CoinsIcon } from 'lucide-react';
 export const headerLinks = [
   {
     label: 'Community',
@@ -1113,7 +1113,7 @@ export const BLOCK_PNG = "\Chart.png"
 export const BLOCK_PNG2 = "\Frame (1).png"
 export const BG_IMAGE = "https://images.unsplash.com/photo-1539597833161-fd52d6ee5d8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjU2fHx5ZWxsb3clMjBiYWNrZ3JvdW5kJTIwaW1hZ2V8ZW58MHwwfDB8fHww"
 export const MOBILE_PAYMENT = '/cashless-payment.png'
-
+export const Coin = '/dollar.png'
 
 
 export const faqs = [
@@ -1533,7 +1533,7 @@ export const reviews = [
 ];
 
 export const sidebarlinks = [
-  { title: "My Orders", icon: ListOrdered, href: "/your-account/my-orders" },
+  { title: "My Orders", icon: ListOrdered, href: "/your-account" },
   { title: "Profile Information", icon: User, href: "/your-account/my-profile" },
   { title: "Manage Addresses", icon: MapPin, href: "/your-account/manage-address" },
   { title: "Contact Us", icon: Contact2, href: "/your-account/contact-us" },
@@ -1544,6 +1544,7 @@ export const sidebarlinks = [
   { title: "My Reviews & Ratings", icon: Star, href: "/your-account/reviews-ratings" },
   { title: "All Notifications", icon: AlertCircle, href: "#" },
   { title: "My Wishlist", icon: Heart, href: "/your-account/wishlist" },
+  { title: "Clamio Coins", icon: CoinsIcon, href: "/your-account/clamio-coins" },
 ];
 
 // data.js

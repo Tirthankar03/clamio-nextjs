@@ -14,15 +14,17 @@ import {
   Heart,
   AlertCircle,
   Contact2,
+  Coins,
 } from "lucide-react";
 import { Button } from "../ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
 import { usePathname } from "next/navigation";
-import { cn } from "@/lib/utils";
-import { sidebarlinks } from "@/constants/data";
+import { cn } from "@/lib/utils"; // Assuming this function is used for conditional class names
 
 const Sidebar = () => {
   const pathName = usePathname();
+
+  const isActive = (href) => pathName === href;
 
   return (
     <div className="hidden border-r bg-white mt-8 md:block">
@@ -48,7 +50,10 @@ const Sidebar = () => {
           <nav className="px-4 py-6 space-y-2">
             <Link
               href="/your-account/my-orders"
-              className="flex items-center gap-3 rounded-lg px-4 py-2 hover:bg-yellow-300 transition-all text-gray-700"
+              className={cn(
+                "flex items-center gap-3 rounded-lg px-4 py-2 transition-all text-gray-700",
+                isActive("/your-account/my-orders") ? "bg-yellow-300" : "hover:bg-yellow-300"
+              )}
             >
               <ListOrdered className="h-5 w-5 text-gray-600" />
               <span className="font-medium">My Orders</span>
@@ -58,21 +63,30 @@ const Sidebar = () => {
             </div>
             <Link
               href="/your-account/my-profile"
-              className="flex items-center gap-3 rounded-lg px-4 py-2 hover:bg-yellow-300 transition-all text-gray-700"
+              className={cn(
+                "flex items-center gap-3 rounded-lg px-4 py-2 transition-all text-gray-700",
+                isActive("/your-account/my-profile") ? "bg-yellow-300" : "hover:bg-yellow-300"
+              )}
             >
               <User className="h-5 w-5 text-gray-600" />
               <span className="font-medium">Profile Information</span>
             </Link>
             <Link
-              href="manage-address"
-              className="flex items-center gap-3 rounded-lg px-4 py-2 hover:bg-yellow-300 transition-all text-gray-700"
+              href="/your-account/manage-address"
+              className={cn(
+                "flex items-center gap-3 rounded-lg px-4 py-2 transition-all text-gray-700",
+                isActive("/your-account/manage-address") ? "bg-yellow-300" : "hover:bg-yellow-300"
+              )}
             >
               <MapPin className="h-5 w-5 text-gray-600" />
               <span className="font-medium">Manage Addresses</span>
             </Link>
             <Link
               href="/your-account/contact-us"
-              className="flex items-center gap-3 rounded-lg px-4 py-2 hover:bg-yellow-300 transition-all text-gray-700"
+              className={cn(
+                "flex items-center gap-3 rounded-lg px-4 py-2 transition-all text-gray-700",
+                isActive("/your-account/contact-us") ? "bg-yellow-300" : "hover:bg-yellow-300"
+              )}
             >
               <Contact2 className="h-5 w-5 text-gray-600" />
               <span className="font-medium">Contact Us</span>
@@ -82,21 +96,30 @@ const Sidebar = () => {
             </div>
             <Link
               href="#"
-              className="flex items-center gap-3 rounded-lg px-4 py-2 hover:bg-yellow-300 transition-all text-gray-700"
+              className={cn(
+                "flex items-center gap-3 rounded-lg px-4 py-2 transition-all text-gray-700",
+                isActive("#") ? "bg-yellow-300" : "hover:bg-yellow-300"
+              )}
             >
               <Gift className="h-5 w-5 text-gray-600" />
               <span className="font-medium">Gift Cards</span>
             </Link>
             <Link
               href="#"
-              className="flex items-center gap-3 rounded-lg px-4 py-2 hover:bg-yellow-300 transition-all text-gray-700"
+              className={cn(
+                "flex items-center gap-3 rounded-lg px-4 py-2 transition-all text-gray-700",
+                isActive("#") ? "bg-yellow-300" : "hover:bg-yellow-300"
+              )}
             >
               <CreditCard className="h-5 w-5 text-gray-600" />
               <span className="font-medium">Saved UPI</span>
             </Link>
             <Link
               href="#"
-              className="flex items-center gap-3 rounded-lg px-4 py-2 hover:bg-yellow-300 transition-all text-gray-700"
+              className={cn(
+                "flex items-center gap-3 rounded-lg px-4 py-2 transition-all text-gray-700",
+                isActive("#") ? "bg-yellow-300" : "hover:bg-yellow-300"
+              )}
             >
               <Wallet className="h-5 w-5 text-gray-600" />
               <span className="font-medium">Saved Cards</span>
@@ -106,31 +129,53 @@ const Sidebar = () => {
             </div>
             <Link
               href="#"
-              className="flex items-center gap-3 rounded-lg px-4 py-2 hover:bg-yellow-300 transition-all text-gray-700"
+              className={cn(
+                "flex items-center gap-3 rounded-lg px-4 py-2 transition-all text-gray-700",
+                isActive("#") ? "bg-yellow-300" : "hover:bg-yellow-300"
+              )}
             >
               <ClipboardList className="h-5 w-5 text-gray-600" />
               <span className="font-medium">My Coupons</span>
-            </Link>``
+            </Link>
             <Link
               href="/your-account/reviews-ratings"
-              className="flex items-center gap-3 rounded-lg px-4 py-2 hover:bg-yellow-300 transition-all text-gray-700"
+              className={cn(
+                "flex items-center gap-3 rounded-lg px-4 py-2 transition-all text-gray-700",
+                isActive("/your-account/reviews-ratings") ? "bg-yellow-300" : "hover:bg-yellow-300"
+              )}
             >
               <Star className="h-5 w-5 text-gray-600" />
               <span className="font-medium">My Reviews & Ratings</span>
             </Link>
             <Link
               href="#"
-              className="flex items-center gap-3 rounded-lg px-4 py-2 hover:bg-yellow-300 transition-all text-gray-700"
+              className={cn(
+                "flex items-center gap-3 rounded-lg px-4 py-2 transition-all text-gray-700",
+                isActive("#") ? "bg-yellow-300" : "hover:bg-yellow-300"
+              )}
             >
               <AlertCircle className="h-5 w-5 text-gray-600" />
               <span className="font-medium">All Notifications</span>
             </Link>
             <Link
               href="/your-account/wishlist"
-              className="flex items-center gap-3 rounded-lg px-4 py-2 hover:bg-yellow-300 transition-all text-gray-700"
+              className={cn(
+                "flex items-center gap-3 rounded-lg px-4 py-2 transition-all text-gray-700",
+                isActive("/your-account/wishlist") ? "bg-yellow-300" : "hover:bg-yellow-300"
+              )}
             >
               <Heart className="h-5 w-5 text-gray-600" />
               <span className="font-medium">My Wishlist</span>
+            </Link>
+            <Link
+              href="/your-account/clamio-coins"
+              className={cn(
+                "flex items-center gap-3 rounded-lg px-4 py-2 transition-all text-gray-700",
+                isActive("/your-account/clamio-coins") ? "bg-yellow-300" : "hover:bg-yellow-300"
+              )}
+            >
+              <Coins className="h-5 w-5 text-gray-600" />
+              <span className="font-medium">Clamio Coins</span>
             </Link>
           </nav>
         </div>
