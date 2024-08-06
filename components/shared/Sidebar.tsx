@@ -105,7 +105,7 @@ const Sidebar = () => {
               My Stuff
             </div>
             <Link
-              href="#"
+              href="/your-account/my-coupons"
               className="flex items-center gap-3 rounded-lg px-4 py-2 hover:bg-yellow-300 transition-all text-gray-700"
             >
               <ClipboardList className="h-5 w-5 text-gray-600" />
