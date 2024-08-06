@@ -128,10 +128,10 @@ const Sidebar = () => {
               My Stuff
             </div>
             <Link
-              href="#"
+              href="/your-account/my-coupons"
               className={cn(
                 "flex items-center gap-3 rounded-lg px-4 py-2 transition-all text-gray-700",
-                isActive("#") ? "bg-yellow-300" : "hover:bg-yellow-300"
+                isActive("/your-account/my-coupons") ? "bg-yellow-300" : "hover:bg-yellow-300"
               )}
             >
               <ClipboardList className="h-5 w-5 text-gray-600" />

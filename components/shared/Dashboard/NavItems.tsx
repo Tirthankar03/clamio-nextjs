@@ -60,14 +60,15 @@ const NavItems = () => {
       <Tooltip>
         
         <TooltipTrigger asChild>
-         
-          <Image
+         <Link href='/your-account/clamio-coins'>
+         <Image
         src='/dollar.png'
         width={35}
         height={35}
         alt='coin'
         />
-        
+         </Link>
+ 
         </TooltipTrigger>
         <TooltipContent className='p-0'>
         <Link href={'/your-account/clamio-coins'}>
