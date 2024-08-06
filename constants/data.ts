@@ -1565,7 +1565,7 @@ export const CATEGORY = [
   { value: "e-Sports Guide", label: "E-Sports Guide" },
   { value: "food Recipes", label: "Food Recipes" },
   { value: "digital Art", label: "Digital Art" },
-] 
+]
 
 
 export const fansOptions = [
@@ -1577,3 +1577,48 @@ export const fansOptions = [
   { value: 'fan6', label: 'Fiona Lee' },
 
 ]
+
+
+// data/brandPacks.ts
+export const brandPacks = [
+  {
+    id: 1,
+    name: "Bonus Card Reading",
+    discount: "Extra 10% OFF",
+    coupons: "3 coupons at ₹29",
+    validity: "Valid for 10 days",
+    imageUrl: "/assets/product-img/imgone.png", // Ensure you have this image in the public folder
+  },
+  {
+    id: 2,
+    name: "Travel Mega Coupon",
+    discount: "Extra 30% OFF",
+    coupons: "3 coupons at ₹9",
+    validity: "Valid for 30 days",
+    imageUrl: "/assets/product-img/imgone.png",
+  },
+  {
+    id: 3,
+    name: "Food Ninja",
+    discount: "Extra 60% OFF",
+    coupons: "3 coupons at ₹19",
+    validity: "Valid for 20 days",
+    imageUrl: "/assets/product-img/imgone.png",
+  },
+  {
+    id: 4,
+    name: "50-50 Art",
+    discount: "Extra 50% OFF",
+    coupons: "3 coupons at ₹29",
+    validity: "Valid for 30 days",
+    imageUrl: "/assets/product-img/imgone.png",
+  },
+  {
+    id: 5,
+    name: "Starter offer",
+    discount: "Extra 40% OFF",
+    coupons: "3 coupons at ₹39",
+    validity: "Valid for 15 days",
+    imageUrl: "/assets/product-img/imgone.png",
+  },
+];
